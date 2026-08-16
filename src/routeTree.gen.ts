@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
+import { Route as PrivacyverklaringRouteImport } from './routes/privacyverklaring'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const AlgemeneVoorwaardenRoute = AlgemeneVoorwaardenRouteImport.update({
   path: '/algemene-voorwaarden',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyverklaringRoute = PrivacyverklaringRouteImport.update({
+  id: '/privacyverklaring',
+  path: '/privacyverklaring',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/privacyverklaring': typeof PrivacyverklaringRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/privacyverklaring': typeof PrivacyverklaringRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/privacyverklaring': typeof PrivacyverklaringRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/algemene-voorwaarden'
+  fullPaths: '/' | '/algemene-voorwaarden' | '/privacyverklaring'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/algemene-voorwaarden'
-  id: '__root__' | '/' | '/algemene-voorwaarden'
+  to: '/' | '/algemene-voorwaarden' | '/privacyverklaring'
+  id: '__root__' | '/' | '/algemene-voorwaarden' | '/privacyverklaring'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AlgemeneVoorwaardenRoute: typeof AlgemeneVoorwaardenRoute
+  PrivacyverklaringRoute: typeof PrivacyverklaringRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AlgemeneVoorwaardenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacyverklaring': {
+      id: '/privacyverklaring'
+      path: '/privacyverklaring'
+      fullPath: '/privacyverklaring'
+      preLoaderRoute: typeof PrivacyverklaringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AlgemeneVoorwaardenRoute: AlgemeneVoorwaardenRoute,
+  PrivacyverklaringRoute: PrivacyverklaringRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
