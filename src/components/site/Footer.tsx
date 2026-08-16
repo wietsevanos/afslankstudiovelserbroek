@@ -1,4 +1,5 @@
 import { Instagram, Facebook } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { contact, navItems } from "@/content/site";
 
 export function Footer() {
@@ -40,7 +41,7 @@ export function Footer() {
               {navItems.map((item) => (
                 <li key={item.href}>
                   <a
-                    href={item.href}
+                    href={`/${item.href}`}
                     className="text-muted-foreground transition-colors hover:text-foreground"
                   >
                     {item.label}
@@ -77,12 +78,15 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Afslankstudio Velserbroek. Alle rechten voorbehouden.</p>
           <div className="flex gap-6">
-            <a href="#contact" className="transition-colors hover:text-foreground">
+            <Link
+              to="/algemene-voorwaarden"
+              className="transition-colors hover:text-foreground"
+            >
               Algemene voorwaarden
-            </a>
-            <a href="#contact" className="transition-colors hover:text-foreground">
+            </Link>
+            <Link to="/privacyverklaring" className="transition-colors hover:text-foreground">
               Privacyverklaring
-            </a>
+            </Link>
           </div>
         </div>
       </div>
