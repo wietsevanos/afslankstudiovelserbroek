@@ -37,7 +37,7 @@ export function Hero() {
             </div>
           </Reveal>
           <Reveal delay={340}>
-            <ul className="mt-12 flex max-w-xl flex-col border-t border-border/70 sm:flex-row sm:items-center">
+            <ul className="mt-12 flex flex-col border-t border-border/70 sm:flex-row sm:items-center">
               {["Persoonlijke aandacht", "Professionele behandelingen", "In Velserbroek"].map(
                 (item) => (
                   <li
