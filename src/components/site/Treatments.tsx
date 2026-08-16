@@ -66,10 +66,7 @@ export function Treatments() {
       </div>
 
       <Dialog open={active !== null} onOpenChange={(open) => !open && setActive(null)}>
-        <DialogContent
-          showCloseButton={false}
-          className="max-h-[92vh] w-[calc(100vw-1.5rem)] max-w-3xl overflow-y-auto rounded-sm border-border/70 bg-card p-0 sm:w-full"
-        >
+        <DialogContent className="max-h-[92vh] w-[calc(100vw-1.5rem)] max-w-3xl overflow-y-auto rounded-sm border-border/70 bg-card p-0 sm:w-full [&>button]:hidden">
           {active ? (
             <div>
               <div className="relative">
