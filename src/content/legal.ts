@@ -1,0 +1,320 @@
+/**
+ * Juridische teksten. Alle plekken met [ ... ] zijn placeholders die de
+ * eigenaar later invult (bedrijfsgegevens, KvK, btw-nummer, termijnen).
+ * Deze teksten zijn zorgvuldig opgesteld maar vormen geen juridisch advies;
+ * laat ze voor publicatie controleren door een jurist.
+ */
+
+export type LegalSection = {
+  heading: string;
+  paragraphs?: string[];
+  list?: string[];
+};
+
+export type LegalDocument = {
+  title: string;
+  intro: string;
+  updated: string;
+  sections: LegalSection[];
+};
+
+/** Placeholders — vervang deze door de definitieve bedrijfsgegevens. */
+export const legalCompany = {
+  name: "[Handelsnaam onderneming] (handelend onder de naam Afslankstudio Velserbroek)",
+  owner: "[Naam eigenaar]",
+  address: "[Straatnaam en huisnummer], [Postcode] Velserbroek",
+  kvk: "[KvK-nummer]",
+  vat: "[Btw-identificatienummer]",
+  phone: "[Telefoonnummer]",
+  email: "[E-mailadres]",
+};
+
+export const terms: LegalDocument = {
+  title: "Algemene voorwaarden",
+  updated: "[Datum laatste wijziging]",
+  intro:
+    "Deze algemene voorwaarden zijn van toepassing op alle afspraken, behandelingen, aanbiedingen en overeenkomsten van Afslankstudio Velserbroek. Lees ze rustig door voordat je een afspraak maakt.",
+  sections: [
+    {
+      heading: "1. Identiteit en bedrijfsgegevens",
+      paragraphs: [
+        "Afslankstudio Velserbroek is een beauty- en afslankstudio gevestigd in Velserbroek. De onderneming wordt hierna aangeduid als 'de studio'.",
+      ],
+      list: [
+        `Handelsnaam: ${legalCompany.name}`,
+        `Eigenaar: ${legalCompany.owner}`,
+        `Vestigingsadres: ${legalCompany.address}`,
+        `KvK-nummer: ${legalCompany.kvk}`,
+        `Btw-identificatienummer: ${legalCompany.vat}`,
+        `Telefoon: ${legalCompany.phone}`,
+        `E-mail: ${legalCompany.email}`,
+      ],
+    },
+    {
+      heading: "2. Definities",
+      list: [
+        "Studio: Afslankstudio Velserbroek, gebruiker van deze algemene voorwaarden.",
+        "Klant: de natuurlijke persoon die een afspraak maakt, een behandeling ondergaat of producten afneemt.",
+        "Behandeling: iedere door de studio aangeboden dienst, waaronder figuur-, lichaams-, gezichts- en beautybehandelingen, massages en adviesgesprekken.",
+        "Overeenkomst: iedere afspraak tussen de studio en de klant over een behandeling, traject, arrangement of product.",
+        "Traject: een reeks behandelingen die als geheel is afgesproken, al dan niet vooruit betaald.",
+      ],
+    },
+    {
+      heading: "3. Toepasselijkheid",
+      paragraphs: [
+        "Deze voorwaarden gelden voor iedere aanbieding, afspraak en overeenkomst tussen de studio en de klant, ongeacht of de afspraak telefonisch, via WhatsApp, per e-mail, via het contactformulier op deze website of in de studio tot stand komt.",
+        "Afwijkingen van deze voorwaarden gelden alleen wanneer die schriftelijk of per e-mail zijn bevestigd door de studio. Eventuele voorwaarden van de klant worden uitdrukkelijk van de hand gewezen.",
+        "Wanneer een bepaling nietig of vernietigbaar is, blijven de overige bepalingen volledig van kracht en treedt daarvoor een bepaling in de plaats die de bedoeling zo dicht mogelijk benadert.",
+      ],
+    },
+    {
+      heading: "4. Afspraken en reserveringen",
+      paragraphs: [
+        "Behandelingen vinden uitsluitend op afspraak plaats. Een afspraak is definitief zodra de studio deze heeft bevestigd. Een aanvraag via het contactformulier of via social media is een verzoek en nog geen bevestigde afspraak.",
+        "De klant is zelf verantwoordelijk voor het doorgeven van juiste contactgegevens, zodat de studio de afspraak kan bevestigen of wijzigen.",
+      ],
+      list: [
+        "Kom bij voorkeur enkele minuten voor aanvang van de behandeling.",
+        "Bij te laat komen wordt de behandeltijd ingekort, zodat volgende klanten niet hoeven te wachten. Het volledige tarief blijft verschuldigd.",
+        "De studio mag een afspraak weigeren of beëindigen bij ongepast gedrag, of wanneer een behandeling om gezondheidsredenen niet verantwoord is.",
+        "Voor minderjarigen onder de 16 jaar is toestemming van een ouder of verzorger nodig; bij bepaalde behandelingen kan een minimumleeftijd gelden.",
+      ],
+    },
+    {
+      heading: "5. Annuleren en verzetten van afspraken",
+      paragraphs: [
+        "De studio reserveert tijd speciaal voor de klant. Kun je niet komen, laat dit dan zo snel mogelijk weten via telefoon, WhatsApp of e-mail.",
+      ],
+      list: [
+        `Kosteloos annuleren of verzetten kan tot [annuleringstermijn, bijvoorbeeld 24 uur] voor aanvang van de afspraak.`,
+        `Bij annulering binnen [annuleringstermijn] of bij het niet verschijnen zonder bericht, mag de studio [percentage, bijvoorbeeld 50%] tot 100% van het behandeltarief in rekening brengen.`,
+        "Bij een traject of arrangement vervalt bij niet verschijnen de betreffende behandeling uit het traject.",
+        "Wanneer de studio zelf een afspraak moet annuleren of verzetten, wordt zo snel mogelijk een nieuw moment aangeboden. Reeds betaalde bedragen voor een geannuleerde behandeling worden terugbetaald of verrekend.",
+      ],
+    },
+    {
+      heading: "6. Prijzen en betaling",
+      paragraphs: [
+        "Alle genoemde prijzen zijn in euro's en inclusief btw, tenzij uitdrukkelijk anders vermeld. Prijzen op deze website en op prijslijsten kunnen worden aangepast; voor een bevestigde afspraak geldt de prijs die bij het maken van de afspraak is gecommuniceerd.",
+      ],
+      list: [
+        `Betaling vindt direct na de behandeling plaats, tenzij anders afgesproken. Betaalmogelijkheden: [betaalmethoden, bijvoorbeeld pin en contant].`,
+        "Trajecten, kuren en arrangementen kunnen vooruit worden betaald. Een vooruitbetaald traject is persoonsgebonden en niet overdraagbaar, tenzij de studio hiermee instemt.",
+        `Een traject of tegoed is geldig gedurende [geldigheidsduur, bijvoorbeeld 12 maanden] na aankoop.`,
+        "Acties en aanbiedingen gelden alleen binnen de aangegeven periode en zijn niet te combineren met andere kortingen, tenzij anders vermeld.",
+        "Bij niet tijdige betaling mag de studio wettelijke rente en redelijke incassokosten in rekening brengen, conform de geldende wettelijke regels.",
+      ],
+    },
+    {
+      heading: "7. Behandelingen en verantwoordelijkheden van de klant",
+      paragraphs: [
+        "De studio voert alle behandelingen naar beste inzicht en vermogen uit en werkt met zorgvuldig gekozen producten en apparatuur. De behandelingen zijn cosmetisch en verzorgend van aard en vervangen nooit medisch advies of medische behandeling.",
+      ],
+      list: [
+        "De klant volgt de adviezen en instructies die tijdens en na de behandeling worden gegeven.",
+        "Resultaten van afslank- en figuurbehandelingen zijn persoonlijk en afhankelijk van onder meer leefstijl, voeding, beweging en gezondheid. De studio geeft daarom geen garantie op een specifiek resultaat.",
+        "De klant meldt het direct wanneer een behandeling als onaangenaam of pijnlijk wordt ervaren, zodat deze kan worden aangepast of gestopt.",
+        "De studio is niet aansprakelijk voor beschadiging of verlies van kleding, sieraden of andere persoonlijke eigendommen. Waardevolle spullen neem je bij voorkeur niet mee.",
+      ],
+    },
+    {
+      heading: "8. Gezondheidsinformatie en contra-indicaties",
+      paragraphs: [
+        "Voor een veilige behandeling is juiste gezondheidsinformatie noodzakelijk. Voorafgaand aan de eerste behandeling vindt een intake plaats.",
+      ],
+      list: [
+        "De klant informeert de studio vooraf en tussentijds over alle relevante medische bijzonderheden, zoals zwangerschap, hart- en vaatziekten, diabetes, epilepsie, huidaandoeningen, allergieën, recente operaties, implantaten, pacemaker, medicijngebruik en behandelingen door een arts of specialist.",
+        "Bij twijfel over de geschiktheid van een behandeling kan de studio de behandeling weigeren of uitstellen en de klant verwijzen naar een huisarts of specialist.",
+        "De studio is niet aansprakelijk voor schade die ontstaat doordat de klant onjuiste of onvolledige gezondheidsinformatie heeft verstrekt.",
+        "De klant meldt overgevoeligheid of allergie voor producten of ingrediënten; op verzoek kan een gevoeligheidstest worden gedaan.",
+      ],
+    },
+    {
+      heading: "9. Aansprakelijkheid",
+      paragraphs: [
+        "De aansprakelijkheid van de studio is beperkt tot schade die het directe gevolg is van een aan de studio toerekenbare tekortkoming of onrechtmatige daad.",
+      ],
+      list: [
+        "Aansprakelijkheid is per gebeurtenis beperkt tot maximaal het bedrag dat de verzekeraar van de studio in dat geval uitkeert, of, bij geen uitkering, tot het bedrag van de betreffende behandeling.",
+        "De studio is niet aansprakelijk voor indirecte schade, zoals gederfde inkomsten of gevolgschade.",
+        "Deze beperkingen gelden niet bij opzet of bewuste roekeloosheid van de studio.",
+        "Dwingendrechtelijke rechten van consumenten blijven onverkort van kracht.",
+      ],
+    },
+    {
+      heading: "10. Klachten",
+      paragraphs: [
+        "Ben je niet tevreden over een behandeling, een product of de gang van zaken? Meld dit dan zo snel mogelijk, bij voorkeur binnen [klachttermijn, bijvoorbeeld 5 werkdagen] na de behandeling, via telefoon of e-mail. Zo kan de studio meekijken en waar mogelijk een passende oplossing bieden.",
+        "De studio reageert binnen [reactietermijn, bijvoorbeeld 14 dagen] inhoudelijk op een klacht. Komen we er samen niet uit, dan kan het geschil worden voorgelegd aan de bevoegde Nederlandse rechter.",
+      ],
+    },
+    {
+      heading: "11. Overmacht",
+      paragraphs: [
+        "Bij overmacht mag de studio een afspraak annuleren of verzetten zonder tot schadevergoeding verplicht te zijn. Onder overmacht wordt onder meer verstaan: ziekte of uitval van de behandelaar, storing of defect aan apparatuur, uitval van nutsvoorzieningen, brand- of waterschade, extreme weersomstandigheden en overheidsmaatregelen.",
+        "De studio biedt in dat geval zo snel mogelijk een nieuwe afspraak aan of betaalt reeds betaalde bedragen voor de niet uitgevoerde behandeling terug.",
+      ],
+    },
+    {
+      heading: "12. Wijziging van de voorwaarden",
+      paragraphs: [
+        "De studio mag deze algemene voorwaarden wijzigen. De actuele versie staat altijd op deze website, met vermelding van de datum van de laatste wijziging. Op een bestaande afspraak zijn de voorwaarden van toepassing zoals die golden op het moment van bevestigen van die afspraak.",
+      ],
+    },
+    {
+      heading: "13. Toepasselijk recht",
+      paragraphs: [
+        "Op alle overeenkomsten tussen de studio en de klant is uitsluitend Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement waarin de studio is gevestigd, tenzij de wet dwingend een andere rechter aanwijst.",
+      ],
+    },
+    {
+      heading: "14. Contactgegevens",
+      paragraphs: [
+        "Vragen over deze voorwaarden? Neem gerust contact op.",
+      ],
+      list: [
+        `${legalCompany.name}`,
+        `${legalCompany.address}`,
+        `Telefoon: ${legalCompany.phone}`,
+        `E-mail: ${legalCompany.email}`,
+        `KvK-nummer: ${legalCompany.kvk}`,
+      ],
+    },
+  ],
+};
+
+export const privacy: LegalDocument = {
+  title: "Privacyverklaring",
+  updated: "[Datum laatste wijziging]",
+  intro:
+    "Afslankstudio Velserbroek hecht veel waarde aan jouw privacy. In deze verklaring lees je welke persoonsgegevens wij verwerken, waarom wij dat doen en welke rechten je hebt. Wij verwerken persoonsgegevens in overeenstemming met de Algemene verordening gegevensbescherming (AVG).",
+  sections: [
+    {
+      heading: "1. Verwerkingsverantwoordelijke",
+      list: [
+        `${legalCompany.name}`,
+        `${legalCompany.address}`,
+        `KvK-nummer: ${legalCompany.kvk}`,
+        `Telefoon: ${legalCompany.phone}`,
+        `E-mail: ${legalCompany.email}`,
+        "Functionaris gegevensbescherming: niet van toepassing. Voor privacyvragen kun je bovenstaand e-mailadres gebruiken.",
+      ],
+    },
+    {
+      heading: "2. Welke persoonsgegevens wij verwerken",
+      paragraphs: [
+        "Wij verwerken alleen gegevens die nodig zijn om je goed en veilig te kunnen behandelen en om contact met je te houden.",
+      ],
+      list: [
+        "Contactgegevens: voor- en achternaam, telefoonnummer en e-mailadres.",
+        "Afspraakgegevens: gekozen behandeling, datum en tijd, en aantekeningen over de afspraak.",
+        "Gezondheidsgegevens uit de intake: relevante medische bijzonderheden, contra-indicaties, allergieën en medicijngebruik. Dit zijn bijzondere persoonsgegevens die wij alleen verwerken met jouw uitdrukkelijke toestemming en uitsluitend om de behandeling veilig te kunnen uitvoeren.",
+        "Behandelgegevens: uitgevoerde behandelingen, gebruikte producten en, indien van toepassing, metingen of voortgang binnen een traject.",
+        "Financiële en administratieve gegevens: factuur- en betaalgegevens die wij op grond van de fiscale bewaarplicht moeten bewaren.",
+        "Beeldmateriaal: alleen wanneer je daarvoor apart en aantoonbaar toestemming hebt gegeven, bijvoorbeeld voor voor- en na-foto's of social media.",
+        "Technische gegevens van de website: IP-adres, browsertype en bezochte pagina's, voor zover verzameld via strikt noodzakelijke of toegestane technieken.",
+      ],
+    },
+    {
+      heading: "3. Waarom wij deze gegevens verwerken en op welke grondslag",
+      list: [
+        "Het maken, bevestigen en beheren van afspraken — grondslag: uitvoering van de overeenkomst.",
+        "Het beantwoorden van vragen via het contactformulier, e-mail, telefoon of WhatsApp — grondslag: uitvoering van de overeenkomst of gerechtvaardigd belang bij goede dienstverlening.",
+        "Het veilig en verantwoord uitvoeren van behandelingen op basis van je gezondheidsinformatie — grondslag: uitdrukkelijke toestemming voor bijzondere persoonsgegevens.",
+        "Facturatie en financiële administratie — grondslag: wettelijke verplichting.",
+        "Het verbeteren van onze dienstverlening en website — grondslag: gerechtvaardigd belang of toestemming, afhankelijk van de gebruikte techniek.",
+        "Het versturen van aanbiedingen of nieuwsbrieven — grondslag: toestemming, die je altijd weer kunt intrekken.",
+      ],
+    },
+    {
+      heading: "4. Contactformulier en afspraakaanvragen",
+      paragraphs: [
+        "Wanneer je via de website of social media een afspraak aanvraagt of een vraag stelt, gebruiken wij de door jou ingevulde gegevens uitsluitend om je aanvraag te behandelen en contact met je op te nemen. Wij vragen in dat formulier niet naar medische gegevens; die bespreken we tijdens de intake in de studio.",
+        "Aanvragen worden bewaard zolang dat nodig is voor de afhandeling en, wanneer een afspraak tot stand komt, opgenomen in je klantdossier.",
+      ],
+    },
+    {
+      heading: "5. Bewaartermijnen",
+      list: [
+        "Contact- en klantgegevens: tot maximaal [bewaartermijn, bijvoorbeeld 2 jaar] na je laatste behandeling, tenzij je eerder om verwijdering vraagt.",
+        "Intake- en gezondheidsgegevens: zolang je klant bent en daarna maximaal [bewaartermijn intake], zodat een vervolgbehandeling veilig kan plaatsvinden.",
+        "Financiële administratie en facturen: 7 jaar, conform de wettelijke fiscale bewaarplicht.",
+        "Beeldmateriaal waarvoor je toestemming gaf: tot je je toestemming intrekt.",
+      ],
+    },
+    {
+      heading: "6. Delen van gegevens met derden",
+      paragraphs: [
+        "Wij verkopen je gegevens nooit. Wij delen gegevens alleen wanneer dat nodig is voor onze dienstverlening of wanneer wij daartoe wettelijk verplicht zijn.",
+      ],
+      list: [
+        "Onze boekhouder of administratiekantoor, voor de financiële administratie.",
+        "Onze hosting- en e-mailprovider, voor het beheer van de website en berichten.",
+        "Eventueel een afsprakensysteem of betaaldienstverlener: [naam dienst, indien gebruikt].",
+        "Met partijen die namens ons gegevens verwerken sluiten wij een verwerkersovereenkomst. Gegevens worden in beginsel binnen de Europese Economische Ruimte verwerkt.",
+      ],
+    },
+    {
+      heading: "7. Cookies en vergelijkbare technieken",
+      paragraphs: [
+        "Deze website gebruikt op dit moment uitsluitend functionele en strikt noodzakelijke technieken die nodig zijn om de website goed te laten werken. Daarvoor is geen toestemming vereist.",
+        "Wanneer wij in de toekomst analytische of marketingcookies plaatsen, vragen wij daarvoor vooraf je toestemming via een cookiemelding en passen wij deze verklaring aan. Je kunt cookies altijd verwijderen of blokkeren via de instellingen van je browser.",
+      ],
+    },
+    {
+      heading: "8. Google-diensten en externe diensten",
+      paragraphs: [
+        "Wij zetten alleen externe diensten in wanneer die daadwerkelijk worden gebruikt. Op het moment van publicatie is dat: [vermeld hier de daadwerkelijk gebruikte diensten, bijvoorbeeld Google Analytics, Google Maps, Google Bedrijfsprofiel of een afsprakensysteem — of laat leeg wanneer deze niet worden gebruikt].",
+        "Wanneer je een recensie achterlaat op ons Google-bedrijfsprofiel, verwerkt Google die gegevens onder zijn eigen privacybeleid. Wij hebben daar geen invloed op.",
+      ],
+    },
+    {
+      heading: "9. Social media",
+      paragraphs: [
+        "Op onze website staan links naar onze profielen op Instagram en Facebook. Deze links openen in een nieuw venster; er worden geen gegevens van jou gedeeld door alleen de link te tonen.",
+        "Neem je via social media contact met ons op of reageer je op een bericht, dan gelden naast onze verklaring ook de privacyvoorwaarden van het betreffende platform.",
+      ],
+    },
+    {
+      heading: "10. Jouw rechten",
+      list: [
+        "Recht op inzage in de gegevens die wij van je verwerken.",
+        "Recht op correctie van onjuiste of onvolledige gegevens.",
+        "Recht op verwijdering, voor zover er geen wettelijke bewaarplicht geldt.",
+        "Recht op beperking van de verwerking.",
+        "Recht op bezwaar tegen verwerking op grond van gerechtvaardigd belang.",
+        "Recht op overdraagbaarheid van de gegevens die je zelf hebt aangeleverd.",
+        "Recht om gegeven toestemming op elk moment in te trekken, zonder dat dit afdoet aan verwerkingen die daarvoor plaatsvonden.",
+      ],
+    },
+    {
+      heading: "11. Een verzoek indienen",
+      paragraphs: [
+        `Een verzoek kun je indienen via ${legalCompany.email} of telefonisch via ${legalCompany.phone}. Om misbruik te voorkomen kunnen wij je vragen je te identificeren, bijvoorbeeld in de studio. Wij reageren binnen vier weken op je verzoek.`,
+      ],
+    },
+    {
+      heading: "12. Beveiliging van persoonsgegevens",
+      list: [
+        "Papieren intakeformulieren en klantkaarten bewaren wij achter slot en grendel.",
+        "Digitale gegevens zijn beveiligd met sterke wachtwoorden en toegang alleen voor bevoegde personen.",
+        "Onze website maakt gebruik van een beveiligde verbinding (https).",
+        "Wij verwerken niet meer gegevens dan nodig en beoordelen onze maatregelen regelmatig.",
+        "Vermoed je misbruik of een datalek? Neem dan direct contact met ons op.",
+      ],
+    },
+    {
+      heading: "13. Klacht indienen bij de Autoriteit Persoonsgegevens",
+      paragraphs: [
+        "Ben je niet tevreden over hoe wij met je persoonsgegevens omgaan, laat het ons dan eerst weten, zodat we er samen uit kunnen komen. Je hebt daarnaast altijd het recht een klacht in te dienen bij de Autoriteit Persoonsgegevens via autoriteitpersoonsgegevens.nl.",
+      ],
+    },
+    {
+      heading: "14. Wijzigingen in deze privacyverklaring",
+      paragraphs: [
+        "Wij kunnen deze privacyverklaring aanpassen wanneer onze werkwijze of wet- en regelgeving daartoe aanleiding geeft. De actuele versie staat altijd op deze pagina.",
+      ],
+    },
+  ],
+};
