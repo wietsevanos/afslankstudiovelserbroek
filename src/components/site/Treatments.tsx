@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { ArrowRight, Check, Clock, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Clock } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/Reveal";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { TreatmentDialog } from "@/components/site/TreatmentDialog";
 import { treatments, type Treatment } from "@/content/site";
 
 export function Treatments() {
@@ -65,83 +64,8 @@ export function Treatments() {
         </ul>
       </div>
 
-      <Dialog open={active !== null} onOpenChange={(open) => !open && setActive(null)}>
-        <DialogContent className="max-h-[92vh] w-[calc(100vw-1.5rem)] max-w-3xl overflow-y-auto rounded-sm border-border/70 bg-card p-0 sm:w-full [&>button]:hidden">
-          {active ? (
-            <div>
-              <div className="relative">
-                <img
-                  src={active.image}
-                  alt={active.imageAlt}
-                  width={1000}
-                  height={1200}
-                  className="h-56 w-full object-cover sm:h-72"
-                />
-                <button
-                  type="button"
-                  onClick={() => setActive(null)}
-                  aria-label="Sluit behandeling"
-                  className="absolute top-4 right-4 inline-flex size-9 cursor-pointer items-center justify-center rounded-full bg-background/90 text-foreground backdrop-blur transition-colors hover:bg-background"
-                >
-                  <X className="size-4" />
-                </button>
-              </div>
-              <div className="p-7 sm:p-10">
-                <p className="eyebrow">{active.category}</p>
-                <DialogTitle className="mt-3 font-display text-3xl font-light sm:text-4xl">
-                  {active.name}
-                </DialogTitle>
-                <span className="gold-rule mt-5" />
-                <DialogDescription className="mt-6 text-base leading-relaxed text-muted-foreground">
-                  {active.description}
-                </DialogDescription>
+      <TreatmentDialog treatment={active} onClose={() => setActive(null)} />
 
-                <div className="mt-9 grid gap-8 sm:grid-cols-2">
-                  <div>
-                    <h4 className="text-lg">Voor wie</h4>
-                    <ul className="mt-4 space-y-2.5">
-                      {active.forWho.map((item) => (
-                        <li key={item} className="flex gap-2.5 text-sm text-muted-foreground">
-                          <Check className="mt-0.5 size-4 shrink-0 text-gold" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-lg">Wat je kunt verwachten</h4>
-                    <ul className="mt-4 space-y-2.5">
-                      {active.expect.map((item) => (
-                        <li key={item} className="flex gap-2.5 text-sm text-muted-foreground">
-                          <Check className="mt-0.5 size-4 shrink-0 text-gold" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="mt-10 flex flex-col gap-4 border-t border-border/70 pt-7 sm:flex-row sm:items-center sm:justify-between">
-                  <div className="text-sm text-muted-foreground">
-                    {active.price ? <span className="text-foreground">{active.price}</span> : null}
-                    {active.duration ? <span className="ml-3">{active.duration}</span> : null}
-                  </div>
-                  <div className="flex flex-col gap-3 sm:flex-row">
-                    <Button asChild variant="gold" size="lg">
-                      <a href="#contact" onClick={() => setActive(null)}>
-                        Plan een afspraak
-                      </a>
-                    </Button>
-                    <Button variant="quiet" size="lg" onClick={() => setActive(null)}>
-                      Terug naar overzicht
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ) : null}
-        </DialogContent>
-      </Dialog>
     </section>
   );
 }
