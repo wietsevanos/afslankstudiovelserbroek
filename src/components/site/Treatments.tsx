@@ -30,7 +30,7 @@ export function Treatments() {
                     loading="lazy"
                     className="h-60 w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                   />
-                  <span className="absolute top-4 left-4 rounded-full bg-background/85 px-3 py-1 text-[0.62rem] tracking-[0.2em] text-muted-foreground uppercase backdrop-blur-sm">
+                  <span className="absolute top-4 left-4 rounded-sm bg-background/85 px-3 py-1 text-[0.62rem] tracking-[0.2em] text-muted-foreground uppercase backdrop-blur-sm">
                     {treatment.category}
                   </span>
                 </div>
