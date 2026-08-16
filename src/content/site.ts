@@ -23,6 +23,10 @@ export type Treatment = {
   description: string;
   forWho: string[];
   expect: string[];
+  /** Wat de behandeling inhoudt — stap voor stap. */
+  includes: string[];
+  /** Optionele aanvullende informatie (voorwaarden, tips, opmerkingen). */
+  extra?: string;
 };
 
 export const treatments: Treatment[] = [
@@ -43,11 +47,19 @@ export const treatments: Treatment[] = [
       "Je zoekt begeleiding met persoonlijke aandacht",
       "Je wilt eerst rustig advies voordat je start",
     ],
+    includes: [
+      "Intakegesprek en het bepalen van jouw doelen",
+      "Metingen en een persoonlijk behandelplan",
+      "De figuurbehandeling zelf, rustig en op jouw tempo",
+      "Nazorg en voedings- of leefstijladvies",
+    ],
     expect: [
       "Een persoonlijk intakegesprek",
       "Een behandeling in een rustige omgeving",
       "Advies voor de periode na de behandeling",
     ],
+    extra:
+      "Placeholder — voorwaarden, aantal aanbevolen behandelingen en pakketprijzen worden later aangeleverd.",
   },
   {
     id: "lichaamsbehandeling",
@@ -66,11 +78,19 @@ export const treatments: Treatment[] = [
       "Je zoekt een moment van ontspanning",
       "Je hebt een droge of vermoeide huid",
     ],
+    includes: [
+      "Reiniging van de huid",
+      "Een verzorgende scrub of peeling",
+      "Verzorging met voedende producten",
+      "Afsluitend advies voor thuis",
+    ],
     expect: [
       "Een rustige, warme behandelruimte",
       "Aandacht voor jouw huidtype",
       "Verzorgingsadvies voor thuis",
     ],
+    extra:
+      "Placeholder — productlijn en eventuele combinatiemogelijkheden worden later aangeleverd.",
   },
   {
     id: "gezichtsbehandeling",
@@ -89,11 +109,19 @@ export const treatments: Treatment[] = [
       "Je huid voelt droog, gevoelig of vermoeid",
       "Je wilt een ontspannen moment voor jezelf",
     ],
+    includes: [
+      "Korte huidanalyse en wensen bespreken",
+      "Reiniging en peeling",
+      "Eventueel onzuiverheden verwijderen",
+      "Masker, serum en afsluitende verzorging",
+    ],
     expect: [
       "Een korte huidanalyse",
       "Een behandeling op maat",
       "Persoonlijk advies over huidverzorging",
     ],
+    extra:
+      "Placeholder — uitbreidingen zoals massage of extra masker worden later aangeleverd.",
   },
   {
     id: "ontspanningsmassage",
@@ -111,7 +139,15 @@ export const treatments: Treatment[] = [
       "Je voelt spanning in nek, schouders of rug",
       "Je zoekt regelmatig een rustmoment",
     ],
+    includes: [
+      "Kort gesprek over spanning en voorkeuren",
+      "Massage van rug, nek en schouders",
+      "Aandacht voor tempo en druk naar wens",
+      "Rustig nakomen met een glas water",
+    ],
     expect: ["Rustige muziek en zacht licht", "Een massage in jouw tempo", "Tijd om na te komen"],
+    extra:
+      "Placeholder — mogelijkheid tot een langere massage wordt later aangeleverd.",
   },
   {
     id: "beauty-details",
@@ -130,7 +166,15 @@ export const treatments: Treatment[] = [
       "Je hebt weinig tijd maar wil wel resultaat",
       "Je combineert dit graag met een andere behandeling",
     ],
+    includes: [
+      "Bespreken van de gewenste vorm en kleur",
+      "Wenkbrauwen modelleren",
+      "Eventueel verven van wenkbrauwen of wimpers",
+      "Advies over onderhoud",
+    ],
     expect: ["Een korte, zorgvuldige behandeling", "Natuurlijk resultaat", "Advies over onderhoud"],
+    extra:
+      "Placeholder — losse tarieven per onderdeel worden later aangeleverd.",
   },
   {
     id: "persoonlijk-advies",
@@ -149,7 +193,15 @@ export const treatments: Treatment[] = [
       "Je weet nog niet welke behandeling past",
       "Je hebt vragen over een traject",
     ],
+    includes: [
+      "Kennismaking en jouw wensen bespreken",
+      "Uitleg over de behandelingen",
+      "Samen een passend voorstel maken",
+      "Vrijblijvend een vervolgafspraak plannen",
+    ],
     expect: ["Een open gesprek", "Uitleg over de mogelijkheden", "Een advies op maat"],
+    extra:
+      "Placeholder — kosteloos en zonder verplichtingen.",
   },
 ];
 
