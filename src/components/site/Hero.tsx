@@ -37,12 +37,12 @@ export function Hero() {
             </div>
           </Reveal>
           <Reveal delay={340}>
-            <ul className="mt-12 grid max-w-xl border-t border-border/70 sm:grid-cols-3">
+            <ul className="mt-12 flex max-w-xl flex-col border-t border-border/70 sm:flex-row sm:items-center">
               {["Persoonlijke aandacht", "Professionele behandelingen", "In Velserbroek"].map(
                 (item) => (
                   <li
                     key={item}
-                    className="border-b border-border/70 py-3.5 text-[0.68rem] leading-snug tracking-[0.2em] text-muted-foreground uppercase sm:border-b-0 sm:border-l sm:border-border/70 sm:px-4 sm:py-1 sm:first:border-l-0 sm:first:pl-0"
+                    className="border-b border-border/70 py-3.5 text-[0.66rem] tracking-[0.18em] whitespace-nowrap text-muted-foreground uppercase sm:border-b-0 sm:border-l sm:border-border/70 sm:px-3.5 sm:py-1 sm:first:border-l-0 sm:first:pl-0"
                   >
                     {item}
                   </li>
