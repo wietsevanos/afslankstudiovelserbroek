@@ -81,7 +81,14 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                 </dl>
 
                 <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:gap-14">
-                  <List title="Wat de behandeling inhoudt" items={treatment.includes} />
+                  <List
+                    title={
+                      treatment.kind === "product"
+                        ? "Wat het product inhoudt"
+                        : "Wat de behandeling inhoudt"
+                    }
+                    items={treatment.includes}
+                  />
                   <List title="Wat je kunt verwachten" items={treatment.expect} />
                   <List title="Voor wie is dit geschikt" items={treatment.forWho} />
                   {treatment.extra ? (
