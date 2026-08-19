@@ -6,7 +6,7 @@ import actieImage from "@/assets/actie.jpg";
 
 export function Actie() {
   return (
-    <section id="actie" className="py-20 md:py-28">
+    <section id="actie" className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Deze maand"

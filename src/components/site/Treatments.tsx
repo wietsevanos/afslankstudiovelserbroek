@@ -8,7 +8,7 @@ export function Treatments() {
   const [active, setActive] = useState<Treatment | null>(null);
 
   return (
-    <section id="behandelingen" className="bg-cream py-20 md:py-28">
+    <section id="behandelingen" className="bg-gradient-blush py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Behandelingen"
