@@ -4,11 +4,16 @@ import heroImage from "@/assets/hero.jpg";
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden bg-gradient-cream pt-28 pb-16 md:pt-36 md:pb-24">
+    <section id="home" className="relative overflow-hidden bg-gradient-rose pt-28 pb-16 md:pt-36 md:pb-24">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gold/10 blur-3xl"
+        className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gold/15 blur-3xl"
       />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -left-24 h-96 w-96 rounded-full bg-rose/25 blur-3xl"
+      />
+
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <Reveal>

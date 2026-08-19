@@ -26,7 +26,7 @@ const usps = [
 
 export function Waarom() {
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="dark bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading eyebrow="Waarom wij" title="Waarom Afslankstudio Velserbroek?" />
         <ul className="mt-14 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">

@@ -5,7 +5,7 @@ import { contact } from "@/content/site";
 
 export function Social() {
   return (
-    <section className="bg-cream py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Social media"

@@ -3,7 +3,7 @@ import studioImage from "@/assets/studio.jpg";
 
 export function Intro() {
   return (
-    <section className="py-20 md:py-28">
+    <section className="bg-background py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <img

@@ -8,7 +8,7 @@ export function Treatments() {
   const [active, setActive] = useState<Treatment | null>(null);
 
   return (
-    <section id="behandelingen" className="bg-cream py-20 md:py-28">
+    <section id="behandelingen" className="bg-gradient-blush py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Behandelingen"
@@ -42,7 +42,7 @@ export function Treatments() {
                 <ul className="mt-9 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
                   {items.map((treatment, i) => (
                     <Reveal as="li" key={treatment.id} delay={(i % 3) * 90}>
-                      <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-border/70 bg-card transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-[var(--shadow-card)]">
+                      <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-border/70 bg-card transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-[var(--shadow-card)]">
                         <div className="relative overflow-hidden">
                           <img
                             src={treatment.image}
