@@ -5,7 +5,7 @@ import { contact } from "@/content/site";
 
 export function Contact() {
   return (
-    <section id="contact" className="dark bg-background py-20 md:py-28">
+    <section id="contact" className="dark bg-background text-foreground py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Contact</p>
