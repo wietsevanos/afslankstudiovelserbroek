@@ -44,11 +44,16 @@
   --color-cream: var(--cream);
   --color-sand: var(--sand);
   --color-nude: var(--nude);
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-rose-deep: var(--rose-deep);
+  --color-ink: var(--ink);
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
   --shadow-soft: 0 18px 50px -30px oklch(0.45 0.05 70 / 0.35);
   --shadow-card: 0 24px 60px -34px oklch(0.45 0.05 70 / 0.45);
 }
+
 
 :root {
   --radius: 0.125rem;
