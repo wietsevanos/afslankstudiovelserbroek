@@ -18,7 +18,7 @@ export function Actie() {
           <div className="relative overflow-hidden rounded-sm border border-gold/30 bg-card shadow-[var(--shadow-soft)]">
             <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-gold" />
             <div className="grid lg:grid-cols-[1.1fr_1fr]">
-              <div className="p-8 sm:p-12">
+              <div className="bg-gradient-blush p-8 sm:p-12">
                 <p className="eyebrow">{actie.period}</p>
                 <h3 className="mt-5 text-3xl leading-tight sm:text-4xl">{actie.title}</h3>
                 <p className="mt-3 text-sm text-muted-foreground">{actie.subtitle}</p>
