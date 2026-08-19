@@ -4,7 +4,7 @@ import { contact, navItems } from "@/content/site";
 
 export function Footer() {
   return (
-    <footer className="dark border-t border-border/70 bg-background">
+    <footer className="dark border-t border-border/70 bg-background text-foreground">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
