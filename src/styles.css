@@ -221,3 +221,18 @@
     transition: none;
   }
 }
+
+@utility bg-gradient-rose {
+  background: var(--gradient-rose);
+}
+
+@utility bg-gradient-blush {
+  background: var(--gradient-blush);
+}
+
+@utility rose-rule {
+  display: block;
+  height: 1px;
+  width: 3.5rem;
+  background: linear-gradient(90deg, var(--rose-deep), var(--gold));
+}
