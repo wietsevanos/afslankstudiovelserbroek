@@ -4,8 +4,8 @@
  * openingstijden en social media links aan.
  */
 
-import tLedFacial from "@/assets/t-led-facial.jpg";
-import tPdrn from "@/assets/t-pdrn.jpg";
+import ledFacialAsset from "@/assets/led-facial.png.asset.json";
+import pdrnAsset from "@/assets/pdrn-meso-cocktail.png.asset.json";
 import tCryo from "@/assets/t-cryo.jpg";
 import tCryoPlus from "@/assets/t-cryo-plus.jpg";
 import tEms from "@/assets/t-ems.jpg";

@@ -42,7 +42,10 @@ export function Treatments() {
                 <ul className="mt-9 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
                   {items.map((treatment, i) => (
                     <Reveal as="li" key={treatment.id} delay={(i % 3) * 90}>
-                      <article className="group flex h-full flex-col overflow-hidden rounded-sm border border-border/70 bg-card transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-[var(--shadow-card)]">
+                      <article
+                        onClick={() => setActive(treatment)}
+                        className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-sm border border-border/70 bg-card transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-[var(--shadow-card)]"
+                      >
                         <div className="relative overflow-hidden">
                           <img
                             src={treatment.image}
@@ -74,16 +77,12 @@ export function Treatments() {
                               ) : null}
                             </div>
                           ) : null}
-                          <button
-                            type="button"
-                            onClick={() => setActive(treatment)}
-                            className="mt-7 inline-flex cursor-pointer items-center gap-2 self-start border-b border-gold/40 pb-1 text-[0.7rem] tracking-[0.18em] uppercase transition-colors hover:border-gold"
-                          >
+                          <span className="mt-7 inline-flex items-center gap-2 self-start border-b border-gold/40 pb-1 text-[0.7rem] tracking-[0.18em] uppercase transition-colors group-hover:border-gold">
                             {treatment.kind === "product"
                               ? "Bekijk product"
                               : "Bekijk behandeling"}
                             <ArrowRight className="size-3.5 text-gold transition-transform duration-300 group-hover:translate-x-1" />
-                          </button>
+                          </span>
                         </div>
                       </article>
                     </Reveal>
