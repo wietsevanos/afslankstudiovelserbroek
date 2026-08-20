@@ -311,7 +311,7 @@ export const treatments: Treatment[] = [
     category: "Product",
     short: "Een kuur die je traject thuis ondersteunt, met begeleiding vanuit de studio.",
     image: pBioHcgAsset.url,
-    imageAlt: "Elegant druppelflesje met gouden dop op een crèmekleurige sokkel",
+    imageAlt: "Beter in Balans Bio HCG afslankkuur verpakking met tabletten",
     description:
       "Een kuur die je in overleg met ons kunt gebruiken naast je behandelingen. Wij geven uitleg over het gebruik en begeleiden je gedurende de kuur. De definitieve omschrijving wordt later aangeleverd.",
     forWho: [
@@ -336,7 +336,7 @@ export const treatments: Treatment[] = [
     category: "Product",
     short: "Een verzorgende crème voor het lichaam, voor dagelijks gebruik thuis.",
     image: pRedulastiqueAsset.url,
-    imageAlt: "Witte crèmepot op crèmekleurige zijde in zacht licht",
+    imageAlt: "Redulastique slimming en firming gel tube met hyaluron booster",
     description:
       "Een verzorgende crème die je thuis kunt gebruiken naast je behandelingen. Wij leggen uit hoe je de crème het beste toepast. De definitieve omschrijving wordt later aangeleverd.",
     forWho: [
@@ -361,7 +361,7 @@ export const treatments: Treatment[] = [
     category: "Product",
     short: "Een natuurlijke tanning voor een egale, warme gloed zonder zon.",
     image: pMarcInbaneAsset.url,
-    imageAlt: "Bronskleurige tanning-fles met applicatiehandschoen op crèmekleurig linnen",
+    imageAlt: "Marc Inbane natural tanning spray met applicatiehandschoen op been",
     description:
       "Een natuurlijke tanning waarmee je een egale, warme gloed geeft aan je huid. Wij geven uitleg over het aanbrengen en onderhoud. De definitieve omschrijving wordt later aangeleverd.",
     forWho: [
