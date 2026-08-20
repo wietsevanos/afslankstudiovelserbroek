@@ -13,9 +13,9 @@ import tStarvac from "@/assets/t-starvac.jpg";
 import tBallancer from "@/assets/t-ballancer.jpg";
 import tVacustep from "@/assets/t-vacustep.jpg";
 import tTanita from "@/assets/t-tanita.jpg";
-import pBioHcg from "@/assets/p-biohcg.jpg";
-import pRedulastique from "@/assets/p-redulastique.jpg";
-import pMarcInbane from "@/assets/p-marcinbane.jpg";
+import pBioHcgAsset from "@/assets/p-biohcg.png.asset.json";
+import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
+import pMarcInbaneAsset from "@/assets/p-marcinbane.png.asset.json";
 
 /** Groepen waarin de kaarten op de website worden verdeeld. */
 export type TreatmentGroupId = "beauty" | "afslanken" | "producten";
@@ -310,7 +310,7 @@ export const treatments: Treatment[] = [
     name: "Bio HCG afslankkuur",
     category: "Product",
     short: "Een kuur die je traject thuis ondersteunt, met begeleiding vanuit de studio.",
-    image: pBioHcg,
+    image: pBioHcgAsset.url,
     imageAlt: "Elegant druppelflesje met gouden dop op een crèmekleurige sokkel",
     description:
       "Een kuur die je in overleg met ons kunt gebruiken naast je behandelingen. Wij geven uitleg over het gebruik en begeleiden je gedurende de kuur. De definitieve omschrijving wordt later aangeleverd.",
@@ -335,7 +335,7 @@ export const treatments: Treatment[] = [
     name: "Redulastique slimming crème",
     category: "Product",
     short: "Een verzorgende crème voor het lichaam, voor dagelijks gebruik thuis.",
-    image: pRedulastique,
+    image: pRedulastiqueAsset.url,
     imageAlt: "Witte crèmepot op crèmekleurige zijde in zacht licht",
     description:
       "Een verzorgende crème die je thuis kunt gebruiken naast je behandelingen. Wij leggen uit hoe je de crème het beste toepast. De definitieve omschrijving wordt later aangeleverd.",
@@ -360,7 +360,7 @@ export const treatments: Treatment[] = [
     name: "Marc Inbane natural tanning",
     category: "Product",
     short: "Een natuurlijke tanning voor een egale, warme gloed zonder zon.",
-    image: pMarcInbane,
+    image: pMarcInbaneAsset.url,
     imageAlt: "Bronskleurige tanning-fles met applicatiehandschoen op crèmekleurig linnen",
     description:
       "Een natuurlijke tanning waarmee je een egale, warme gloed geeft aan je huid. Wij geven uitleg over het aanbrengen en onderhoud. De definitieve omschrijving wordt later aangeleverd.",
