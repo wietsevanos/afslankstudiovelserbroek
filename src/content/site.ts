@@ -44,14 +44,14 @@ export type Treatment = {
 
 export const treatmentGroups: { id: TreatmentGroupId; label: string; intro?: string }[] = [
   {
-    id: "beauty",
-    label: "Beauty",
-    intro: "Verzorgende gezichtsbehandelingen voor een verzorgde, stralende huid.",
-  },
-  {
     id: "afslanken",
     label: "Afslanken",
     intro: "Behandelingen gericht op figuur, huid en lichaamsomvang.",
+  },
+  {
+    id: "beauty",
+    label: "Beauty",
+    intro: "Verzorgende gezichtsbehandelingen voor een verzorgde, stralende huid.",
   },
   {
     id: "producten",
