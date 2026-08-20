@@ -5,7 +5,7 @@
  */
 
 import ledFacialAsset from "@/assets/led-facial.png.asset.json";
-import pdrnAsset from "@/assets/pdrn-meso-cocktail.png.asset.json";
+import pdrnAsset from "@/assets/pdrn-meso-cocktail-v2.png.asset.json";
 import tCryoAsset from "@/assets/t-cryo.png.asset.json";
 import tCryoPlusAsset from "@/assets/t-cryo-plus.png.asset.json";
 import tEmsAsset from "@/assets/t-ems.png.asset.json";
