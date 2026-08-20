@@ -4,8 +4,8 @@
  * openingstijden en social media links aan.
  */
 
-import tLedFacial from "@/assets/t-led-facial.jpg";
-import tPdrn from "@/assets/t-pdrn.jpg";
+import ledFacialAsset from "@/assets/led-facial.png.asset.json";
+import pdrnAsset from "@/assets/pdrn-meso-cocktail.png.asset.json";
 import tCryo from "@/assets/t-cryo.jpg";
 import tCryoPlus from "@/assets/t-cryo-plus.jpg";
 import tEms from "@/assets/t-ems.jpg";
@@ -69,8 +69,8 @@ export const treatments: Treatment[] = [
     name: "Led facial",
     category: "Beauty",
     short: "Een rustige gezichtsbehandeling met ledlicht, afgestemd op jouw huid.",
-    image: tLedFacial,
-    imageAlt: "Ledmasker in een rustige, crèmekleurige behandelruimte",
+    image: ledFacialAsset.url,
+    imageAlt: "Vrouw ontspannen tijdens een led facial behandeling in een luxe studio",
     description:
       "Een gezichtsbehandeling waarbij ledlicht wordt gecombineerd met een zorgvuldige verzorging van de huid. De behandeling wordt rustig en op jouw tempo uitgevoerd. De definitieve omschrijving wordt later aangeleverd.",
     forWho: [
@@ -98,8 +98,8 @@ export const treatments: Treatment[] = [
     name: "PDRN meso cocktail",
     category: "Beauty",
     short: "Een verfijnde huidbehandeling met een meso cocktail, gericht op huidverzorging.",
-    image: tPdrn,
-    imageAlt: "Glazen ampullen en serum met goudaccenten op een crèmekleurige steen",
+    image: pdrnAsset.url,
+    imageAlt: "Meso PDRN cocktail ampullen voor een luxe huidbehandeling",
     description:
       "Een huidbehandeling waarbij een meso cocktail met PDRN wordt gebruikt. Tijdens de intake bespreken we of deze behandeling bij jouw huid en wensen past. De definitieve omschrijving wordt later aangeleverd.",
     forWho: [
