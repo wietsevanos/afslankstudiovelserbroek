@@ -6,13 +6,13 @@
 
 import ledFacialAsset from "@/assets/led-facial.png.asset.json";
 import pdrnAsset from "@/assets/pdrn-meso-cocktail.png.asset.json";
-import tCryo from "@/assets/t-cryo.jpg";
-import tCryoPlus from "@/assets/t-cryo-plus.jpg";
-import tEms from "@/assets/t-ems.jpg";
-import tStarvac from "@/assets/t-starvac.jpg";
-import tBallancer from "@/assets/t-ballancer.jpg";
-import tVacustep from "@/assets/t-vacustep.jpg";
-import tTanita from "@/assets/t-tanita.jpg";
+import tCryoAsset from "@/assets/t-cryo.png.asset.json";
+import tCryoPlusAsset from "@/assets/t-cryo-plus.png.asset.json";
+import tEmsAsset from "@/assets/t-ems.png.asset.json";
+import tStarvacAsset from "@/assets/t-starvac.png.asset.json";
+import tBallancerAsset from "@/assets/t-ballancer.png.asset.json";
+import tVacustepAsset from "@/assets/t-vacustep.png.asset.json";
+import tTanitaAsset from "@/assets/t-tanita.png.asset.json";
 import pBioHcgAsset from "@/assets/p-biohcg.png.asset.json";
 import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
 import pMarcInbaneAsset from "@/assets/p-marcinbane.png.asset.json";
@@ -129,7 +129,7 @@ export const treatments: Treatment[] = [
     name: "TC Cryo",
     category: "Afslanken",
     short: "Een figuurbehandeling met koudetechniek, gericht op specifieke zones.",
-    image: tCryo,
+    image: tCryoAsset.url,
     imageAlt: "Zachte witte handdoeken in een rustige, crèmekleurige behandelruimte",
     description:
       "Een behandeling met koudetechniek die gericht wordt ingezet op de zones die je wilt behandelen. Tijdens de intake bepalen we samen een passend plan. De definitieve omschrijving wordt later aangeleverd.",
@@ -154,7 +154,7 @@ export const treatments: Treatment[] = [
     name: "TC Cryo Plus",
     category: "Afslanken",
     short: "De uitgebreide variant van de TC Cryo behandeling.",
-    image: tCryoPlus,
+    image: tCryoPlusAsset.url,
     imageAlt: "Behandelbank met crèmekleurige handdoeken en een modern behandelapparaat",
     description:
       "Een uitgebreidere variant van de TC Cryo behandeling. Tijdens de intake bespreken we welke variant het beste bij jouw wensen past. De definitieve omschrijving wordt later aangeleverd.",
@@ -183,7 +183,7 @@ export const treatments: Treatment[] = [
     name: "EMS Bodysculpting Pro",
     category: "Afslanken",
     short: "Een bodysculpting behandeling waarbij de spieren worden geactiveerd.",
-    image: tEms,
+    image: tEmsAsset.url,
     imageAlt: "EMS-pads op de buik tijdens een behandeling in een warme, rustige studio",
     description:
       "Een behandeling waarbij met EMS-technologie de spieren worden geactiveerd terwijl jij rustig ligt. Tijdens de intake bespreken we jouw wensen. De definitieve omschrijving wordt later aangeleverd.",
@@ -208,7 +208,7 @@ export const treatments: Treatment[] = [
     name: "Starvac",
     category: "Afslanken",
     short: "Een vacuümmassage behandeling voor lichaam en huid.",
-    image: tStarvac,
+    image: tStarvacAsset.url,
     imageAlt: "Handstuk van een vacuümmassage-apparaat tijdens een beenbehandeling",
     description:
       "Een behandeling met vacuümmassage, gericht op het lichaam en de huid. De behandeling wordt afgestemd op jouw wensen. De definitieve omschrijving wordt later aangeleverd.",
@@ -233,7 +233,7 @@ export const treatments: Treatment[] = [
     name: "Ballancer lymfedrainage",
     category: "Afslanken",
     short: "Een rustgevende drainagebehandeling met de Ballancer.",
-    image: tBallancer,
+    image: tBallancerAsset.url,
     imageAlt: "Ontspannen benen onder een zachte deken in een warme behandelruimte",
     description:
       "Een rustgevende behandeling met de Ballancer, waarbij je comfortabel ligt terwijl de behandeling zijn werk doet. De definitieve omschrijving wordt later aangeleverd.",
@@ -258,7 +258,7 @@ export const treatments: Treatment[] = [
     name: "Vacu step",
     category: "Afslanken",
     short: "Rustig bewegen in de Vacu step, onder persoonlijke begeleiding.",
-    image: tVacustep,
+    image: tVacustepAsset.url,
     imageAlt: "Modern stepapparaat in een lichte studio met eikenhouten vloer",
     description:
       "Bij de Vacu step beweeg je in een rustig tempo onder begeleiding. Tijdens de intake bespreken we of dit bij jouw wensen past. De definitieve omschrijving wordt later aangeleverd.",
@@ -283,7 +283,7 @@ export const treatments: Treatment[] = [
     name: "Tanita weegschaal",
     category: "Afslanken",
     short: "Een meting met de Tanita weegschaal als vertrekpunt van je traject.",
-    image: tTanita,
+    image: tTanitaAsset.url,
     imageAlt: "Elegante witte weegschaal op een eikenhouten vloer in een lichte ruimte",
     description:
       "Met de Tanita weegschaal brengen we jouw uitgangspunt in kaart, zodat we jouw traject goed kunnen volgen. De definitieve omschrijving wordt later aangeleverd.",
