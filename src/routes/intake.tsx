@@ -327,13 +327,13 @@ function IntakePage() {
 
       <Button
         asChild
-        variant="outline"
+        variant="gold"
         size="lg"
-        className="fixed bottom-6 right-6 z-50 gap-2 rounded-sm border-border bg-background/95 shadow-[var(--shadow-soft)] backdrop-blur hover:border-gold"
+        className="fixed bottom-6 right-6 z-50 gap-2 rounded-sm shadow-[var(--shadow-soft)]"
         aria-label="Terug naar website"
       >
         <Link to="/">
-          <ArrowLeft className="size-4 text-gold" />
+          <ArrowLeft className="size-4" />
           Terug
         </Link>
       </Button>
