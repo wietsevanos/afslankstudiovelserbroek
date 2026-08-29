@@ -19,15 +19,14 @@ export function Intro() {
           <Reveal>
             <p className="eyebrow">Welkom</p>
             <h2 className="mt-5 text-3xl leading-[1.15] sm:text-4xl md:text-[2.75rem]">
-              Even tijd voor jezelf
+              Bij ons draait het om jou!
             </h2>
             <span className="gold-rule mt-6" />
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Bij Afslankstudio Velserbroek draait het om jou. Even weg uit de drukte, tijd maken
-              voor jezelf en werken aan hoe jij je voelt. We bieden verschillende behandelingen op
-              het gebied van afslanken, lichaamsverzorging en beauty.
+              Wij geven persoonlijk advies om een gezond gewicht te krijgen en te behouden. Wij
+              bieden verschillende soorten behandelingen op het gebied van beauty en afslanken.
             </p>
           </Reveal>
         </div>

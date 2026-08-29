@@ -16,14 +16,10 @@ export function OverOns() {
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-7 text-base leading-relaxed text-muted-foreground">
-              Placeholder tekst. Afslankstudio Velserbroek is een kleinschalige studio waar rust en
-              persoonlijke aandacht vooropstaan. Je wordt ontvangen in een fijne omgeving en we nemen
-              de tijd om te bespreken wat jij graag wilt.
-            </p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-              Placeholder tekst. Hier komt later een korte, persoonlijke introductie met achtergrond,
-              ervaring en werkwijze. Deze tekst is eenvoudig aan te passen zodra de definitieve
-              informatie beschikbaar is.
+              Afslankstudio Velserbroek is al ruim 27 jaar een toonaangevende salon op het gebied
+              van beauty en afslanken. Persoonlijke aandacht staat bij ons voorop. In onze
+              kleurrijke salon nemen wij de tijd om te bespreken wat jouw wensen zijn en hoe wij die
+              samen kunnen behalen.
             </p>
           </Reveal>
           <Reveal delay={200}>

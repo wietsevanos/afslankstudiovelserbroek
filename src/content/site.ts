@@ -46,12 +46,12 @@ export const treatmentGroups: { id: TreatmentGroupId; label: string; intro?: str
   {
     id: "afslanken",
     label: "Afslanken",
-    intro: "Behandelingen gericht op figuur, huid en lichaamsomvang.",
+    intro: "Behandelingen gericht op gewichtsverlies, huidverstrakking en huidverbetering.",
   },
   {
     id: "beauty",
     label: "Beauty",
-    intro: "Verzorgende gezichtsbehandelingen voor een verzorgde, stralende huid.",
+    intro: "Verzorgende gezichtsbehandelingen voor een jongere en stralende huid.",
   },
   {
     id: "producten",
@@ -399,12 +399,12 @@ export const contact = {
   instagram: "https://www.instagram.com/",
   facebook: "https://www.facebook.com/",
   hours: [
-    { day: "Maandag", time: "Op afspraak" },
+    { day: "Maandag", time: "09:00 – 17:00" },
     { day: "Dinsdag", time: "09:00 – 17:00" },
-    { day: "Woensdag", time: "09:00 – 17:00" },
-    { day: "Donderdag", time: "09:00 – 21:00" },
+    { day: "Woensdag", time: "09:00 – 14:00" },
+    { day: "Donderdag", time: "09:00 – 17:00" },
     { day: "Vrijdag", time: "09:00 – 17:00" },
-    { day: "Zaterdag", time: "Op afspraak" },
+    { day: "Zaterdag", time: "09:30 – 13:00" },
     { day: "Zondag", time: "Gesloten" },
   ],
 };
