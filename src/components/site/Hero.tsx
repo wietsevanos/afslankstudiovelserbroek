@@ -18,8 +18,11 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <Reveal>
+            <p className="eyebrow mb-5">Behandelingen op maat</p>
+          </Reveal>
+          <Reveal delay={120}>
             <h1 className="font-display text-4xl leading-[1.08] font-light sm:text-5xl md:text-6xl lg:text-7xl">
-              Beauty- en Afslankstudio{" "}
+              Beauty{"\u2011"} en Afslankstudio{" "}
               <span className="text-gradient-gold">Velserbroek</span>
             </h1>
           </Reveal>
