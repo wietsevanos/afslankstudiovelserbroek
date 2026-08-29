@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Check, Clock, Info, Tag, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -112,9 +113,9 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="gold" size="lg">
-                  <a href="#contact" onClick={onClose}>
-                    Afspraak maken
-                  </a>
+                  <Link to="/intake" onClick={onClose}>
+                    Plan een intake
+                  </Link>
                 </Button>
                 <Button variant="quiet" size="lg" onClick={onClose}>
                   Sluiten

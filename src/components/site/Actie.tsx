@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, SectionHeading } from "@/components/Reveal";
@@ -46,7 +47,7 @@ export function Actie() {
 
                 <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                   <Button asChild variant="gold" size="xl">
-                    <a href="#contact">Plan je afspraak</a>
+                    <Link to="/intake">Plan een intake</Link>
                   </Button>
                   <Button asChild variant="goldOutline" size="xl">
                     <a href="#behandelingen">Bekijk behandelingen</a>

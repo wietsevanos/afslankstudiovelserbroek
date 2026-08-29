@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -52,7 +53,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <Button asChild variant="gold" size="lg" className="hidden sm:inline-flex">
-            <a href="#contact">Plan een afspraak</a>
+            <Link to="/intake">Plan een intake</Link>
           </Button>
           <button
             type="button"
@@ -86,9 +87,9 @@ export function Navbar() {
           ))}
           <li className="pt-5">
             <Button asChild variant="gold" size="lg" className="w-full">
-              <a href="#contact" onClick={() => setOpen(false)}>
-                Plan een afspraak
-              </a>
+              <Link to="/intake" onClick={() => setOpen(false)}>
+                Plan een intake
+              </Link>
             </Button>
           </li>
         </ul>
