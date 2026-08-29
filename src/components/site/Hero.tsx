@@ -17,14 +17,12 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <Reveal>
-            <p className="eyebrow">
-              Afslanken onder deskundige begeleiding bij Afslankstudio Velserbroek
-            </p>
+            <p className="eyebrow">&nbsp;AFSLANKSTUDIO VELSERBROEK</p>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="mt-6 text-4xl leading-[1.08] sm:text-5xl md:text-6xl lg:text-[4.1rem]">
-              Beauty &amp; Afslankstudio
-              <span className="block text-gradient-gold italic">Velserbroek</span>
+              Afslanken onder deskundige
+              <span className="block text-gradient-gold italic">Begeleiding</span>
             </h1>
           </Reveal>
           <Reveal delay={180}>
