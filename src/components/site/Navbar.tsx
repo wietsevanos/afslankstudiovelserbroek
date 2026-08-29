@@ -30,10 +30,10 @@ export function Navbar() {
         className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8"
       >
         <a href="#home" className="group flex flex-col leading-none">
-          <span className="font-display text-lg tracking-[0.02em] sm:text-xl">
+          <span className="font-display text-base font-semibold tracking-[0.14em] uppercase sm:text-lg">
             Afslankstudio
           </span>
-          <span className="mt-0.5 text-[0.6rem] tracking-[0.34em] text-muted-foreground uppercase">
+          <span className="text-gradient-gold font-display text-base font-semibold tracking-[0.14em] uppercase italic sm:text-lg">
             Velserbroek
           </span>
         </a>

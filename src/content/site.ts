@@ -393,7 +393,7 @@ export const actie = {
 
 export const contact = {
   studio: "Afslankstudio Velserbroek",
-  address: "Straatnaam 00, 1991 XX Velserbroek",
+  address: "Klompenmakerstraat 7, 1991 JJ Velserbroek",
   phone: "023 549 0556",
   email: "info@afslankstudiovelserbroek.nl",
   instagram: "https://www.instagram.com/",
