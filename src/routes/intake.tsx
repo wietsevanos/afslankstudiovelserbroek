@@ -104,24 +104,15 @@ function IntakePage() {
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8">
-          <Link to="/" className="font-display text-lg leading-none">
-            Afslankstudio
-            <span className="mt-1 block text-[0.6rem] tracking-[0.32em] text-muted-foreground uppercase">
-              Velserbroek
+          <Link to="/" className="group flex items-baseline gap-1.5 leading-none">
+            <span className="font-sans text-base font-medium text-foreground sm:text-lg">
+              Afslankstudio
             </span>
+            <span className="text-base font-medium text-gold sm:text-lg">Velserbroek</span>
           </Link>
-          <div className="flex items-center gap-5">
-            <Link
-              to="/"
-              className="hidden items-center gap-2 border-b border-gold/40 pb-1 text-[0.7rem] tracking-[0.18em] uppercase transition-colors hover:border-gold sm:inline-flex"
-            >
-              <ArrowLeft className="size-3.5 text-gold" />
-              Terug naar website
-            </Link>
-            <Button asChild variant="gold" size="lg">
-              <a href={telHref}>{contact.phone}</a>
-            </Button>
-          </div>
+          <Button asChild variant="gold" size="lg">
+            <a href={telHref}>{contact.phone}</a>
+          </Button>
         </div>
       </header>
 
@@ -333,6 +324,19 @@ function IntakePage() {
           </div>
         </section>
       </main>
+
+      <Button
+        asChild
+        variant="outline"
+        size="lg"
+        className="fixed bottom-6 right-6 z-50 gap-2 rounded-sm border-border bg-background/95 shadow-[var(--shadow-soft)] backdrop-blur hover:border-gold"
+        aria-label="Terug naar website"
+      >
+        <Link to="/">
+          <ArrowLeft className="size-4 text-gold" />
+          Terug
+        </Link>
+      </Button>
 
       <Footer />
     </div>
