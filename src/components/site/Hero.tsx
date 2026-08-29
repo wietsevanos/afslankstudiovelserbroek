@@ -18,15 +18,15 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <Reveal>
-            <h1 className="font-display text-5xl leading-[1.04] font-semibold tracking-[0.04em] uppercase sm:text-6xl md:text-7xl">
-              Afslankstudio
+            <h1 className="font-display text-4xl leading-[1.08] font-light sm:text-5xl md:text-6xl lg:text-7xl">
+              Beauty- en Afslankstudio
               <span className="text-gradient-gold block italic">Velserbroek</span>
             </h1>
           </Reveal>
           <Reveal delay={180}>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Afslanken onder deskundige begeleiding. In onze sfeervolle salon staan wij met
-              persoonlijke aandacht voor jou klaar.
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Afslanken onder deskundige begeleiding, met persoonlijke aandacht en een aanpak die
+              aansluit bij jouw wensen.
             </p>
           </Reveal>
           <Reveal delay={260}>
