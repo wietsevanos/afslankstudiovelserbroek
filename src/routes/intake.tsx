@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/Reveal";
-import { contact, treatmentGroups } from "@/content/site";
+import { contact, treatmentGroups, treatments } from "@/content/site";
 
 const title = "Plan een intake | Afslankstudio Velserbroek";
 const description =
@@ -228,13 +228,20 @@ function IntakePage() {
                         >
                           <option value="">Maak een keuze</option>
                           <option value="Persoonlijk advies">Persoonlijk advies</option>
-                          {treatmentGroups.map((group) =>
-                            group.items.map((item) => (
-                              <option key={item.name} value={`${group.title} – ${item.name}`}>
-                                {item.name}
-                              </option>
-                            )),
-                          )}
+                          {treatmentGroups.map((group) => (
+                            <optgroup key={group.id} label={group.label}>
+                              {treatments
+                                .filter((item) => item.group === group.id)
+                                .map((item) => (
+                                  <option
+                                    key={item.name}
+                                    value={`${group.label} – ${item.name}`}
+                                  >
+                                    {item.name}
+                                  </option>
+                                ))}
+                            </optgroup>
+                          ))}
                         </select>
                       </div>
                       <div className="space-y-2">

@@ -25,7 +25,7 @@ export const legalCompany = {
   address: "[Straatnaam en huisnummer], [Postcode] Velserbroek",
   kvk: "[KvK-nummer]",
   vat: "[Btw-identificatienummer]",
-  phone: "[Telefoonnummer]",
+  phone: "023 549 0556",
   email: "[E-mailadres]",
 };
 
