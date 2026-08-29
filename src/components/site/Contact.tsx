@@ -82,9 +82,6 @@ export function Contact() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-xs text-muted-foreground">
-                Openingstijden zijn placeholders en worden later definitief ingevuld.
-              </p>
             </div>
           </Reveal>
         </div>
