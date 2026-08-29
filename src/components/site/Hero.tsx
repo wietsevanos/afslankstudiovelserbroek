@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import heroImage from "@/assets/hero.jpg";
@@ -40,7 +41,7 @@ export function Hero() {
                 <a href="#behandelingen">Bekijk behandelingen</a>
               </Button>
               <Button asChild variant="goldOutline" size="xl">
-                <a href="#contact">Plan een intake</a>
+                <Link to="/intake">Plan een intake</Link>
               </Button>
             </div>
           </Reveal>

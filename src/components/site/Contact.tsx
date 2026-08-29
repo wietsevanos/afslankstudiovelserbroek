@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
 import { contact } from "@/content/site";
 
@@ -19,7 +20,7 @@ export function Contact() {
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild variant="gold" size="xl">
-              <a href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}>Plan een afspraak</a>
+              <Link to="/intake">Plan een intake</Link>
             </Button>
             <Button asChild variant="goldOutline" size="xl">
               <a href={`mailto:${contact.email}`}>Neem contact op</a>
