@@ -136,7 +136,7 @@ function IntakePage() {
               <span className="gold-rule mt-6" />
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 Tijdens een persoonlijk intakegesprek bekijken we samen jouw wensen en stellen we een
-                plan op dat bij je past. Vul het formulier in of bel ons direct — we denken graag
+                plan op dat bij je past. Vul het formulier in of bel ons direct, we denken graag
                 met je mee.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
