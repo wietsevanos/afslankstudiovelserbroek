@@ -10,7 +10,7 @@ export function Contact() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="eyebrow">Contact</p>
           <h2 className="mt-5 text-3xl leading-[1.15] sm:text-4xl md:text-[2.75rem]">
-            Klaar om jezelf weer even op één te zetten?
+            Klaar om jezelf weer op één te zetten?
           </h2>
           <span className="gold-rule mx-auto mt-6" />
           <p className="mt-6 text-base leading-relaxed text-muted-foreground">
@@ -82,9 +82,6 @@ export function Contact() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-xs text-muted-foreground">
-                Openingstijden zijn placeholders en worden later definitief ingevuld.
-              </p>
             </div>
           </Reveal>
         </div>

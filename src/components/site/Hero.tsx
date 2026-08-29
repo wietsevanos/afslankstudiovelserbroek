@@ -17,18 +17,23 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
         <div>
           <Reveal>
-            <p className="eyebrow">Beauty &amp; afslanken in Velserbroek</p>
+            <p className="eyebrow">
+              Afslanken onder deskundige begeleiding bij Afslankstudio Velserbroek
+            </p>
           </Reveal>
           <Reveal delay={100}>
             <h1 className="mt-6 text-4xl leading-[1.08] sm:text-5xl md:text-6xl lg:text-[4.1rem]">
-              Lekkerder in je vel,
-              <span className="block text-gradient-gold italic">op jouw manier.</span>
+              Beauty &amp; Afslankstudio
+              <span className="block text-gradient-gold italic">Velserbroek</span>
             </h1>
           </Reveal>
           <Reveal delay={180}>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Ontdek onze behandelingen voor huid, lichaam en welzijn. Persoonlijke aandacht, een
-              fijne sfeer en behandelingen die bij jou passen.
+            <h2 className="mt-7 max-w-xl font-display text-xl leading-snug text-foreground sm:text-2xl">
+              Een gezond gewicht en weer lekker in je vel zitten?
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              Wij helpen je graag. In onze sfeervolle salon staan wij met persoonlijke aandacht en
+              professionele begeleiding voor jou klaar.
             </p>
           </Reveal>
           <Reveal delay={260}>
@@ -37,7 +42,7 @@ export function Hero() {
                 <a href="#behandelingen">Bekijk behandelingen</a>
               </Button>
               <Button asChild variant="goldOutline" size="xl">
-                <a href="#contact">Plan een afspraak</a>
+                <a href="#contact">Plan een intake</a>
               </Button>
             </div>
           </Reveal>
