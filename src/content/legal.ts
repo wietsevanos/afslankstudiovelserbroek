@@ -22,7 +22,7 @@ export type LegalDocument = {
 export const legalCompany = {
   name: "[Handelsnaam onderneming] (handelend onder de naam Afslankstudio Velserbroek)",
   owner: "[Naam eigenaar]",
-  address: "[Straatnaam en huisnummer], [Postcode] Velserbroek",
+  address: "Klompenmakerstraat 7, 1991 JJ Velserbroek",
   kvk: "[KvK-nummer]",
   vat: "[Btw-identificatienummer]",
   phone: "023 549 0556",

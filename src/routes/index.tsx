@@ -41,8 +41,8 @@ export const Route = createFileRoute("/")({
           email: contact.email,
           address: {
             "@type": "PostalAddress",
-            streetAddress: "Straatnaam 00",
-            postalCode: "1991 XX",
+            streetAddress: "Klompenmakerstraat 7",
+            postalCode: "1991 JJ",
             addressLocality: "Velserbroek",
             addressCountry: "NL",
           },
