@@ -19,8 +19,8 @@ export function Hero() {
         <div>
           <Reveal>
             <h1 className="font-display text-4xl leading-[1.08] font-light sm:text-5xl md:text-6xl lg:text-7xl">
-              Beauty- en Afslankstudio
-              <span className="text-gradient-gold block italic">Velserbroek</span>
+              Beauty- en Afslankstudio{" "}
+              <span className="text-gradient-gold">Velserbroek</span>
             </h1>
           </Reveal>
           <Reveal delay={180}>

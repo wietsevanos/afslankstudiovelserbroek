@@ -29,13 +29,11 @@ export function Navbar() {
         aria-label="Hoofdnavigatie"
         className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8"
       >
-        <a href="#home" className="group flex flex-col leading-none">
-          <span className="font-display text-base font-semibold tracking-[0.14em] uppercase sm:text-lg">
+        <a href="#home" className="group flex items-baseline gap-1.5 leading-none">
+          <span className="font-sans text-base font-medium text-foreground sm:text-lg">
             Afslankstudio
           </span>
-          <span className="text-gradient-gold font-display text-base font-semibold tracking-[0.14em] uppercase italic sm:text-lg">
-            Velserbroek
-          </span>
+          <span className="text-base font-medium text-gold sm:text-lg">Velserbroek</span>
         </a>
 
         <ul className="hidden items-center gap-9 lg:flex">
