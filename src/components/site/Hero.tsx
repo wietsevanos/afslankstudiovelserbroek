@@ -22,7 +22,7 @@ export function Hero() {
           </Reveal>
           <Reveal delay={120}>
             <h1 className="font-display text-4xl leading-[1.08] font-light sm:text-5xl md:text-6xl lg:text-7xl">
-              Beauty{"\u2011"} en Afslankstudio{" "}
+              Beauty{"\u00a0"}en Afslankstudio{" "}
               <span className="text-gradient-gold">Velserbroek</span>
             </h1>
           </Reveal>
