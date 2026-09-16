@@ -493,7 +493,7 @@ export const treatments: Treatment[] = [
     image: pBioHcgAsset.url,
     imageAlt: "Beter in Balans Bio HCG afslankkuur verpakking met tabletten",
     description:
-      "Een kuur die je in overleg met ons kunt gebruiken naast je behandelingen. Wij geven uitleg over het gebruik en begeleiden je gedurende de kuur. De definitieve omschrijving wordt later aangeleverd.",
+      "De Bio HCG+ afslankkuur is een afslankprogramma waarbij een caloriearm voedingsprogramma centraal staat. Tijdens de kuur volg je een vooraf opgesteld voedingsschema en wordt je voortgang begeleid.",
     forWho: [
       "Je volgt een traject in de studio",
       "Je wilt thuis ondersteuning bij je traject",
@@ -506,7 +506,24 @@ export const treatments: Treatment[] = [
       "Evaluatie en vervolgadvies",
     ],
     expect: ["Duidelijke uitleg", "Persoonlijke begeleiding", "Advies op maat"],
-    extra: "Prijs en verkrijgbaarheid worden later aangeleverd.",
+    extra:
+      "Afvallen is afhankelijk van meerdere factoren, waaronder voeding, beweging en leefstijl. Resultaten verschillen daarom per persoon. Wil je weten of deze kuur bij jou past? Tijdens een kennismaking bespreken we jouw wensen en situatie.",
+    details: [
+      {
+        title: "Hoe werkt de kuur?",
+        paragraphs: [
+          "De aanpak draait voornamelijk om een gecontroleerde calorie-inname en duidelijke voedingsrichtlijnen. Het doel is om op een gestructureerde manier gewicht te verliezen.",
+          "Tijdens het traject is het belangrijk om de voorgeschreven voedingsrichtlijnen goed te volgen en voldoende aandacht te besteden aan je dagelijkse leefstijl.",
+        ],
+      },
+      {
+        title: "Persoonlijke begeleiding",
+        paragraphs: [
+          "Iedereen begint vanuit een andere situatie. Daarom wordt tijdens het traject gekeken naar jouw doelstellingen en voortgang.",
+          "De Tanita lichaamsanalyse kan hierbij eventueel worden gebruikt om veranderingen in je lichaamssamenstelling inzichtelijk te maken.",
+        ],
+      },
+    ],
   },
   {
     id: "redulastique-slimming-creme",
@@ -518,7 +535,7 @@ export const treatments: Treatment[] = [
     image: pRedulastiqueAsset.url,
     imageAlt: "Redulastique slimming en firming gel tube met hyaluron booster",
     description:
-      "Een verzorgende crème die je thuis kunt gebruiken naast je behandelingen. Wij leggen uit hoe je de crème het beste toepast. De definitieve omschrijving wordt later aangeleverd.",
+      "Redulastique is een verzorgende crème voor het lichaam, bedoeld voor dagelijks gebruik thuis. De formule met onder andere hyaluronzuur ondersteunt de dagelijkse verzorging van de huid, bijvoorbeeld als aanvulling op een behandeltraject in de studio.",
     forWho: [
       "Je wilt je huid thuis verzorgen",
       "Je volgt een behandeltraject",
@@ -531,7 +548,22 @@ export const treatments: Treatment[] = [
       "Vervolgadvies",
     ],
     expect: ["Persoonlijk advies", "Uitleg over het gebruik", "Een eenvoudige routine"],
-    extra: "Prijs en inhoud worden later aangeleverd.",
+    extra:
+      "Wij adviseren je graag over de juiste toepassing, afgestemd op jouw huid en behandeltraject. Vraag ernaar tijdens je behandeling of intake.",
+    details: [
+      {
+        title: "Hoe gebruik je de crème?",
+        paragraphs: [
+          "Breng de crème dagelijks aan op een gereinigde huid en masseer zachtjes in tot de crème is opgenomen. Regelmatig gebruik ondersteunt een verzorgde en soepele huid.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "De crème is een verzorgend product voor thuis en vormt een eenvoudige aanvulling op je dagelijkse routine. Voor advies over de combinatie met behandelingen kun je altijd bij ons terecht.",
+        ],
+      },
+    ],
   },
 ];
 
