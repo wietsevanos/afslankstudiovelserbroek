@@ -276,7 +276,7 @@ function IntakePage() {
             <Reveal delay={120}>
               <div className="dark h-full border border-border/70 bg-background p-7 text-foreground sm:p-10">
                 <p className="eyebrow">Liever direct bellen?</p>
-                <h2 className="mt-4 text-2xl">We staan voor je klaar</h2>
+                <h2 className="mt-4 text-2xl">Wij staan voor je klaar</h2>
                 <span className="gold-rule mt-5" />
                 <a
                   href={telHref}
