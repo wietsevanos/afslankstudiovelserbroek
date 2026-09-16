@@ -65,7 +65,7 @@ export function Social() {
         </ul>
         <Reveal delay={120}>
           <p className="mt-6 text-center text-xs tracking-[0.16em] text-muted-foreground uppercase">
-            Hier komt later...
+            Een kijkje achter de schermen — dagelijks tips, acties &amp; resultaten
           </p>
         </Reveal>
       </div>
