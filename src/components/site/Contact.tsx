@@ -30,38 +30,61 @@ export function Contact() {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           <Reveal delay={100}>
-            <div className="h-full rounded-sm border border-border/70 bg-card p-8 sm:p-10">
+            <div className="flex h-full flex-col rounded-sm border border-border/70 bg-card p-8 sm:p-10">
               <h3 className="text-2xl">Gegevens</h3>
               <span className="gold-rule mt-5" />
-              <ul className="mt-7 space-y-5 text-sm">
+              <ul className="mt-8 space-y-7 text-sm">
                 <li className="flex gap-4">
                   <MapPin className="mt-0.5 size-4 shrink-0 text-gold" strokeWidth={1.5} />
-                  <span className="text-muted-foreground">
-                    {contact.studio}
-                    <br />
-                    {contact.address}
-                    <span className="mt-1 block text-xs">{"\n"}</span>
-                  </span>
+                  <div>
+                    <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-gold/80">
+                      Bezoekadres
+                    </p>
+                    <p className="mt-1.5 leading-relaxed text-muted-foreground">
+                      {contact.studio}
+                      <br />
+                      {contact.address}
+                    </p>
+                  </div>
                 </li>
                 <li className="flex gap-4">
                   <Phone className="mt-0.5 size-4 shrink-0 text-gold" strokeWidth={1.5} />
-                  <a
-                    href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {contact.phone}
-                  </a>
+                  <div>
+                    <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-gold/80">
+                      Telefoon
+                    </p>
+                    <a
+                      href={`tel:${contact.phone.replace(/[^0-9+]/g, "")}`}
+                      className="mt-1.5 inline-block leading-relaxed text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {contact.phone}
+                    </a>
+                  </div>
                 </li>
                 <li className="flex gap-4">
                   <Mail className="mt-0.5 size-4 shrink-0 text-gold" strokeWidth={1.5} />
-                  <a
-                    href={`mailto:${contact.email}`}
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                  >
-                    {contact.email}
-                  </a>
+                  <div>
+                    <p className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-gold/80">
+                      E-mail
+                    </p>
+                    <a
+                      href={`mailto:${contact.email}`}
+                      className="mt-1.5 inline-block leading-relaxed text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {contact.email}
+                    </a>
+                  </div>
                 </li>
               </ul>
+              <div className="mt-auto pt-9">
+                <span className="block h-px w-full bg-border/50" />
+                <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+                  Liever direct een moment inplannen?
+                </p>
+                <Button asChild variant="goldOutline" size="lg" className="mt-4">
+                  <Link to="/intake">Plan een intake</Link>
+                </Button>
+              </div>
             </div>
           </Reveal>
 
