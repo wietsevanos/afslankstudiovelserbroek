@@ -58,7 +58,7 @@ export function Hero() {
           </div>
           <div
             aria-hidden
-            className="absolute -bottom-4 -left-4 hidden h-32 w-32 rounded-full border border-gold/30 sm:block"
+            className="absolute -bottom-4 -left-4 hidden h-32 w-32 rounded-full border-2 border-rose-deep/35 sm:block"
           />
         </Reveal>
       </div>
