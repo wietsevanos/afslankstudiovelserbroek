@@ -274,7 +274,7 @@ export const treatments: Treatment[] = [
     image: tEmsAsset.url,
     imageAlt: "EMS-pads op de buik tijdens een behandeling in een warme, rustige studio",
     description:
-      "Een behandeling waarbij met EMS-technologie de spieren worden geactiveerd terwijl jij rustig ligt. Tijdens de intake bespreken we jouw wensen. De definitieve omschrijving wordt later aangeleverd.",
+      "Wil je je buik, billen, benen of armen extra verstevigen en meer vorm geven? Met BodySculpting PRO worden de spieren intensief gestimuleerd door middel van krachtige elektromagnetische pulsen — vergelijkbaar met spiercontracties tijdens een intensieve training.",
     forWho: [
       "Je wilt aan je lichaam werken met begeleiding",
       "Je zoekt een behandeling die je rustig ondergaat",
@@ -287,7 +287,27 @@ export const treatments: Treatment[] = [
       "Advies voor de periode erna",
     ],
     expect: ["Een persoonlijke intake", "Een comfortabele behandeling", "Advies op maat"],
-    extra: "Duur, prijs en het aantal aanbevolen sessies worden later aangeleverd.",
+    extra:
+      "Het uiteindelijke resultaat verschilt per persoon en is onder andere afhankelijk van je uitgangssituatie en leefstijl. BodySculpting PRO is een mooie aanvulling op een gezonde leefstijl en regelmatige beweging.",
+    details: [
+      {
+        title: "Hoe werkt BodySculpting PRO?",
+        paragraphs: [
+          "Tijdens de behandeling worden speciale applicatoren op het te behandelen lichaamsdeel geplaatst. Deze stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor de spieren herhaaldelijk samentrekken.",
+          "Hierdoor worden de spieren intensief geactiveerd, zonder dat je zelf actief hoeft te bewegen.",
+        ],
+      },
+      {
+        title: "Welke lichaamsdelen kunnen worden behandeld?",
+        list: ["Buik", "Billen", "Benen", "Armen"],
+      },
+      {
+        title: "Wanneer zie je resultaat?",
+        paragraphs: [
+          "Na een behandeling kan het behandelde gebied direct anders aanvoelen. Voor zichtbare resultaten zijn meerdere behandelingen nodig.",
+        ],
+      },
+    ],
   },
   {
     id: "starvac",
