@@ -410,7 +410,7 @@ export const treatments: Treatment[] = [
     image: tVacustepAsset.url,
     imageAlt: "Modern stepapparaat in een lichte studio met eikenhouten vloer",
     description:
-      "Bij de Vacu step beweeg je in een rustig tempo onder begeleiding. Tijdens de intake bespreken we of dit bij jouw wensen past. De definitieve omschrijving wordt later aangeleverd.",
+      "De Vacustep combineert actief bewegen met vacuümtechnologie. Tijdens de behandeling wandel je op een speciaal apparaat terwijl het onderlichaam zich in een gecontroleerde vacuümruimte bevindt. De behandeling richt zich voornamelijk op de buik, billen en benen.",
     forWho: [
       "Je wilt rustig en begeleid bewegen",
       "Je combineert dit graag met een behandeltraject",
@@ -423,7 +423,22 @@ export const treatments: Treatment[] = [
       "Advies voor het vervolg",
     ],
     expect: ["Duidelijke uitleg", "Begeleiding tijdens de sessie", "Een sessie in jouw tempo"],
-    extra: "Duur, prijs en het aantal aanbevolen sessies worden later aangeleverd.",
+    extra:
+      "De intensiteit en duur van de behandeling worden afgestemd op jouw conditie en persoonlijke doelen.",
+    details: [
+      {
+        title: "Hoe werkt Vacustep?",
+        paragraphs: [
+          "Het vacuüm stimuleert de doorbloeding van het behandelde gebied terwijl je tegelijkertijd actief beweegt. Hierdoor ontstaat een combinatie van beweging en vacuümstimulatie.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "De Vacustep is geschikt voor mensen die gericht aan hun conditie en lichaamsvorm willen werken. Regelmatige behandelingen kunnen worden gecombineerd met gezonde voeding en voldoende beweging.",
+        ],
+      },
+    ],
   },
   {
     id: "tanita-weegschaal",
