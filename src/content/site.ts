@@ -15,7 +15,7 @@ import tVacustepAsset from "@/assets/t-vacustep.png.asset.json";
 import tTanitaAsset from "@/assets/t-tanita.png.asset.json";
 import pBioHcgAsset from "@/assets/p-biohcg.png.asset.json";
 import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
-import pMarcInbaneAsset from "@/assets/p-marcinbane.png.asset.json";
+
 
 /** Groepen waarin de kaarten op de website worden verdeeld. */
 export type TreatmentGroupId = "beauty" | "afslanken" | "producten";
@@ -353,31 +353,6 @@ export const treatments: Treatment[] = [
     expect: ["Persoonlijk advies", "Uitleg over het gebruik", "Een eenvoudige routine"],
     extra: "Prijs en inhoud worden later aangeleverd.",
   },
-  {
-    id: "marc-inbane-natural-tanning",
-    group: "producten",
-    kind: "product",
-    name: "Marc Inbane natural tanning",
-    category: "Product",
-    short: "Een natuurlijke tanning voor een egale, warme gloed zonder zon.",
-    image: pMarcInbaneAsset.url,
-    imageAlt: "Marc Inbane natural tanning spray met applicatiehandschoen op been",
-    description:
-      "Een natuurlijke tanning waarmee je een egale, warme gloed geeft aan je huid. Wij geven uitleg over het aanbrengen en onderhoud. De definitieve omschrijving wordt later aangeleverd.",
-    forWho: [
-      "Je wilt een natuurlijke gloed zonder zon",
-      "Je hebt een gelegenheid of vakantie op de planning",
-      "Je wilt advies over het aanbrengen",
-    ],
-    includes: [
-      "Uitleg over het product",
-      "Advies over het voorbereiden van de huid",
-      "Tips voor een egaal resultaat",
-      "Advies over onderhoud",
-    ],
-    expect: ["Persoonlijk advies", "Uitleg over het aanbrengen", "Een natuurlijk resultaat"],
-    extra: "Prijs en verkrijgbaarheid worden later aangeleverd.",
-  },
 ];
 
 export const actie = {
@@ -401,7 +376,7 @@ export const contact = {
   hours: [
     { day: "Maandag", time: "09:00 – 17:00" },
     { day: "Dinsdag", time: "09:00 – 17:00" },
-    { day: "Woensdag", time: "09:00 – 14:00" },
+    { day: "Woensdag", time: "09:00 – 13:00" },
     { day: "Donderdag", time: "09:00 – 17:00" },
     { day: "Vrijdag", time: "09:00 – 17:00" },
     { day: "Zaterdag", time: "09:30 – 13:00" },
