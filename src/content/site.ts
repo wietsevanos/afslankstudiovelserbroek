@@ -230,7 +230,7 @@ export const treatments: Treatment[] = [
     image: tCryoPlusAsset.url,
     imageAlt: "Behandelbank met crèmekleurige handdoeken en een modern behandelapparaat",
     description:
-      "Een uitgebreidere variant van de TC Cryo behandeling. Tijdens de intake bespreken we welke variant het beste bij jouw wensen past. De definitieve omschrijving wordt later aangeleverd.",
+      "De TC Cryo Plus is de uitgebreidere variant van de TC Cryo behandeling, met dezelfde gecontroleerde temperatuurwisselingen maar met meer mogelijkheden qua zones en intensiteit. Tijdens de intake bespreken we welke variant het beste bij jouw wensen past.",
     forWho: [
       "Je wilt een uitgebreider traject",
       "Je hebt meerdere zones die je wilt behandelen",
@@ -247,7 +247,22 @@ export const treatments: Treatment[] = [
       "Een uitgebreidere behandeling",
       "Begeleiding tijdens het traject",
     ],
-    extra: "Duur, prijs en voorwaarden worden later aangeleverd.",
+    extra:
+      "De TC Cryo Plus is niet-invasief; er zijn geen injecties of operaties nodig. Welke instellingen geschikt zijn, hangt af van het gebied en jouw persoonlijke situatie.",
+    details: [
+      {
+        title: "Hoe werkt TC Cryo Plus?",
+        paragraphs: [
+          "Net als bij de TC Cryo wordt het te behandelen gebied afwisselend gekoeld en verwarmd, waardoor het onderliggende weefsel gericht wordt gestimuleerd. De Plus-variant biedt ruimere toepassingsmogelijkheden voor grotere of meerdere zones.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "Een behandeling duurt relatief kort en je kunt daarna je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
+        ],
+      },
+    ],
   },
   {
     id: "ems-bodysculpting-pro",
