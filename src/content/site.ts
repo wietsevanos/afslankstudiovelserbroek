@@ -101,21 +101,12 @@ export const treatments: Treatment[] = [
       "Na de behandeling voelt de huid doorgaans schoon, verzorgd en fris aan. De combinatie van technieken maakt deze behandeling geschikt wanneer je jouw huid een extra boost wilt geven.",
     details: [
       {
-        title: "De behandeling kan verschillende technieken bevatten",
+        title: "Mogelijke technieken",
         list: [
-          "Hydro Dermabrasie — een intensieve reiniging waarbij de huid wordt gereinigd en verzorgd",
-          "Skin Scrubber — ultrasone trillingen die helpen bij het reinigen en verzorgen van de huid",
-          "Water Oxygen Spray — een zachte behandeling, prettig voor een gevoelige of vochtarme huid",
-          "Ultrasound — hoogfrequente geluidsgolven die verzorgende werkstoffen ondersteunen",
-          "Radio Frequency — warmte in de huidlagen, toegepast voor huidverzorging en een stevigere uitstraling",
-          "LED lichttherapie — verschillende kleuren licht voor verschillende huiddoelen",
-          "Koude Hamer — een verkoelende afsluiting die de huid helpt kalmeren",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "De gekozen technieken en toepassingen worden afgestemd op jouw huid. De behandeling is een uitgebreide gezichtsbehandeling wanneer je jouw huid een extra boost wilt geven.",
+          "Hydro dermabrasie voor een intensieve reiniging",
+          "Skin scrubber en water oxygen spray",
+          "Radio frequency en ultrasound",
+          "LED lichttherapie en een verkoelende afsluiting",
         ],
       },
     ],
@@ -153,13 +144,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt de behandeling?",
         paragraphs: [
-          "Tijdens de behandeling wordt de huid eerst gereinigd en voorbereid. Vervolgens wordt de meso cocktail met PDRN zorgvuldig op de huid aangebracht. De behandeling wordt rustig en gecontroleerd uitgevoerd.",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "De behandeling is gericht op verzorging en ondersteuning van de huid. Na afloop kan de huid er fris en verzorgd uitzien. Voor een optimaal resultaat kan een kuur van meerdere behandelingen worden geadviseerd.",
+          "Na reiniging wordt de meso cocktail met PDRN zorgvuldig op de huid aangebracht. Voor een optimaal resultaat kan een kuur van meerdere behandelingen worden geadviseerd.",
         ],
       },
     ],
@@ -195,28 +180,12 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt TC Cryo?",
         paragraphs: [
-          "Tijdens de behandeling wordt het te behandelen gebied afwisselend gekoeld en verwarmd. Door deze temperatuurwisselingen wordt het onderliggende weefsel gericht gestimuleerd.",
-          "De behandeling is niet-invasief en er zijn geen injecties of operaties nodig.",
+          "Het te behandelen gebied wordt afwisselend gekoeld en verwarmd, waardoor het onderliggende weefsel gericht wordt gestimuleerd. Niet-invasief, zonder injecties of operaties.",
         ],
       },
       {
-        title: "Waarvoor kan TC Cryo worden ingezet?",
-        paragraphs: [
-          "De TC Cryo kan worden toegepast op verschillende lichaamsdelen en wordt onder andere gebruikt bij:",
-        ],
-        list: [
-          "Lokale vetophopingen",
-          "Lichaamscontouring",
-          "Cellulite",
-          "Huidverbetering",
-          "Ondersteuning van herstel en doorbloeding",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "Een behandeling duurt relatief kort en je kunt na afloop je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
-        ],
+        title: "Inzetbaar bij",
+        list: ["Lokale vetophopingen", "Lichaamscontouring", "Cellulite", "Huidverbetering"],
       },
     ],
   },
@@ -253,13 +222,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt TC Cryo Plus?",
         paragraphs: [
-          "Net als bij de TC Cryo wordt het te behandelen gebied afwisselend gekoeld en verwarmd, waardoor het onderliggende weefsel gericht wordt gestimuleerd. De Plus-variant biedt ruimere toepassingsmogelijkheden voor grotere of meerdere zones.",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "Een behandeling duurt relatief kort en je kunt daarna je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
+          "Dezelfde temperatuurwisselingen als de TC Cryo, met ruimere mogelijkheden voor grotere of meerdere zones. Na afloop kun je je dagelijkse activiteiten doorgaans hervatten.",
         ],
       },
     ],
@@ -293,19 +256,12 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt BodySculpting PRO?",
         paragraphs: [
-          "Tijdens de behandeling worden speciale applicatoren op het te behandelen lichaamsdeel geplaatst. Deze stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor de spieren herhaaldelijk samentrekken.",
-          "Hierdoor worden de spieren intensief geactiveerd, zonder dat je zelf actief hoeft te bewegen.",
+          "Applicatoren stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor ze herhaaldelijk samentrekken — zonder dat je zelf actief beweegt.",
         ],
       },
       {
-        title: "Welke lichaamsdelen kunnen worden behandeld?",
+        title: "Behandelbare zones",
         list: ["Buik", "Billen", "Benen", "Armen"],
-      },
-      {
-        title: "Wanneer zie je resultaat?",
-        paragraphs: [
-          "Na een behandeling kan het behandelde gebied direct anders aanvoelen. Voor zichtbare resultaten zijn meerdere behandelingen nodig.",
-        ],
       },
     ],
   },
@@ -338,18 +294,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt de Starvac?",
         paragraphs: [
-          "Tijdens de behandeling wordt met gecontroleerde vacuümdruk op het weefsel gewerkt. Hierdoor wordt de huid en het onderliggende weefsel gemasseerd en wordt de lokale circulatie gestimuleerd.",
-          "De behandeling kan worden toegepast op verschillende lichaamszones.",
-        ],
-      },
-      {
-        title: "Waarvoor wordt de Starvac gebruikt?",
-        list: [
-          "Lokale vetophopingen",
-          "Cellulite",
-          "Huidverbetering",
-          "Stimulatie van de doorbloeding",
-          "Lichaamscontouring",
+          "Met gecontroleerde vacuümdruk worden huid en weefsel gemasseerd, waardoor de lokale doorbloeding wordt gestimuleerd. Inzetbaar op verschillende lichaamszones.",
         ],
       },
     ],
@@ -383,19 +328,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt de Ballancer?",
         paragraphs: [
-          "Je neemt plaats in een speciaal pak waarin verschillende compressiezones zitten. Deze zones vullen zich achter elkaar met lucht, waardoor een aangename, ritmische druk ontstaat.",
-          "De behandeling voelt als een uitgebreide massage en wordt door veel mensen als zeer ontspannend ervaren.",
-        ],
-      },
-      {
-        title: "Waarvoor kan de Ballancer worden ingezet?",
-        list: [
-          "Stimulatie van de lymfecirculatie",
-          "Ondersteuning bij vochtophoping",
-          "Stimulatie van de bloedsomloop",
-          "Zware of vermoeide benen",
-          "Ontspanning na het sporten",
-          "Ondersteuning bij lichaamsbehandelingen",
+          "Je neemt plaats in een speciaal pak waarvan de compressiezones zich ritmisch met lucht vullen. Het voelt als een uitgebreide massage en wordt als zeer ontspannend ervaren.",
         ],
       },
     ],
@@ -429,13 +362,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt Vacustep?",
         paragraphs: [
-          "Het vacuüm stimuleert de doorbloeding van het behandelde gebied terwijl je tegelijkertijd actief beweegt. Hierdoor ontstaat een combinatie van beweging en vacuümstimulatie.",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "De Vacustep is geschikt voor mensen die gericht aan hun conditie en lichaamsvorm willen werken. Regelmatige behandelingen kunnen worden gecombineerd met gezonde voeding en voldoende beweging.",
+          "Je wandelt op een speciaal apparaat terwijl het onderlichaam zich in een gecontroleerde vacuümruimte bevindt. Zo combineer je bewegen met stimulatie van de doorbloeding.",
         ],
       },
     ],
@@ -469,14 +396,7 @@ export const treatments: Treatment[] = [
       {
         title: "Waarom een lichaamsanalyse?",
         paragraphs: [
-          "Een lichaamsanalyse is vooral interessant wanneer je bezig bent met afvallen, fitter worden of je lichaamssamenstelling wilt verbeteren.",
-          "Door metingen op verschillende momenten met elkaar te vergelijken, kun je beter zien welke veranderingen er plaatsvinden.",
-        ],
-      },
-      {
-        title: "Een handig startpunt",
-        paragraphs: [
-          "De Tanita meting kan worden gebruikt als uitgangspunt voor een persoonlijk traject en om je voortgang gedurende een behandeling of leefstijlverandering te volgen.",
+          "Naast je gewicht geeft een meting inzicht in onder andere je vet- en spiermassa. Zo heb je een duidelijk vertrekpunt en kun je je voortgang volgen.",
         ],
       },
     ],
@@ -512,15 +432,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe werkt de kuur?",
         paragraphs: [
-          "De aanpak draait voornamelijk om een gecontroleerde calorie-inname en duidelijke voedingsrichtlijnen. Het doel is om op een gestructureerde manier gewicht te verliezen.",
-          "Tijdens het traject is het belangrijk om de voorgeschreven voedingsrichtlijnen goed te volgen en voldoende aandacht te besteden aan je dagelijkse leefstijl.",
-        ],
-      },
-      {
-        title: "Persoonlijke begeleiding",
-        paragraphs: [
-          "Iedereen begint vanuit een andere situatie. Daarom wordt tijdens het traject gekeken naar jouw doelstellingen en voortgang.",
-          "De Tanita lichaamsanalyse kan hierbij eventueel worden gebruikt om veranderingen in je lichaamssamenstelling inzichtelijk te maken.",
+          "De kuur draait om een caloriearm voedingsprogramma met duidelijke richtlijnen. Je wordt begeleid en de Tanita meting kan je voortgang inzichtelijk maken.",
         ],
       },
     ],
@@ -554,13 +466,7 @@ export const treatments: Treatment[] = [
       {
         title: "Hoe gebruik je de crème?",
         paragraphs: [
-          "Breng de crème dagelijks aan op een gereinigde huid en masseer zachtjes in tot de crème is opgenomen. Regelmatig gebruik ondersteunt een verzorgde en soepele huid.",
-        ],
-      },
-      {
-        title: "Wat kun je verwachten?",
-        paragraphs: [
-          "De crème is een verzorgend product voor thuis en vormt een eenvoudige aanvulling op je dagelijkse routine. Voor advies over de combinatie met behandelingen kun je altijd bij ons terecht.",
+          "Breng de crème dagelijks aan op een gereinigde huid en masseer zachtjes in. Voor advies over de combinatie met behandelingen kun je altijd bij ons terecht.",
         ],
       },
     ],
