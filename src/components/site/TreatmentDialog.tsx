@@ -12,7 +12,7 @@ type Props = {
 function List({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h4 className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">{title}</h4>
+      <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">{title}</h4>
       <ul className="mt-4 space-y-3">
         {items.map((item) => (
           <li key={item} className="flex gap-3 text-[0.925rem] leading-[1.75] text-foreground/80">
@@ -85,7 +85,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                   <div className="mt-10 max-w-2xl space-y-9">
                     {treatment.details.map((section) => (
                       <div key={section.title}>
-      <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">
+                        <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">
                           {section.title}
                         </h4>
                         {section.paragraphs?.map((paragraph) => (
