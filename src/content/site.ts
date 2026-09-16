@@ -364,7 +364,7 @@ export const treatments: Treatment[] = [
     image: tBallancerAsset.url,
     imageAlt: "Ontspannen benen onder een zachte deken in een warme behandelruimte",
     description:
-      "Een rustgevende behandeling met de Ballancer, waarbij je comfortabel ligt terwijl de behandeling zijn werk doet. De definitieve omschrijving wordt later aangeleverd.",
+      "De Ballancer 606 is een vorm van compressietherapie waarbij verschillende delen van het lichaam afwisselend worden samengedrukt. De behandeling stimuleert de bloed- en lymfecirculatie en kan helpen bij het afvoeren van overtollig vocht.",
     forWho: [
       "Je wilt een rustige, comfortabele behandeling",
       "Je combineert dit graag met een figuurbehandeling",
@@ -377,7 +377,28 @@ export const treatments: Treatment[] = [
       "Rustig nakomen met een glas water",
     ],
     expect: ["Zacht licht en rustige muziek", "Een comfortabele behandeling", "Tijd om na te komen"],
-    extra: "Duur, prijs en combinatiemogelijkheden worden later aangeleverd.",
+    extra:
+      "De Ballancer is niet alleen gericht op lichaamsverbetering, maar is ook een heerlijk ontspannend moment voor jezelf.",
+    details: [
+      {
+        title: "Hoe werkt de Ballancer?",
+        paragraphs: [
+          "Je neemt plaats in een speciaal pak waarin verschillende compressiezones zitten. Deze zones vullen zich achter elkaar met lucht, waardoor een aangename, ritmische druk ontstaat.",
+          "De behandeling voelt als een uitgebreide massage en wordt door veel mensen als zeer ontspannend ervaren.",
+        ],
+      },
+      {
+        title: "Waarvoor kan de Ballancer worden ingezet?",
+        list: [
+          "Stimulatie van de lymfecirculatie",
+          "Ondersteuning bij vochtophoping",
+          "Stimulatie van de bloedsomloop",
+          "Zware of vermoeide benen",
+          "Ontspanning na het sporten",
+          "Ondersteuning bij lichaamsbehandelingen",
+        ],
+      },
+    ],
   },
   {
     id: "vacu-step",
