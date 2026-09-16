@@ -81,6 +81,39 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                   ) : null}
                 </dl>
 
+                {treatment.details && treatment.details.length > 0 ? (
+                  <div className="mt-10 max-w-2xl space-y-9">
+                    {treatment.details.map((section) => (
+                      <div key={section.title}>
+                        <h4 className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">
+                          {section.title}
+                        </h4>
+                        {section.paragraphs?.map((paragraph) => (
+                          <p
+                            key={paragraph}
+                            className="mt-4 text-sm leading-relaxed text-muted-foreground"
+                          >
+                            {paragraph}
+                          </p>
+                        ))}
+                        {section.list ? (
+                          <ul className="mt-4 space-y-3">
+                            {section.list.map((item) => (
+                              <li
+                                key={item}
+                                className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                              >
+                                <Check className="mt-[0.2rem] size-3.5 shrink-0 text-gold" />
+                                <span>{item}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+
                 <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:gap-14">
                   <List
                     title={
