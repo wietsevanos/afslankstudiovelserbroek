@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import welkomAsset from "@/assets/welkom-studio.png.asset.json";
+import welkomAsset from "@/assets/welkom-studio-v2.png.asset.json";
 
 export function Intro() {
   return (
@@ -8,7 +8,7 @@ export function Intro() {
         <Reveal className="order-2 lg:order-1">
           <img
             src={welkomAsset.url}
-            alt="TC Cryo XL behandelapparaat naast een comfortabele behandelstoel in de studio"
+            alt="Artist impression van een vrouw in goud en zwart, in de huisstijl van de studio"
             loading="lazy"
             className="w-full rounded-sm object-cover shadow-[var(--shadow-soft)]"
           />
