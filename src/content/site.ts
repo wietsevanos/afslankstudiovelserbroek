@@ -176,7 +176,7 @@ export const treatments: Treatment[] = [
     image: tCryoAsset.url,
     imageAlt: "Zachte witte handdoeken in een rustige, crèmekleurige behandelruimte",
     description:
-      "Een behandeling met koudetechniek die gericht wordt ingezet op de zones die je wilt behandelen. Tijdens de intake bepalen we samen een passend plan. De definitieve omschrijving wordt later aangeleverd.",
+      "De TC Cryo is een medisch gecertificeerd apparaat dat gebruikmaakt van gecontroleerde temperatuurwisselingen. De behandeling kan worden ingezet voor verschillende lichaamszones en richt zich onder andere op lokale vetophopingen, huidverbetering en lichaamscontouring.",
     forWho: [
       "Je wilt gericht werken aan je figuur",
       "Je zoekt begeleiding met persoonlijke aandacht",
@@ -189,7 +189,36 @@ export const treatments: Treatment[] = [
       "Nazorg- en leefstijladvies",
     ],
     expect: ["Een persoonlijke intake", "Een rustige behandeling", "Advies voor de periode erna"],
-    extra: "Duur, prijs en het aantal aanbevolen behandelingen worden later aangeleverd.",
+    extra:
+      "Welke behandeling en intensiteit geschikt zijn, hangt af van het te behandelen gebied en jouw persoonlijke situatie. Tijdens een intake bespreken we jouw wensen en bekijken we welke behandeling het beste bij je past.",
+    details: [
+      {
+        title: "Hoe werkt TC Cryo?",
+        paragraphs: [
+          "Tijdens de behandeling wordt het te behandelen gebied afwisselend gekoeld en verwarmd. Door deze temperatuurwisselingen wordt het onderliggende weefsel gericht gestimuleerd.",
+          "De behandeling is niet-invasief en er zijn geen injecties of operaties nodig.",
+        ],
+      },
+      {
+        title: "Waarvoor kan TC Cryo worden ingezet?",
+        paragraphs: [
+          "De TC Cryo kan worden toegepast op verschillende lichaamsdelen en wordt onder andere gebruikt bij:",
+        ],
+        list: [
+          "Lokale vetophopingen",
+          "Lichaamscontouring",
+          "Cellulite",
+          "Huidverbetering",
+          "Ondersteuning van herstel en doorbloeding",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "Een behandeling duurt relatief kort en je kunt na afloop je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
+        ],
+      },
+    ],
   },
   {
     id: "tc-cryo-plus",
