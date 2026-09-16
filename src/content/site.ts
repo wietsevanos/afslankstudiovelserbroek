@@ -16,9 +16,14 @@ import tTanitaAsset from "@/assets/t-tanita.png.asset.json";
 import pBioHcgAsset from "@/assets/p-biohcg.png.asset.json";
 import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
 
-
 /** Groepen waarin de kaarten op de website worden verdeeld. */
 export type TreatmentGroupId = "beauty" | "afslanken" | "producten";
+
+export type TreatmentDetailSection = {
+  title: string;
+  paragraphs?: string[];
+  list?: string[];
+};
 
 export type Treatment = {
   id: string;
@@ -33,21 +38,10 @@ export type Treatment = {
   duration?: string;
   image: string;
   imageAlt: string;
+  /** Hoofdtekst in de popup. Meerdere alinea's scheiden met "\n\n". */
   description: string;
-  forWho: string[];
-  expect: string[];
-  /** Wat de behandeling inhoudt — stap voor stap. */
-  includes: string[];
-  /** Optionele aanvullende informatie (voorwaarden, tips, opmerkingen). */
-  extra?: string;
-  /** Uitgebreide tekstsecties in de popup (optioneel). */
-  details?: TreatmentDetailSection[];
-};
-
-export type TreatmentDetailSection = {
-  title: string;
-  paragraphs?: string[];
-  list?: string[];
+  /** Uitgebreide tekstsecties in de popup. */
+  details: TreatmentDetailSection[];
 };
 
 export const treatmentGroups: { id: TreatmentGroupId; label: string; intro?: string }[] = [
@@ -76,37 +70,29 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "Led facial",
     category: "Beauty",
-    short: "Een rustige gezichtsbehandeling met ledlicht, afgestemd op jouw huid.",
+    short: "Complete gezichtsbehandeling voor huidverbetering",
     image: ledFacialAsset.url,
     imageAlt: "Vrouw ontspannen tijdens een led facial behandeling in een luxe studio",
     description:
-      "De Hydrogen LED Facial combineert meerdere technieken in één uitgebreide gezichtsbehandeling, gericht op een grondig gereinigde, verzorgde en stralende huid. Afhankelijk van jouw huid en wensen kunnen verschillende technieken worden gecombineerd.",
-    forWho: [
-      "Je wilt je huid verzorgen en verwennen",
-      "Je zoekt een rustige behandeling zonder hersteltijd",
-      "Je wilt persoonlijk advies over je huid",
-    ],
-    includes: [
-      "Korte huidanalyse en wensen bespreken",
-      "Reiniging van de huid",
-      "Behandeling met ledlicht",
-      "Afsluitende verzorging en advies",
-    ],
-    expect: [
-      "Een rustige behandelruimte",
-      "Een behandeling op maat",
-      "Advies over verzorging thuis",
-    ],
-    extra:
-      "Na de behandeling voelt de huid doorgaans schoon, verzorgd en fris aan. De combinatie van technieken maakt deze behandeling geschikt wanneer je jouw huid een extra boost wilt geven.",
+      "De Hydrogen LED Facial combineert meerdere technieken in één uitgebreide gezichtsbehandeling. De behandeling is gericht op een grondig gereinigde, verzorgde en stralende huid.\n\nAfhankelijk van jouw huid en wensen kunnen verschillende technieken worden gecombineerd.",
     details: [
       {
-        title: "Mogelijke technieken",
+        title: "De behandeling",
+        paragraphs: ["De Hydrogen LED Facial kan verschillende technieken bevatten, waaronder:"],
         list: [
-          "Hydro dermabrasie voor een intensieve reiniging",
-          "Skin scrubber en water oxygen spray",
-          "Radio frequency en ultrasound",
-          "LED lichttherapie en een verkoelende afsluiting",
+          "Hydro dermabrasie — een intensieve reiniging waarbij de huid wordt gereinigd en verzorgd.",
+          "Skin scrubber — een behandeling met ultrasone trillingen die helpt bij het reinigen en verzorgen van de huid.",
+          "Water oxygen spray — een zachte behandeling die vooral prettig kan zijn voor een gevoelige of vochtarme huid.",
+          "Ultrasound — maakt gebruik van hoogfrequente geluidsgolven en kan worden ingezet om verzorgende werkstoffen te ondersteunen.",
+          "Radio frequency — gebruikt radiofrequente energie om warmte in de huidlagen op te wekken. Dit wordt toegepast voor huidverzorging en het ondersteunen van een stevigere uitstraling.",
+          "LED lichttherapie — verschillende kleuren LED licht worden gebruikt voor verschillende huiddoelen. De gekozen kleur en toepassing worden afgestemd op de huid.",
+          "Koude hamer — een verkoelende behandeling die de huid na de andere technieken helpt kalmeren.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "Na de behandeling voelt de huid doorgaans schoon, verzorgd en fris aan. De combinatie van technieken maakt de Hydrogen LED Facial geschikt als uitgebreide behandeling wanneer je jouw huid een extra boost wilt geven.",
         ],
       },
     ],
@@ -117,34 +103,22 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "PDRN meso cocktail",
     category: "Beauty",
-    short: "Een verfijnde huidbehandeling met een meso cocktail, gericht op huidverzorging.",
+    short: "Huidverzorging met een meso cocktail met PDRN",
     image: pdrnAsset.url,
     imageAlt: "Meso PDRN cocktail ampullen voor een luxe huidbehandeling",
     description:
-      "Een verfijnde huidbehandeling waarbij een meso cocktail met PDRN wordt gebruikt. PDRN (polydeoxyribonucleotide) is een werkstof die in de huidverzorging wordt toegepast ter ondersteuning van de huidkwaliteit. Tijdens de intake bespreken we of deze behandeling bij jouw huid en wensen past.",
-    forWho: [
-      "Je wilt je huid gericht laten verzorgen",
-      "Je zoekt een behandeling met persoonlijke begeleiding",
-      "Je wilt eerst rustig advies voordat je start",
-    ],
-    includes: [
-      "Intake en huidanalyse",
-      "Voorbereiding en reiniging van de huid",
-      "De behandeling met de meso cocktail",
-      "Nazorgadvies",
-    ],
-    expect: [
-      "Een persoonlijke intake",
-      "Een zorgvuldige behandeling",
-      "Duidelijke uitleg over de nazorg",
-    ],
-    extra:
-      "De behandeling wordt altijd voorafgegaan door een intake en huidanalyse. Welke aanpak past, hangt af van jouw huidconditie en wensen.",
+      "Een huidbehandeling waarbij een meso cocktail met PDRN (polydeoxyribonucleotide) wordt gebruikt. PDRN is een werkstof die in de huidverzorging wordt toegepast ter ondersteuning van de huidkwaliteit.",
     details: [
       {
         title: "Hoe werkt de behandeling?",
         paragraphs: [
-          "Na reiniging wordt de meso cocktail met PDRN zorgvuldig op de huid aangebracht. Voor een optimaal resultaat kan een kuur van meerdere behandelingen worden geadviseerd.",
+          "Na reiniging van de huid wordt de meso cocktail zorgvuldig aangebracht. De behandeling wordt altijd voorafgegaan door een intake en huidanalyse, zodat de aanpak wordt afgestemd op jouw huidconditie en wensen.",
+        ],
+      },
+      {
+        title: "Goed om te weten",
+        paragraphs: [
+          "Voor een optimaal resultaat kan een kuur van meerdere behandelingen worden geadviseerd. Tijdens een intake bespreken we of deze behandeling bij jouw huid en wensen past.",
         ],
       },
     ],
@@ -157,35 +131,38 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "TC Cryo",
     category: "Afslanken",
-    short: "Een figuurbehandeling met koudetechniek, gericht op specifieke zones.",
+    short: "Gerichte lichaamsbehandeling met temperatuurwisselingen",
     image: tCryoAsset.url,
     imageAlt: "Zachte witte handdoeken in een rustige, crèmekleurige behandelruimte",
     description:
       "De TC Cryo is een medisch gecertificeerd apparaat dat gebruikmaakt van gecontroleerde temperatuurwisselingen. De behandeling kan worden ingezet voor verschillende lichaamszones en richt zich onder andere op lokale vetophopingen, huidverbetering en lichaamscontouring.",
-    forWho: [
-      "Je wilt gericht werken aan je figuur",
-      "Je zoekt begeleiding met persoonlijke aandacht",
-      "Je wilt eerst een intake en advies",
-    ],
-    includes: [
-      "Intakegesprek en doelen bespreken",
-      "Metingen en een behandelplan",
-      "De behandeling zelf, rustig en op jouw tempo",
-      "Nazorg- en leefstijladvies",
-    ],
-    expect: ["Een persoonlijke intake", "Een rustige behandeling", "Advies voor de periode erna"],
-    extra:
-      "Welke behandeling en intensiteit geschikt zijn, hangt af van het te behandelen gebied en jouw persoonlijke situatie. Tijdens een intake bespreken we jouw wensen en bekijken we welke behandeling het beste bij je past.",
     details: [
       {
         title: "Hoe werkt TC Cryo?",
         paragraphs: [
-          "Het te behandelen gebied wordt afwisselend gekoeld en verwarmd, waardoor het onderliggende weefsel gericht wordt gestimuleerd. Niet-invasief, zonder injecties of operaties.",
+          "Tijdens de behandeling wordt het te behandelen gebied afwisselend gekoeld en verwarmd. Door deze temperatuurwisselingen wordt het onderliggende weefsel gericht gestimuleerd.",
+          "De behandeling is niet-invasief en er zijn geen injecties of operaties nodig.",
         ],
       },
       {
-        title: "Inzetbaar bij",
-        list: ["Lokale vetophopingen", "Lichaamscontouring", "Cellulite", "Huidverbetering"],
+        title: "Waarvoor kan TC Cryo worden ingezet?",
+        paragraphs: [
+          "De TC Cryo kan worden toegepast op verschillende lichaamsdelen en wordt onder andere gebruikt bij:",
+        ],
+        list: [
+          "lokale vetophopingen",
+          "lichaamscontouring",
+          "cellulite",
+          "huidverbetering",
+          "ondersteuning van herstel en doorbloeding",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "Een behandeling duurt relatief kort en je kunt na afloop je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
+          "Welke behandeling en intensiteit geschikt zijn, hangt af van het te behandelen gebied en jouw persoonlijke situatie. Tijdens een intake bespreken we jouw wensen en bekijken we welke behandeling het beste bij je past.",
+        ],
       },
     ],
   },
@@ -195,34 +172,33 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "TC Cryo Plus",
     category: "Afslanken",
-    short: "De uitgebreide variant van de TC Cryo behandeling.",
+    short: "De uitgebreide variant van de TC Cryo behandeling",
     image: tCryoPlusAsset.url,
     imageAlt: "Behandelbank met crèmekleurige handdoeken en een modern behandelapparaat",
     description:
-      "De TC Cryo Plus is de uitgebreidere variant van de TC Cryo behandeling, met dezelfde gecontroleerde temperatuurwisselingen maar met meer mogelijkheden qua zones en intensiteit. Tijdens de intake bespreken we welke variant het beste bij jouw wensen past.",
-    forWho: [
-      "Je wilt een uitgebreider traject",
-      "Je hebt meerdere zones die je wilt behandelen",
-      "Je zoekt begeleiding van begin tot eind",
-    ],
-    includes: [
-      "Intakegesprek en doelen bespreken",
-      "Metingen en een behandelplan",
-      "De uitgebreide behandeling",
-      "Nazorg- en leefstijladvies",
-    ],
-    expect: [
-      "Een persoonlijke intake",
-      "Een uitgebreidere behandeling",
-      "Begeleiding tijdens het traject",
-    ],
-    extra:
-      "De TC Cryo Plus is niet-invasief; er zijn geen injecties of operaties nodig. Welke instellingen geschikt zijn, hangt af van het gebied en jouw persoonlijke situatie.",
+      "De TC Cryo Plus werkt met dezelfde gecontroleerde temperatuurwisselingen als de TC Cryo, maar biedt ruimere mogelijkheden qua zones en intensiteit. De behandeling is niet-invasief; er zijn geen injecties of operaties nodig.",
     details: [
       {
         title: "Hoe werkt TC Cryo Plus?",
         paragraphs: [
-          "Dezelfde temperatuurwisselingen als de TC Cryo, met ruimere mogelijkheden voor grotere of meerdere zones. Na afloop kun je je dagelijkse activiteiten doorgaans hervatten.",
+          "Tijdens de behandeling wordt het te behandelen gebied afwisselend gekoeld en verwarmd, waardoor het onderliggende weefsel gericht wordt gestimuleerd. Door de uitgebreidere opzet kunnen grotere of meerdere zones in één behandeling worden meegenomen.",
+        ],
+      },
+      {
+        title: "Waarvoor kan TC Cryo Plus worden ingezet?",
+        list: [
+          "lokale vetophopingen",
+          "lichaamscontouring",
+          "cellulite",
+          "huidverbetering",
+          "versteviging van de huid",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "Je kunt na afloop je dagelijkse activiteiten doorgaans weer hervatten. Voor een optimaal resultaat kan een behandelkuur worden geadviseerd.",
+          "Welke instellingen en intensiteit geschikt zijn, hangt af van het te behandelen gebied en jouw persoonlijke situatie. Tijdens een intake bespreken we welke variant het beste bij jouw wensen past.",
         ],
       },
     ],
@@ -233,35 +209,30 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "EMS Bodysculpting Pro",
     category: "Afslanken",
-    short: "Een bodysculpting behandeling waarbij de spieren worden geactiveerd.",
+    short: "Intensieve spierbehandeling voor een strakker lichaam",
     image: tEmsAsset.url,
     imageAlt: "EMS-pads op de buik tijdens een behandeling in een warme, rustige studio",
     description:
-      "Wil je je buik, billen, benen of armen extra verstevigen en meer vorm geven? Met BodySculpting PRO worden de spieren intensief gestimuleerd door middel van krachtige elektromagnetische pulsen — vergelijkbaar met spiercontracties tijdens een intensieve training.",
-    forWho: [
-      "Je wilt aan je lichaam werken met begeleiding",
-      "Je zoekt een behandeling die je rustig ondergaat",
-      "Je combineert dit graag met andere behandelingen",
-    ],
-    includes: [
-      "Intake en doelen bespreken",
-      "Plaatsing van de applicators",
-      "De behandeling in een opgebouwd programma",
-      "Advies voor de periode erna",
-    ],
-    expect: ["Een persoonlijke intake", "Een comfortabele behandeling", "Advies op maat"],
-    extra:
-      "Het uiteindelijke resultaat verschilt per persoon en is onder andere afhankelijk van je uitgangssituatie en leefstijl. BodySculpting PRO is een mooie aanvulling op een gezonde leefstijl en regelmatige beweging.",
+      "Wil je je buik, billen, benen of armen extra verstevigen en meer vorm geven? Met BodySculpting PRO worden de spieren intensief gestimuleerd door middel van krachtige elektromagnetische pulsen.\n\nDe behandeling is gericht op spiercontracties die je normaal gesproken tijdens een intensieve training uitvoert.",
     details: [
       {
         title: "Hoe werkt BodySculpting PRO?",
         paragraphs: [
-          "Applicatoren stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor ze herhaaldelijk samentrekken — zonder dat je zelf actief beweegt.",
+          "Tijdens de behandeling worden speciale applicatoren op het te behandelen lichaamsdeel geplaatst. Deze stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor de spieren herhaaldelijk samentrekken.",
+          "Hierdoor worden de spieren intensief geactiveerd, zonder dat je zelf actief hoeft te bewegen.",
         ],
       },
       {
-        title: "Behandelbare zones",
-        list: ["Buik", "Billen", "Benen", "Armen"],
+        title: "Welke lichaamsdelen kunnen worden behandeld?",
+        paragraphs: ["BodySculpting PRO kan worden ingezet voor:"],
+        list: ["buik", "billen", "benen", "armen"],
+      },
+      {
+        title: "Wanneer zie je resultaat?",
+        paragraphs: [
+          "Na een behandeling kan het behandelde gebied direct anders aanvoelen. Voor zichtbare resultaten zijn meerdere behandelingen nodig. Het uiteindelijke resultaat verschilt per persoon en is onder andere afhankelijk van je uitgangssituatie en leefstijl.",
+          "De behandeling kan worden gebruikt om spieren te verstevigen en het lichaam meer vorm te geven. BodySculpting PRO is een mooie aanvulling op een gezonde leefstijl en regelmatige beweging.",
+        ],
       },
     ],
   },
@@ -271,30 +242,34 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "Starvac",
     category: "Afslanken",
-    short: "Een vacuümmassage behandeling voor lichaam en huid.",
+    short: "Lichaamsbehandeling met vacuümtechniek",
     image: tStarvacAsset.url,
     imageAlt: "Handstuk van een vacuümmassage-apparaat tijdens een beenbehandeling",
     description:
       "De Starvac UX 100 is een lichaamsbehandeling waarbij gebruik wordt gemaakt van vacuümtechnologie en massage. De behandeling stimuleert de doorbloeding van het behandelde gebied en kan worden ingezet bij lokale vetophopingen en cellulite.",
-    forWho: [
-      "Je wilt je lichaam laten verzorgen",
-      "Je zoekt een behandeling gericht op huid en figuur",
-      "Je wilt eerst advies over de mogelijkheden",
-    ],
-    includes: [
-      "Intake en wensen bespreken",
-      "De vacuümmassage van de gekozen zones",
-      "Aandacht voor tempo en intensiteit",
-      "Afsluitend advies",
-    ],
-    expect: ["Een rustige behandeling", "Aandacht voor jouw comfort", "Advies voor thuis"],
-    extra:
-      "Een behandelplan wordt afgestemd op jouw wensen en het gebied dat je wilt laten behandelen.",
     details: [
       {
         title: "Hoe werkt de Starvac?",
         paragraphs: [
-          "Met gecontroleerde vacuümdruk worden huid en weefsel gemasseerd, waardoor de lokale doorbloeding wordt gestimuleerd. Inzetbaar op verschillende lichaamszones.",
+          "Tijdens de behandeling wordt met gecontroleerde vacuümdruk op het weefsel gewerkt. Hierdoor worden de huid en het onderliggende weefsel gemasseerd en wordt de lokale circulatie gestimuleerd.",
+          "De behandeling kan worden toegepast op verschillende lichaamszones.",
+        ],
+      },
+      {
+        title: "Waarvoor wordt de Starvac gebruikt?",
+        paragraphs: ["De Starvac UX 100 wordt onder andere ingezet voor:"],
+        list: [
+          "lokale vetophopingen",
+          "cellulite",
+          "huidverbetering",
+          "stimulatie van de doorbloeding",
+          "lichaamscontouring",
+        ],
+      },
+      {
+        title: "Goed om te weten",
+        paragraphs: [
+          "Een behandelplan wordt afgestemd op jouw wensen en het gebied dat je wilt laten behandelen.",
         ],
       },
     ],
@@ -305,30 +280,35 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "Ballancer lymfedrainage",
     category: "Afslanken",
-    short: "Een rustgevende drainagebehandeling met de Ballancer.",
+    short: "Compressietherapie voor een ontspannen en licht gevoel",
     image: tBallancerAsset.url,
     imageAlt: "Ontspannen benen onder een zachte deken in een warme behandelruimte",
     description:
-      "De Ballancer 606 is een vorm van compressietherapie waarbij verschillende delen van het lichaam afwisselend worden samengedrukt. De behandeling stimuleert de bloed- en lymfecirculatie en kan helpen bij het afvoeren van overtollig vocht.",
-    forWho: [
-      "Je wilt een rustige, comfortabele behandeling",
-      "Je combineert dit graag met een figuurbehandeling",
-      "Je zoekt een moment voor jezelf",
-    ],
-    includes: [
-      "Kort gesprek over jouw wensen",
-      "De behandeling met de Ballancer",
-      "Aandacht voor comfort en tempo",
-      "Rustig nakomen met een glas water",
-    ],
-    expect: ["Zacht licht en rustige muziek", "Een comfortabele behandeling", "Tijd om na te komen"],
-    extra:
-      "De Ballancer is niet alleen gericht op lichaamsverbetering, maar is ook een heerlijk ontspannend moment voor jezelf.",
+      "De Ballancer 606 is een vorm van compressietherapie waarbij verschillende delen van het lichaam afwisselend worden samengedrukt.\n\nDe behandeling stimuleert de bloed- en lymfecirculatie en kan helpen bij het afvoeren van overtollig vocht.",
     details: [
       {
         title: "Hoe werkt de Ballancer?",
         paragraphs: [
-          "Je neemt plaats in een speciaal pak waarvan de compressiezones zich ritmisch met lucht vullen. Het voelt als een uitgebreide massage en wordt als zeer ontspannend ervaren.",
+          "Je neemt plaats in een speciaal pak waarin verschillende compressiezones zitten. Deze zones vullen zich achter elkaar met lucht, waardoor een aangename, ritmische druk ontstaat.",
+          "De behandeling voelt als een uitgebreide massage en wordt door veel mensen als zeer ontspannend ervaren.",
+        ],
+      },
+      {
+        title: "Waarvoor kan de Ballancer worden ingezet?",
+        paragraphs: ["De Ballancer kan onder andere worden gebruikt voor:"],
+        list: [
+          "stimulatie van de lymfecirculatie",
+          "ondersteuning bij vochtophoping",
+          "stimulatie van de bloedsomloop",
+          "zware of vermoeide benen",
+          "ontspanning na het sporten",
+          "ondersteuning bij lichaamsbehandelingen",
+        ],
+      },
+      {
+        title: "Goed om te weten",
+        paragraphs: [
+          "De Ballancer is daarmee niet alleen gericht op lichaamsverbetering, maar is ook een heerlijk ontspannend moment voor jezelf.",
         ],
       },
     ],
@@ -339,30 +319,23 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "Vacu step",
     category: "Afslanken",
-    short: "Rustig bewegen in de Vacu step, onder persoonlijke begeleiding.",
+    short: "Bewegen in een gecontroleerde vacuümomgeving",
     image: tVacustepAsset.url,
     imageAlt: "Modern stepapparaat in een lichte studio met eikenhouten vloer",
     description:
-      "De Vacustep combineert actief bewegen met vacuümtechnologie. Tijdens de behandeling wandel je op een speciaal apparaat terwijl het onderlichaam zich in een gecontroleerde vacuümruimte bevindt. De behandeling richt zich voornamelijk op de buik, billen en benen.",
-    forWho: [
-      "Je wilt rustig en begeleid bewegen",
-      "Je combineert dit graag met een behandeltraject",
-      "Je wilt eerst uitleg en advies",
-    ],
-    includes: [
-      "Intake en uitleg over het apparaat",
-      "Instellen op jouw niveau",
-      "De sessie onder begeleiding",
-      "Advies voor het vervolg",
-    ],
-    expect: ["Duidelijke uitleg", "Begeleiding tijdens de sessie", "Een sessie in jouw tempo"],
-    extra:
-      "De intensiteit en duur van de behandeling worden afgestemd op jouw conditie en persoonlijke doelen.",
+      "De Vacustep combineert actief bewegen met vacuümtechnologie. Tijdens de behandeling wandel je op een speciaal apparaat terwijl het onderlichaam zich in een gecontroleerde vacuümruimte bevindt.\n\nDe behandeling richt zich voornamelijk op de buik, billen en benen.",
     details: [
       {
         title: "Hoe werkt Vacustep?",
         paragraphs: [
-          "Je wandelt op een speciaal apparaat terwijl het onderlichaam zich in een gecontroleerde vacuümruimte bevindt. Zo combineer je bewegen met stimulatie van de doorbloeding.",
+          "Het vacuüm stimuleert de doorbloeding van het behandelde gebied terwijl je tegelijkertijd actief beweegt. Hierdoor ontstaat een combinatie van beweging en vacuümstimulatie.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "De Vacustep is geschikt voor mensen die gericht aan hun conditie en lichaamsvorm willen werken. Regelmatige behandelingen kunnen worden gecombineerd met gezonde voeding en voldoende beweging.",
+          "De intensiteit en duur van de behandeling worden afgestemd op jouw conditie en persoonlijke doelen.",
         ],
       },
     ],
@@ -373,30 +346,23 @@ export const treatments: Treatment[] = [
     kind: "behandeling",
     name: "Tanita weegschaal",
     category: "Afslanken",
-    short: "Een meting met de Tanita weegschaal als vertrekpunt van je traject.",
+    short: "Inzicht in je lichaamssamenstelling",
     image: tTanitaAsset.url,
     imageAlt: "Elegante witte weegschaal op een eikenhouten vloer in een lichte ruimte",
     description:
-      "Alleen je gewicht vertelt niet het hele verhaal. Met een Tanita lichaamsanalyse krijg je meer inzicht in de samenstelling van je lichaam — naast je gewicht kan een meting onder andere inzicht geven in je vetmassa en spiermassa.",
-    forWho: [
-      "Je wilt je voortgang inzichtelijk maken",
-      "Je start met een behandeltraject",
-      "Je wilt een duidelijk vertrekpunt",
-    ],
-    includes: [
-      "Uitleg over de meting",
-      "De meting zelf",
-      "Bespreken van de uitkomsten",
-      "Vastleggen als vertrekpunt van jouw traject",
-    ],
-    expect: ["Een korte, zorgvuldige meting", "Rustige uitleg", "Inzicht in jouw vertrekpunt"],
-    extra:
-      "Zo kijk je niet alleen naar het getal op de weegschaal, maar naar het grotere geheel. Wordt vaak gecombineerd met een intake of behandeltraject.",
+      "Alleen je gewicht vertelt niet het hele verhaal. Met een Tanita lichaamsanalyse krijg je meer inzicht in de samenstelling van je lichaam.\n\nNaast je gewicht kan een meting onder andere inzicht geven in je vetmassa en spiermassa.",
     details: [
       {
         title: "Waarom een lichaamsanalyse?",
         paragraphs: [
-          "Naast je gewicht geeft een meting inzicht in onder andere je vet- en spiermassa. Zo heb je een duidelijk vertrekpunt en kun je je voortgang volgen.",
+          "Een lichaamsanalyse is vooral interessant wanneer je bezig bent met afvallen, fitter worden of je lichaamssamenstelling wilt verbeteren.",
+          "Door metingen op verschillende momenten met elkaar te vergelijken, kun je beter zien welke veranderingen er plaatsvinden.",
+        ],
+      },
+      {
+        title: "Een handig startpunt",
+        paragraphs: [
+          "De Tanita meting kan worden gebruikt als uitgangspunt voor een persoonlijk traject en om je voortgang gedurende een behandeling of leefstijlverandering te volgen. Zo kijk je niet alleen naar het getal op de weegschaal, maar naar het grotere geheel.",
         ],
       },
     ],
@@ -409,30 +375,31 @@ export const treatments: Treatment[] = [
     kind: "product",
     name: "Bio HCG afslankkuur",
     category: "Product",
-    short: "Een kuur die je traject thuis ondersteunt, met begeleiding vanuit de studio.",
+    short: "Persoonlijke begeleiding bij afvallen",
     image: pBioHcgAsset.url,
     imageAlt: "Beter in Balans Bio HCG afslankkuur verpakking met tabletten",
     description:
-      "De Bio HCG+ afslankkuur is een afslankprogramma waarbij een caloriearm voedingsprogramma centraal staat. Tijdens de kuur volg je een vooraf opgesteld voedingsschema en wordt je voortgang begeleid.",
-    forWho: [
-      "Je volgt een traject in de studio",
-      "Je wilt thuis ondersteuning bij je traject",
-      "Je wilt begeleiding en uitleg",
-    ],
-    includes: [
-      "Uitleg over de kuur",
-      "Persoonlijk gebruiksadvies",
-      "Begeleiding tijdens de kuur",
-      "Evaluatie en vervolgadvies",
-    ],
-    expect: ["Duidelijke uitleg", "Persoonlijke begeleiding", "Advies op maat"],
-    extra:
-      "Afvallen is afhankelijk van meerdere factoren, waaronder voeding, beweging en leefstijl. Resultaten verschillen daarom per persoon. Wil je weten of deze kuur bij jou past? Tijdens een kennismaking bespreken we jouw wensen en situatie.",
+      "De Bio HCG+ afslankkuur is een afslankprogramma waarbij een caloriearm voedingsprogramma centraal staat.\n\nTijdens de kuur volg je een vooraf opgesteld voedingsschema en wordt je voortgang begeleid.",
     details: [
       {
         title: "Hoe werkt de kuur?",
         paragraphs: [
-          "De kuur draait om een caloriearm voedingsprogramma met duidelijke richtlijnen. Je wordt begeleid en de Tanita meting kan je voortgang inzichtelijk maken.",
+          "De aanpak draait voornamelijk om een gecontroleerde calorie-inname en duidelijke voedingsrichtlijnen. Het doel is om op een gestructureerde manier gewicht te verliezen.",
+          "Tijdens het traject is het belangrijk om de voorgeschreven voedingsrichtlijnen goed te volgen en voldoende aandacht te besteden aan je dagelijkse leefstijl.",
+        ],
+      },
+      {
+        title: "Persoonlijke begeleiding",
+        paragraphs: [
+          "Iedereen begint vanuit een andere situatie. Daarom wordt tijdens het traject gekeken naar jouw doelstellingen en voortgang.",
+          "De Tanita lichaamsanalyse kan hierbij eventueel worden gebruikt om veranderingen in je lichaamssamenstelling inzichtelijk te maken.",
+        ],
+      },
+      {
+        title: "Belangrijk om te weten",
+        paragraphs: [
+          "Afvallen is uiteindelijk afhankelijk van meerdere factoren, waaronder voeding, beweging en leefstijl. Resultaten verschillen daarom per persoon.",
+          "Wil je weten of deze afslankkuur bij jou past? Tijdens een kennismaking kunnen we jouw wensen en situatie bespreken.",
         ],
       },
     ],
@@ -443,30 +410,22 @@ export const treatments: Treatment[] = [
     kind: "product",
     name: "Redulastique slimming crème",
     category: "Product",
-    short: "Een verzorgende crème voor het lichaam, voor dagelijks gebruik thuis.",
+    short: "Verzorgende lichaamscrème voor dagelijks gebruik",
     image: pRedulastiqueAsset.url,
     imageAlt: "Redulastique slimming en firming gel tube met hyaluron booster",
     description:
       "Redulastique is een verzorgende crème voor het lichaam, bedoeld voor dagelijks gebruik thuis. De formule met onder andere hyaluronzuur ondersteunt de dagelijkse verzorging van de huid, bijvoorbeeld als aanvulling op een behandeltraject in de studio.",
-    forWho: [
-      "Je wilt je huid thuis verzorgen",
-      "Je volgt een behandeltraject",
-      "Je zoekt een eenvoudige dagelijkse routine",
-    ],
-    includes: [
-      "Uitleg over het product",
-      "Advies over de juiste toepassing",
-      "Afstemming op jouw huid",
-      "Vervolgadvies",
-    ],
-    expect: ["Persoonlijk advies", "Uitleg over het gebruik", "Een eenvoudige routine"],
-    extra:
-      "Wij adviseren je graag over de juiste toepassing, afgestemd op jouw huid en behandeltraject. Vraag ernaar tijdens je behandeling of intake.",
     details: [
       {
         title: "Hoe gebruik je de crème?",
         paragraphs: [
-          "Breng de crème dagelijks aan op een gereinigde huid en masseer zachtjes in. Voor advies over de combinatie met behandelingen kun je altijd bij ons terecht.",
+          "Breng de crème dagelijks aan op een gereinigde huid en masseer zachtjes in. De crème is eenvoudig te combineren met een behandeltraject in de studio.",
+        ],
+      },
+      {
+        title: "Goed om te weten",
+        paragraphs: [
+          "Wij adviseren je graag over de juiste toepassing, afgestemd op jouw huid en eventueel behandeltraject. Vraag ernaar tijdens je behandeling of intake.",
         ],
       },
     ],
