@@ -1,7 +1,23 @@
-import { Instagram, Facebook, Image as ImageIcon } from "lucide-react";
+import { Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 import { contact } from "@/content/site";
+
+import instagram1 from "@/assets/instagram-1.png.asset.json";
+import instagram2 from "@/assets/instagram-2.png.asset.json";
+import instagram3 from "@/assets/instagram-3.png.asset.json";
+import instagram4 from "@/assets/instagram-4.png.asset.json";
+import instagram5 from "@/assets/instagram-5.png.asset.json";
+import instagram6 from "@/assets/instagram-6.png.asset.json";
+
+const posts = [
+  { src: instagram1.url, alt: "Winactie: maak kans op 3 gratis behandelingen" },
+  { src: instagram2.url, alt: "Vrijdag is de dag — na 27 jaar zaak verkocht" },
+  { src: instagram3.url, alt: "Open dagen september: gratis intakegesprek en BMI-meting" },
+  { src: instagram4.url, alt: "Na-zomer actie: 10 kilo kwijt in 6 weken tijd" },
+  { src: instagram5.url, alt: "Kleurrijke studio-inrichting" },
+  { src: instagram6.url, alt: "WK-kortingen op afslankbehandelingen" },
+];
 
 export function Social() {
   return (
@@ -29,17 +45,27 @@ export function Social() {
         </Reveal>
 
         <ul className="mt-14 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <Reveal as="li" key={i} delay={i * 70}>
-              <div className="flex aspect-square items-center justify-center rounded-sm border border-border/70 bg-sand/60 transition-colors duration-500 hover:border-gold/40">
-                <ImageIcon className="size-5 text-muted-foreground/60" strokeWidth={1.2} />
-              </div>
+          {posts.map((post, i) => (
+            <Reveal as="li" key={post.src} delay={i * 70}>
+              <a
+                href={contact.instagram}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group block overflow-hidden rounded-sm border border-border/70 transition-colors duration-500 hover:border-gold/40"
+              >
+                <img
+                  src={post.src}
+                  alt={post.alt}
+                  loading="lazy"
+                  className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                />
+              </a>
             </Reveal>
           ))}
         </ul>
         <Reveal delay={120}>
           <p className="mt-6 text-center text-xs tracking-[0.16em] text-muted-foreground uppercase">
-            Instagram preview — hier komt later echte content
+            Hier komt later...
           </p>
         </Reveal>
       </div>
