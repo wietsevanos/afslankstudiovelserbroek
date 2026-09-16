@@ -64,22 +64,24 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                   {treatment.description}
                 </DialogDescription>
 
-                <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-y border-border/70 py-5 text-sm">
-                  {treatment.duration ? (
-                    <div className="flex items-center gap-2.5">
-                      <Clock className="size-4 text-gold" />
-                      <dt className="sr-only">Duur</dt>
-                      <dd className="text-foreground">{treatment.duration}</dd>
-                    </div>
-                  ) : null}
-                  {treatment.price ? (
-                    <div className="flex items-center gap-2.5">
-                      <Tag className="size-4 text-gold" />
-                      <dt className="sr-only">Prijs</dt>
-                      <dd className="text-foreground">{treatment.price}</dd>
-                    </div>
-                  ) : null}
-                </dl>
+                {treatment.duration || treatment.price ? (
+                  <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-y border-border/70 py-5 text-sm">
+                    {treatment.duration ? (
+                      <div className="flex items-center gap-2.5">
+                        <Clock className="size-4 text-gold" />
+                        <dt className="sr-only">Duur</dt>
+                        <dd className="text-foreground">{treatment.duration}</dd>
+                      </div>
+                    ) : null}
+                    {treatment.price ? (
+                      <div className="flex items-center gap-2.5">
+                        <Tag className="size-4 text-gold" />
+                        <dt className="sr-only">Prijs</dt>
+                        <dd className="text-foreground">{treatment.price}</dd>
+                      </div>
+                    ) : null}
+                  </dl>
+                ) : null}
 
                 {treatment.details && treatment.details.length > 0 ? (
                   <div className="mt-10 max-w-2xl space-y-9">
