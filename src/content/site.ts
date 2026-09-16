@@ -80,7 +80,7 @@ export const treatments: Treatment[] = [
     image: ledFacialAsset.url,
     imageAlt: "Vrouw ontspannen tijdens een led facial behandeling in een luxe studio",
     description:
-      "Een gezichtsbehandeling waarbij ledlicht wordt gecombineerd met een zorgvuldige verzorging van de huid. De behandeling wordt rustig en op jouw tempo uitgevoerd. De definitieve omschrijving wordt later aangeleverd.",
+      "De Hydrogen LED Facial combineert meerdere technieken in één uitgebreide gezichtsbehandeling, gericht op een grondig gereinigde, verzorgde en stralende huid. Afhankelijk van jouw huid en wensen kunnen verschillende technieken worden gecombineerd.",
     forWho: [
       "Je wilt je huid verzorgen en verwennen",
       "Je zoekt een rustige behandeling zonder hersteltijd",
@@ -97,7 +97,28 @@ export const treatments: Treatment[] = [
       "Een behandeling op maat",
       "Advies over verzorging thuis",
     ],
-    extra: "Duur, prijs en aantal aanbevolen behandelingen worden later aangeleverd.",
+    extra:
+      "Na de behandeling voelt de huid doorgaans schoon, verzorgd en fris aan. De combinatie van technieken maakt deze behandeling geschikt wanneer je jouw huid een extra boost wilt geven.",
+    details: [
+      {
+        title: "De behandeling kan verschillende technieken bevatten",
+        list: [
+          "Hydro Dermabrasie — een intensieve reiniging waarbij de huid wordt gereinigd en verzorgd",
+          "Skin Scrubber — ultrasone trillingen die helpen bij het reinigen en verzorgen van de huid",
+          "Water Oxygen Spray — een zachte behandeling, prettig voor een gevoelige of vochtarme huid",
+          "Ultrasound — hoogfrequente geluidsgolven die verzorgende werkstoffen ondersteunen",
+          "Radio Frequency — warmte in de huidlagen, toegepast voor huidverzorging en een stevigere uitstraling",
+          "LED lichttherapie — verschillende kleuren licht voor verschillende huiddoelen",
+          "Koude Hamer — een verkoelende afsluiting die de huid helpt kalmeren",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "De gekozen technieken en toepassingen worden afgestemd op jouw huid. De behandeling is een uitgebreide gezichtsbehandeling wanneer je jouw huid een extra boost wilt geven.",
+        ],
+      },
+    ],
   },
   {
     id: "pdrn-meso-cocktail",
