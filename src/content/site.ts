@@ -450,7 +450,7 @@ export const treatments: Treatment[] = [
     image: tTanitaAsset.url,
     imageAlt: "Elegante witte weegschaal op een eikenhouten vloer in een lichte ruimte",
     description:
-      "Met de Tanita weegschaal brengen we jouw uitgangspunt in kaart, zodat we jouw traject goed kunnen volgen. De definitieve omschrijving wordt later aangeleverd.",
+      "Alleen je gewicht vertelt niet het hele verhaal. Met een Tanita lichaamsanalyse krijg je meer inzicht in de samenstelling van je lichaam — naast je gewicht kan een meting onder andere inzicht geven in je vetmassa en spiermassa.",
     forWho: [
       "Je wilt je voortgang inzichtelijk maken",
       "Je start met een behandeltraject",
@@ -463,7 +463,23 @@ export const treatments: Treatment[] = [
       "Vastleggen als vertrekpunt van jouw traject",
     ],
     expect: ["Een korte, zorgvuldige meting", "Rustige uitleg", "Inzicht in jouw vertrekpunt"],
-    extra: "Wordt vaak gecombineerd met een intake of behandeltraject.",
+    extra:
+      "Zo kijk je niet alleen naar het getal op de weegschaal, maar naar het grotere geheel. Wordt vaak gecombineerd met een intake of behandeltraject.",
+    details: [
+      {
+        title: "Waarom een lichaamsanalyse?",
+        paragraphs: [
+          "Een lichaamsanalyse is vooral interessant wanneer je bezig bent met afvallen, fitter worden of je lichaamssamenstelling wilt verbeteren.",
+          "Door metingen op verschillende momenten met elkaar te vergelijken, kun je beter zien welke veranderingen er plaatsvinden.",
+        ],
+      },
+      {
+        title: "Een handig startpunt",
+        paragraphs: [
+          "De Tanita meting kan worden gebruikt als uitgangspunt voor een persoonlijk traject en om je voortgang gedurende een behandeling of leefstijlverandering te volgen.",
+        ],
+      },
+    ],
   },
 
   // ── PRODUCTEN ─────────────────────────────────────────────────────────────
