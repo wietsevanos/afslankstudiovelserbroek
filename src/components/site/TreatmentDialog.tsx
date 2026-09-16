@@ -12,10 +12,10 @@ type Props = {
 function List({ title, items }: { title: string; items: string[] }) {
   return (
     <div>
-      <h4 className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">{title}</h4>
+      <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">{title}</h4>
       <ul className="mt-4 space-y-3">
         {items.map((item) => (
-          <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
+          <li key={item} className="flex gap-3 text-[0.925rem] leading-[1.75] text-foreground/80">
             <Check className="mt-[0.2rem] size-3.5 shrink-0 text-gold" />
             <span>{item}</span>
           </li>
@@ -60,38 +60,40 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                 </DialogTitle>
                 <span className="gold-rule mt-6" />
 
-                <DialogDescription className="mt-7 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                <DialogDescription className="mt-7 max-w-2xl text-[1.05rem] leading-[1.8] text-foreground/85">
                   {treatment.description}
                 </DialogDescription>
 
-                <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-y border-border/70 py-5 text-sm">
-                  {treatment.duration ? (
-                    <div className="flex items-center gap-2.5">
-                      <Clock className="size-4 text-gold" />
-                      <dt className="sr-only">Duur</dt>
-                      <dd className="text-foreground">{treatment.duration}</dd>
-                    </div>
-                  ) : null}
-                  {treatment.price ? (
-                    <div className="flex items-center gap-2.5">
-                      <Tag className="size-4 text-gold" />
-                      <dt className="sr-only">Prijs</dt>
-                      <dd className="text-foreground">{treatment.price}</dd>
-                    </div>
-                  ) : null}
-                </dl>
+                {treatment.duration || treatment.price ? (
+                  <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-4 border-y border-border/70 py-5 text-sm">
+                    {treatment.duration ? (
+                      <div className="flex items-center gap-2.5">
+                        <Clock className="size-4 text-gold" />
+                        <dt className="sr-only">Duur</dt>
+                        <dd className="text-foreground">{treatment.duration}</dd>
+                      </div>
+                    ) : null}
+                    {treatment.price ? (
+                      <div className="flex items-center gap-2.5">
+                        <Tag className="size-4 text-gold" />
+                        <dt className="sr-only">Prijs</dt>
+                        <dd className="text-foreground">{treatment.price}</dd>
+                      </div>
+                    ) : null}
+                  </dl>
+                ) : null}
 
                 {treatment.details && treatment.details.length > 0 ? (
                   <div className="mt-10 max-w-2xl space-y-9">
                     {treatment.details.map((section) => (
                       <div key={section.title}>
-                        <h4 className="text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">
+                        <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">
                           {section.title}
                         </h4>
                         {section.paragraphs?.map((paragraph) => (
                           <p
                             key={paragraph}
-                            className="mt-4 text-sm leading-relaxed text-muted-foreground"
+                            className="mt-4 text-[0.925rem] leading-[1.75] text-foreground/80"
                           >
                             {paragraph}
                           </p>
@@ -101,7 +103,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                             {section.list.map((item) => (
                               <li
                                 key={item}
-                                className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                                className="flex gap-3 text-[0.925rem] leading-[1.75] text-foreground/80"
                               >
                                 <Check className="mt-[0.2rem] size-3.5 shrink-0 text-gold" />
                                 <span>{item}</span>
@@ -127,11 +129,11 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                   <List title="Voor wie is dit geschikt" items={treatment.forWho} />
                   {treatment.extra ? (
                     <div className="border-l border-gold/40 bg-sand/40 px-6 py-5">
-                      <h4 className="flex items-center gap-2 text-[0.7rem] tracking-[0.2em] text-muted-foreground uppercase">
+                      <h4 className="flex items-center gap-2 text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">
                         <Info className="size-3.5 text-gold" />
                         Goed om te weten
                       </h4>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-3 text-[0.925rem] leading-[1.75] text-foreground/80">
                         {treatment.extra}
                       </p>
                     </div>
