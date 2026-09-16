@@ -40,7 +40,7 @@ export function Contact() {
                     {contact.studio}
                     <br />
                     {contact.address}
-                    <span className="mt-1 block text-xs">(adres nog te bevestigen)</span>
+                    <span className="mt-1 block text-xs">{"\n"}</span>
                   </span>
                 </li>
                 <li className="flex gap-4">
