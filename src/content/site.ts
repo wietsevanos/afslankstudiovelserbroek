@@ -130,7 +130,7 @@ export const treatments: Treatment[] = [
     image: pdrnAsset.url,
     imageAlt: "Meso PDRN cocktail ampullen voor een luxe huidbehandeling",
     description:
-      "Een huidbehandeling waarbij een meso cocktail met PDRN wordt gebruikt. Tijdens de intake bespreken we of deze behandeling bij jouw huid en wensen past. De definitieve omschrijving wordt later aangeleverd.",
+      "Een verfijnde huidbehandeling waarbij een meso cocktail met PDRN wordt gebruikt. PDRN (polydeoxyribonucleotide) is een werkstof die in de huidverzorging wordt toegepast ter ondersteuning van de huidkwaliteit. Tijdens de intake bespreken we of deze behandeling bij jouw huid en wensen past.",
     forWho: [
       "Je wilt je huid gericht laten verzorgen",
       "Je zoekt een behandeling met persoonlijke begeleiding",
@@ -147,7 +147,22 @@ export const treatments: Treatment[] = [
       "Een zorgvuldige behandeling",
       "Duidelijke uitleg over de nazorg",
     ],
-    extra: "Duur, prijs en voorwaarden worden later aangeleverd.",
+    extra:
+      "De behandeling wordt altijd voorafgegaan door een intake en huidanalyse. Welke aanpak past, hangt af van jouw huidconditie en wensen.",
+    details: [
+      {
+        title: "Hoe werkt de behandeling?",
+        paragraphs: [
+          "Tijdens de behandeling wordt de huid eerst gereinigd en voorbereid. Vervolgens wordt de meso cocktail met PDRN zorgvuldig op de huid aangebracht. De behandeling wordt rustig en gecontroleerd uitgevoerd.",
+        ],
+      },
+      {
+        title: "Wat kun je verwachten?",
+        paragraphs: [
+          "De behandeling is gericht op verzorging en ondersteuning van de huid. Na afloop kan de huid er fris en verzorgd uitzien. Voor een optimaal resultaat kan een kuur van meerdere behandelingen worden geadviseerd.",
+        ],
+      },
+    ],
   },
 
   // ── AFSLANKEN ─────────────────────────────────────────────────────────────
