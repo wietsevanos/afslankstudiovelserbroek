@@ -319,7 +319,7 @@ export const treatments: Treatment[] = [
     image: tStarvacAsset.url,
     imageAlt: "Handstuk van een vacuümmassage-apparaat tijdens een beenbehandeling",
     description:
-      "Een behandeling met vacuümmassage, gericht op het lichaam en de huid. De behandeling wordt afgestemd op jouw wensen. De definitieve omschrijving wordt later aangeleverd.",
+      "De Starvac UX 100 is een lichaamsbehandeling waarbij gebruik wordt gemaakt van vacuümtechnologie en massage. De behandeling stimuleert de doorbloeding van het behandelde gebied en kan worden ingezet bij lokale vetophopingen en cellulite.",
     forWho: [
       "Je wilt je lichaam laten verzorgen",
       "Je zoekt een behandeling gericht op huid en figuur",
@@ -332,7 +332,27 @@ export const treatments: Treatment[] = [
       "Afsluitend advies",
     ],
     expect: ["Een rustige behandeling", "Aandacht voor jouw comfort", "Advies voor thuis"],
-    extra: "Duur, prijs en voorwaarden worden later aangeleverd.",
+    extra:
+      "Een behandelplan wordt afgestemd op jouw wensen en het gebied dat je wilt laten behandelen.",
+    details: [
+      {
+        title: "Hoe werkt de Starvac?",
+        paragraphs: [
+          "Tijdens de behandeling wordt met gecontroleerde vacuümdruk op het weefsel gewerkt. Hierdoor wordt de huid en het onderliggende weefsel gemasseerd en wordt de lokale circulatie gestimuleerd.",
+          "De behandeling kan worden toegepast op verschillende lichaamszones.",
+        ],
+      },
+      {
+        title: "Waarvoor wordt de Starvac gebruikt?",
+        list: [
+          "Lokale vetophopingen",
+          "Cellulite",
+          "Huidverbetering",
+          "Stimulatie van de doorbloeding",
+          "Lichaamscontouring",
+        ],
+      },
+    ],
   },
   {
     id: "ballancer-lymfedrainage",
