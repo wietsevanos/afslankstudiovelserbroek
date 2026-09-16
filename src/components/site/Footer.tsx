@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <p className="font-display text-xl">Afslankstudio Velserbroek</p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Beauty, lichaamsverzorging en afslanken in een rustige studio met persoonlijke
+              Beauty, lichaamsverzorging en afslanken in een professionele studio met persoonlijke
               aandacht.
             </p>
             <div className="mt-6 flex gap-3">

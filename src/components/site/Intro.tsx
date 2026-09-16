@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import studioImage from "@/assets/studio.jpg";
+import welkomAsset from "@/assets/welkom-studio.png.asset.json";
 
 export function Intro() {
   return (
