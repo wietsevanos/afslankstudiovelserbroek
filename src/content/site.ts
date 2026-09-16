@@ -40,6 +40,14 @@ export type Treatment = {
   includes: string[];
   /** Optionele aanvullende informatie (voorwaarden, tips, opmerkingen). */
   extra?: string;
+  /** Uitgebreide tekstsecties in de popup (optioneel). */
+  details?: TreatmentDetailSection[];
+};
+
+export type TreatmentDetailSection = {
+  title: string;
+  paragraphs?: string[];
+  list?: string[];
 };
 
 export const treatmentGroups: { id: TreatmentGroupId; label: string; intro?: string }[] = [
