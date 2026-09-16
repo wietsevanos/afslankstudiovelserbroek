@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import heroImage from "@/assets/hero.jpg";
+import heroImageAsset from "@/assets/hero-art.png.asset.json";
+
+const heroImage = heroImageAsset.url;
 
 export function Hero() {
   return (
@@ -48,7 +50,7 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-t-[10rem] rounded-b-md shadow-[var(--shadow-card)]">
             <img
               src={heroImage}
-              alt="Vrouw met een verzorgde, natuurlijke huid ontspant tijdens een beautybehandeling in Velserbroek"
+              alt="Elegante illustratie van een vrouwengezicht met gouden accenten — Beauty en Afslankstudio Velserbroek"
               width={1408}
               height={1760}
               className="h-[26rem] w-full object-cover sm:h-[34rem] lg:h-[38rem]"
