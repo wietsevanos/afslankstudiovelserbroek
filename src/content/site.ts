@@ -4,16 +4,16 @@
  * openingstijden en social media links aan.
  */
 
-import ledFacialAsset from "@/assets/led-facial.png.asset.json";
+import ledFacialAsset from "@/assets/led-facial-v2.png.asset.json";
 import pdrnAsset from "@/assets/pdrn-meso-cocktail-v2.png.asset.json";
 import tCryoAsset from "@/assets/t-cryo.png.asset.json";
 import tCryoPlusAsset from "@/assets/t-cryo-plus.png.asset.json";
 import tEmsAsset from "@/assets/t-ems.png.asset.json";
-import tStarvacAsset from "@/assets/t-starvac.png.asset.json";
-import tBallancerAsset from "@/assets/t-ballancer.png.asset.json";
-import tVacustepAsset from "@/assets/t-vacustep.png.asset.json";
-import tTanitaAsset from "@/assets/t-tanita.png.asset.json";
-import pBioHcgAsset from "@/assets/p-biohcg.png.asset.json";
+import tStarvacAsset from "@/assets/t-starvac-v2.png.asset.json";
+import tBallancerAsset from "@/assets/t-ballancer-v2.png.asset.json";
+import tVacustepAsset from "@/assets/t-vacustep-v2.png.asset.json";
+import tTanitaAsset from "@/assets/t-tanita-v2.png.asset.json";
+import pBioHcgAsset from "@/assets/p-biohcg-v2.png.asset.json";
 import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
 
 /** Groepen waarin de kaarten op de website worden verdeeld. */
