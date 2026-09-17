@@ -8,18 +8,19 @@ pagina's als kant-en-klare HTML-bestanden oplevert.
 ## Zelf bouwen
 
 ```bash
-bun install
-bun run build:static
+npm install
+npm run build
 ```
 
-De volledige website staat daarna in `dist/client/`:
+De volledige website staat daarna rechtstreeks in `dist/`:
 
 - `index.html`, `intake/`, `algemene-voorwaarden/`, `privacyverklaring/`
 - `assets/` (styling en scripts)
 - `media/` (alle foto's, meegepakt zodat er niets van buiten geladen hoeft)
 - `.htaccess` (nette URL's en caching voor Apache/DirectAdmin)
 
-Upload de **inhoud** van `dist/client/` naar `public_html` — niet de map zelf.
+Upload de **inhoud** van `dist/` naar `public_html` — niet de map zelf. Dit is
+precies wat de huidige DirectAdmin-instelling "Upload vanuit: dist/" doet.
 
 ## Automatisch via GitHub
 

@@ -4,8 +4,9 @@
 // (/__l5e/assets-v1/...), which only exists on Lovable hosting. This script
 // downloads every referenced upload into dist/client/media/ and rewrites the
 // references, so the exported site works on any plain web host.
-import { readdir, readFile, writeFile, mkdir, stat } from "node:fs/promises";
+import { cp, mkdtemp, readdir, readFile, writeFile, mkdir, rm, stat } from "node:fs/promises";
 import { join, extname } from "node:path";
+import { tmpdir } from "node:os";
 
 const DIST = "dist/client";
 const MEDIA_DIR = join(DIST, "media");
@@ -49,35 +50,45 @@ for (const file of textFiles) {
   matches.forEach((m) => referenced.add(m));
 }
 
-if (referenced.size === 0) {
-  console.log("[assets] no uploaded assets referenced — nothing to inline");
-  process.exit(0);
-}
-
-await mkdir(MEDIA_DIR, { recursive: true });
-
 const replacements = new Map();
-for (const path of referenced) {
-  const [, , , assetId, filename] = path.split("/");
-  const localName = `${assetId.slice(0, 8)}-${filename}`;
-  const target = join(MEDIA_DIR, localName);
-  let cached = false;
-  try {
-    cached = (await stat(target)).size > 0;
-  } catch {
-    cached = false;
+if (referenced.size > 0) {
+  await mkdir(MEDIA_DIR, { recursive: true });
+
+  for (const path of referenced) {
+    const [, , , assetId, filename] = path.split("/");
+    const localName = `${assetId.slice(0, 8)}-${filename}`;
+    const target = join(MEDIA_DIR, localName);
+    let cached = false;
+    try {
+      cached = (await stat(target)).size > 0;
+    } catch {
+      cached = false;
+    }
+    if (!cached) {
+      const buffer = await download(path);
+      await writeFile(target, buffer);
+      console.log(`[assets] downloaded ${localName} (${buffer.length} bytes)`);
+    }
+    replacements.set(path, `/media/${localName}`);
   }
-  if (!cached) {
-    const buffer = await download(path);
-    await writeFile(target, buffer);
-    console.log(`[assets] downloaded ${localName} (${buffer.length} bytes)`);
+
+  for (const [file, text] of contents) {
+    const rewritten = text.replace(ASSET_RE, (match) => replacements.get(match) ?? match);
+    await writeFile(file, rewritten);
   }
-  replacements.set(path, `/media/${localName}`);
+
+  console.log(`[assets] inlined ${replacements.size} uploaded assets into ${MEDIA_DIR}`);
+} else {
+  console.log("[assets] no uploaded assets referenced — nothing to inline");
 }
 
-for (const [file, text] of contents) {
-  const rewritten = text.replace(ASSET_RE, (match) => replacements.get(match) ?? match);
-  await writeFile(file, rewritten);
-}
+// DirectAdmin uploads dist/. Put index.html directly in that folder rather
+// than one level deeper in dist/client/.
+const staging = await mkdtemp(join(tmpdir(), "afslankstudio-static-"));
+await cp(DIST, staging, { recursive: true });
+await rm("dist", { recursive: true, force: true });
+await mkdir("dist", { recursive: true });
+await cp(staging, "dist", { recursive: true });
+await rm(staging, { recursive: true, force: true });
 
-console.log(`[assets] inlined ${replacements.size} uploaded assets into ${MEDIA_DIR}`);
+console.log("[static] website ready in dist/ (index.html is at the root)");
