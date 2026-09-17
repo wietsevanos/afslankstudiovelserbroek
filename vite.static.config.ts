@@ -14,11 +14,5 @@ export default defineConfig({
       { path: "/privacyverklaring" },
     ],
   },
-  nitro: {
-    preset: "static",
-    output: {
-      dir: ".output-static",
-      publicDir: ".output-static/public",
-    },
-  },
+  nitro: false,
 });
