@@ -27,7 +27,7 @@ jobs:
 
       - name: Publish to deploy branch
         run: |
-          cd dist/client
+          cd dist
           touch .nojekyll
           git init -b deploy
           git config user.name "github-actions"
