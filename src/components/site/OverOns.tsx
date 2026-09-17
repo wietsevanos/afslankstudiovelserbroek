@@ -2,12 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import overonsAsset from "@/assets/overons.png.asset.json";
 
-const stats = [
-  { value: "27+", label: "jaar ervaring" },
-  { value: "12", label: "behandelingen & producten" },
-  { value: "1-op-1", label: "persoonlijke begeleiding" },
-];
-
 export function OverOns() {
   return (
     <section id="over-ons" className="bg-cream py-20 md:py-28">
