@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "build:static": "vite build --config vite.static.config.ts"
+    "build:static": "vite build --config vite.static.config.ts && node scripts/inline-uploaded-assets.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
