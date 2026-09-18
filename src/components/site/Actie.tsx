@@ -1,73 +1,60 @@
+import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, SectionHeading } from "@/components/Reveal";
-import { actie } from "@/content/site";
-import actieImage from "@/assets/actie.jpg";
+import actieImageAsset from "@/assets/actie-september-2026.jpg.asset.json";
+import { getMonthlyAction } from "@/lib/monthly-action";
 
 export function Actie() {
+  const [image, setImage] = useState<string | null>(actieImageAsset.url);
+
+  useEffect(() => {
+    getMonthlyAction()
+      .then((action) => {
+        if (!action) {
+          setImage(null);
+          return;
+        }
+        setImage(action.imageUrl.startsWith("/__l5e/assets-v1/") ? actieImageAsset.url : action.imageUrl);
+      })
+      .catch(() => setImage(actieImageAsset.url));
+  }, []);
+
   return (
-    <section id="actie" className="bg-background py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+    <section id="actie" className="bg-cream py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <SectionHeading
           eyebrow="Deze maand"
           title="Actie van de maand"
-          subtitle="Ontdek iedere maand een speciale behandeling of aanbieding."
+          subtitle="Bekijk onze actuele aanbieding en ontdek wat we deze maand voor je hebben samengesteld."
         />
 
-        <Reveal delay={120} className="mt-14">
-          <div className="relative overflow-hidden rounded-sm border border-gold/30 bg-card shadow-[var(--shadow-soft)]">
-            <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-gold" />
-            <div className="grid lg:grid-cols-[1.1fr_1fr]">
-              <div className="bg-gradient-blush p-8 sm:p-12">
-                <p className="eyebrow">{actie.period}</p>
-                <h3 className="mt-5 text-3xl leading-tight sm:text-4xl">{actie.title}</h3>
-                <p className="mt-3 text-sm text-muted-foreground">{actie.subtitle}</p>
-                <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">
-                  {actie.description}
-                </p>
-
-                <ul className="mt-8 space-y-2.5">
-                  {actie.highlights.map((item) => (
-                    <li key={item} className="flex gap-2.5 text-sm text-muted-foreground">
-                      <Check className="mt-0.5 size-4 shrink-0 text-gold" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mt-9 flex flex-wrap items-end gap-4">
-                  {actie.oldPrice ? (
-                    <span className="text-base text-muted-foreground line-through">
-                      {actie.oldPrice}
-                    </span>
-                  ) : null}
-                  <span className="font-display text-4xl text-gradient-gold">{actie.newPrice}</span>
-                </div>
-
-                <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild variant="gold" size="xl">
-                    <Link to="/intake">Plan een intake</Link>
-                  </Button>
-                  <Button asChild variant="goldOutline" size="xl">
-                    <a href="#behandelingen">Bekijk behandelingen</a>
-                  </Button>
-                </div>
-              </div>
-
-              <div className="relative min-h-56 bg-sand">
+        {image ? (
+          <Reveal delay={120} className="mt-12">
+            <div className="mx-auto max-w-3xl overflow-hidden rounded-sm border border-gold/30 bg-card shadow-[var(--shadow-card)]">
+              <div className="relative bg-sand">
                 <img
-                  src={actieImage}
-                  alt="Stijlvolle crème stof met subtiel gouden detail bij de actie van de maand"
-                  width={1200}
-                  height={900}
+                  src={image}
+                  alt="Actuele aanbieding van Afslankstudio Velserbroek"
+                  width={887}
+                  height={1146}
                   loading="lazy"
-                  className="h-full w-full object-cover"
+                  className="h-auto w-full object-contain"
                 />
               </div>
+              <div className="flex flex-col items-center justify-between gap-5 border-t border-gold/20 bg-card px-6 py-7 text-center sm:flex-row sm:px-9 sm:text-left">
+                <div>
+                  <p className="eyebrow">Persoonlijk advies</p>
+                  <p className="mt-2 text-sm text-muted-foreground">Benieuwd of deze actie bij jou past?</p>
+                </div>
+                <Button asChild variant="gold" size="xl">
+                  <Link to="/intake">Plan een intake <ArrowRight /></Link>
+                </Button>
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        ) : null}
       </div>
     </section>
   );

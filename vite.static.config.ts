@@ -17,6 +17,7 @@ export default defineConfig({
       { path: "/intake" },
       { path: "/algemene-voorwaarden" },
       { path: "/privacyverklaring" },
+      { path: "/beheer" },
     ],
   },
   nitro: false,
