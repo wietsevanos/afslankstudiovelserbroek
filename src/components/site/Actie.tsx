@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Reveal, SectionHeading } from "@/components/Reveal";
+import { SectionHeading } from "@/components/Reveal";
 import actieImageAsset from "@/assets/actie-september-2026.jpg.asset.json";
 import { getMonthlyAction } from "@/lib/monthly-action";
 
@@ -31,7 +31,7 @@ export function Actie() {
         />
 
         {image ? (
-          <Reveal delay={120} className="mt-12">
+          <div className="mt-12">
             <div className="mx-auto max-w-3xl overflow-hidden rounded-sm border border-gold/30 bg-card shadow-[var(--shadow-card)]">
               <div className="relative bg-sand">
                 <img
@@ -53,7 +53,7 @@ export function Actie() {
                 </Button>
               </div>
             </div>
-          </Reveal>
+          </div>
         ) : null}
       </div>
     </section>
