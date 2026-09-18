@@ -38,7 +38,7 @@ export async function manageMonthlyAction(input: {
   imageUrl?: string;
   imageName?: string;
 }) {
-  const { error } = await supabase.rpc("manage_monthly_action", {
+  const { data, error } = await supabase.rpc("manage_monthly_action", {
     access_code: input.code,
     operation: input.operation,
     client_key: getClientKey(),
@@ -47,6 +47,16 @@ export async function manageMonthlyAction(input: {
   });
 
   if (error) throw error;
+  const result = data as { ok?: boolean; error?: string } | null;
+  if (result?.ok) return;
+  if (result?.error === "invalid_code") throw new Error("Onjuiste beheer-code.");
+  if (result?.error === "rate_limited") {
+    throw new Error("Te veel pogingen. Probeer het over 15 minuten opnieuw.");
+  }
+  if (result?.error === "invalid_image") {
+    throw new Error("Kies een geldige afbeelding van maximaal 5 MB.");
+  }
+  throw new Error("De wijziging kon niet worden opgeslagen.");
 }
 
 export function prepareActionImage(file: File): Promise<string> {
