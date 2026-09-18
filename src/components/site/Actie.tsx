@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/Reveal";
 import actieImageAsset from "@/assets/actie-september-2026.jpg.asset.json";
 import { getMonthlyAction } from "@/lib/monthly-action";
+import { MonthlyActionManager } from "@/components/site/MonthlyActionManager";
 
 export function Actie() {
   const [image, setImage] = useState<string | null>(actieImageAsset.url);
@@ -29,6 +30,10 @@ export function Actie() {
           title="Actie van de maand"
           subtitle="Bekijk onze actuele aanbieding en ontdek wat we deze maand voor je hebben samengesteld."
         />
+
+        <div className="mt-8 flex justify-center">
+          <MonthlyActionManager currentImage={image} onChange={setImage} />
+        </div>
 
         {image ? (
           <div className="mt-12">
