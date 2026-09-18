@@ -15,6 +15,8 @@ import { contact } from "@/content/site";
 const title = "Afslankstudio Velserbroek | Beauty & afslanken in Velserbroek";
 const description =
   "Beauty behandelingen, lichaamsbehandelingen en afslanken in Velserbroek. Persoonlijke aandacht in een rustige studio. Plan eenvoudig een afspraak.";
+const socialImage =
+  "https://afslankstudiovelserbroek.nl/media/011adad2-hero-art.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,10 +26,13 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+       { property: "og:url", content: "https://afslankstudiovelserbroek.nl/" },
+       { property: "og:image", content: socialImage },
+       { property: "og:image:alt", content: "Beauty en Afslankstudio Velserbroek" },
       { name: "twitter:card", content: "summary_large_image" },
+       { name: "twitter:image", content: socialImage },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+     links: [{ rel: "canonical", href: "https://afslankstudiovelserbroek.nl/" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -36,7 +41,7 @@ export const Route = createFileRoute("/")({
           "@type": "BeautySalon",
           name: "Afslankstudio Velserbroek",
           description,
-          image: "/favicon.ico",
+           image: socialImage,
           telephone: contact.phone,
           email: contact.email,
           address: {
