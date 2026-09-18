@@ -16,7 +16,7 @@ const title = "Afslankstudio Velserbroek | Beauty & afslanken in Velserbroek";
 const description =
   "Beauty behandelingen, lichaamsbehandelingen en afslanken in Velserbroek. Persoonlijke aandacht in een rustige studio. Plan eenvoudig een afspraak.";
 const socialImage =
-  "https://afslankstudiovelserbroek.nl/media/011adad2-hero-art.png";
+  "https://afslankstudiovelserbroek.nl/media/a44e658d-social-hero.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
