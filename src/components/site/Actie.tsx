@@ -1,25 +1,48 @@
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/Reveal";
 import actieImageAsset from "@/assets/actie-september-2026.webp.asset.json";
-import { getMonthlyAction } from "@/lib/monthly-action";
-import { MonthlyActionManager } from "@/components/site/MonthlyActionManager";
+
+const MonthlyActionManager = lazy(() =>
+  import("@/components/site/MonthlyActionManager").then((m) => ({
+    default: m.MonthlyActionManager,
+  })),
+);
 
 export function Actie() {
   const [image, setImage] = useState<string | null>(actieImageAsset.url);
 
   useEffect(() => {
-    getMonthlyAction()
-      .then((action) => {
-        if (!action) {
-          setImage(null);
-          return;
-        }
-        setImage(action.imageUrl.startsWith("/__l5e/assets-v1/") ? actieImageAsset.url : action.imageUrl);
-      })
-      .catch(() => setImage(actieImageAsset.url));
+    let cancelled = false;
+    const load = () => {
+      import("@/lib/monthly-action")
+        .then(({ getMonthlyAction }) => getMonthlyAction())
+        .then((action) => {
+          if (cancelled) return;
+          if (!action) {
+            setImage(null);
+            return;
+          }
+          setImage(
+            action.imageUrl.startsWith("/__l5e/assets-v1/")
+              ? actieImageAsset.url
+              : action.imageUrl,
+          );
+        })
+        .catch(() => {
+          if (!cancelled) setImage(actieImageAsset.url);
+        });
+    };
+
+    const idle = (window as unknown as { requestIdleCallback?: (cb: () => void) => number })
+      .requestIdleCallback;
+    const handle = idle ? idle(load) : window.setTimeout(load, 800);
+    return () => {
+      cancelled = true;
+      if (!idle) window.clearTimeout(handle as number);
+    };
   }, []);
 
   return (
