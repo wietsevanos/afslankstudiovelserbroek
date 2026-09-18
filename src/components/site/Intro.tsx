@@ -7,7 +7,7 @@ export function Intro() {
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 lg:order-1">
           <img
-            src={welkomAsset.url}
+            src={overonsAsset.url}
             alt="TC Cryo XL behandelapparaat naast een comfortabele behandelstoel in de studio"
             loading="lazy"
             className="w-full rounded-sm object-cover shadow-[var(--shadow-soft)]"

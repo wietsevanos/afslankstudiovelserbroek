@@ -36,7 +36,7 @@ export function OverOns() {
               className="absolute -right-4 -top-4 hidden h-24 w-24 border-r border-t border-gold/50 sm:block"
             />
             <img
-              src={overonsAsset.url}
+              src={welkomAsset.url}
               alt="Vrouw meet haar taille met een centimeter"
               loading="lazy"
               className="w-full rounded-sm object-cover shadow-[var(--shadow-soft)]"
