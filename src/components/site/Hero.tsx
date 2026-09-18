@@ -2,8 +2,11 @@ import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
 import heroImageAsset from "@/assets/hero-art.webp.asset.json";
+import heroImageSmallAsset from "@/assets/hero-art-800.webp.asset.json";
 
 const heroImage = heroImageAsset.url;
+const heroImageSmall = heroImageSmallAsset.url;
+const heroSrcSet = `${heroImageSmall} 800w, ${heroImage} 1194w`;
 
 export function Hero() {
   return (
@@ -50,9 +53,14 @@ export function Hero() {
           <div className="relative overflow-hidden rounded-t-[10rem] rounded-b-md shadow-[var(--shadow-card)]">
             <img
               src={heroImage}
+              srcSet={heroSrcSet}
+              sizes="(max-width: 1023px) 100vw, 45vw"
               alt="Elegante illustratie van een vrouwengezicht met gouden accenten — Beauty en Afslankstudio Velserbroek"
-              width={1408}
-              height={1760}
+              width={1194}
+              height={1317}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="h-[26rem] w-full object-cover sm:h-[34rem] lg:h-[38rem]"
             />
           </div>
