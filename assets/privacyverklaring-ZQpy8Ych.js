@@ -1,0 +1,1 @@
+import{h as e}from"./index-CLP_HEYe.js";import{r as t,t as n}from"./legal-Ctp4lloz.js";var r=e(),i=()=>(0,r.jsx)(t,{doc:n});export{i as component};
