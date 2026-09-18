@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AlgemeneVoorwaardenRouteImport } from './routes/algemene-voorwaarden'
+import { Route as BeheerRouteImport } from './routes/beheer'
 import { Route as IntakeRouteImport } from './routes/intake'
 import { Route as PrivacyverklaringRouteImport } from './routes/privacyverklaring'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const AlgemeneVoorwaardenRoute = AlgemeneVoorwaardenRouteImport.update({
   id: '/algemene-voorwaarden',
   path: '/algemene-voorwaarden',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BeheerRoute = BeheerRouteImport.update({
+  id: '/beheer',
+  path: '/beheer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IntakeRoute = IntakeRouteImport.update({
@@ -38,12 +44,14 @@ const PrivacyverklaringRoute = PrivacyverklaringRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/beheer': typeof BeheerRoute
   '/intake': typeof IntakeRoute
   '/privacyverklaring': typeof PrivacyverklaringRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/beheer': typeof BeheerRoute
   '/intake': typeof IntakeRoute
   '/privacyverklaring': typeof PrivacyverklaringRoute
 }
@@ -51,18 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/algemene-voorwaarden': typeof AlgemeneVoorwaardenRoute
+  '/beheer': typeof BeheerRoute
   '/intake': typeof IntakeRoute
   '/privacyverklaring': typeof PrivacyverklaringRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/algemene-voorwaarden' | '/intake' | '/privacyverklaring'
+  fullPaths:
+    '/' | '/algemene-voorwaarden' | '/beheer' | '/intake' | '/privacyverklaring'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/algemene-voorwaarden' | '/intake' | '/privacyverklaring'
+  to:
+    '/' | '/algemene-voorwaarden' | '/beheer' | '/intake' | '/privacyverklaring'
   id:
     | '__root__'
     | '/'
     | '/algemene-voorwaarden'
+    | '/beheer'
     | '/intake'
     | '/privacyverklaring'
   fileRoutesById: FileRoutesById
@@ -70,6 +82,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AlgemeneVoorwaardenRoute: typeof AlgemeneVoorwaardenRoute
+  BeheerRoute: typeof BeheerRoute
   IntakeRoute: typeof IntakeRoute
   PrivacyverklaringRoute: typeof PrivacyverklaringRoute
 }
@@ -88,6 +101,13 @@ declare module '@tanstack/react-router' {
       path: '/algemene-voorwaarden'
       fullPath: '/algemene-voorwaarden'
       preLoaderRoute: typeof AlgemeneVoorwaardenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/beheer': {
+      id: '/beheer'
+      path: '/beheer'
+      fullPath: '/beheer'
+      preLoaderRoute: typeof BeheerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/intake': {
@@ -110,6 +130,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AlgemeneVoorwaardenRoute: AlgemeneVoorwaardenRoute,
+  BeheerRoute: BeheerRoute,
   IntakeRoute: IntakeRoute,
   PrivacyverklaringRoute: PrivacyverklaringRoute,
 }

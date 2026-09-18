@@ -41,9 +41,9 @@ export async function manageMonthlyAction(input: {
   const { error } = await supabase.rpc("manage_monthly_action", {
     access_code: input.code,
     operation: input.operation,
-    new_image_url: input.imageUrl,
-    new_image_name: input.imageName,
     client_key: getClientKey(),
+    ...(input.imageUrl ? { new_image_url: input.imageUrl } : {}),
+    ...(input.imageName ? { new_image_name: input.imageName } : {}),
   });
 
   if (error) throw error;
