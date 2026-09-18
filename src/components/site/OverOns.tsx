@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import overonsAsset from "@/assets/overons.png.asset.json";
+import welkomAsset from "@/assets/welkom-studio.png.asset.json";
 
 export function OverOns() {
   return (
