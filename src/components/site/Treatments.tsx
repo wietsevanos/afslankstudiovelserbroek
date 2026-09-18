@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { Suspense, lazy, useState } from "react";
 import { ArrowRight, Clock } from "lucide-react";
 import { Reveal, SectionHeading } from "@/components/Reveal";
-import { TreatmentDialog } from "@/components/site/TreatmentDialog";
+
+const TreatmentDialog = lazy(() =>
+  import("@/components/site/TreatmentDialog").then((m) => ({ default: m.TreatmentDialog })),
+);
 import { treatments, treatmentGroups, type Treatment } from "@/content/site";
 
 export function Treatments() {
@@ -53,6 +56,8 @@ export function Treatments() {
                             width={1000}
                             height={1200}
                             loading="lazy"
+                            decoding="async"
+                            sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                             className="h-60 w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                           />
                           <span className="absolute top-4 left-4 rounded-sm bg-background/85 px-3 py-1 text-[0.62rem] tracking-[0.2em] text-muted-foreground uppercase backdrop-blur-sm">
@@ -94,7 +99,11 @@ export function Treatments() {
         </div>
       </div>
 
-      <TreatmentDialog treatment={active} onClose={() => setActive(null)} />
+      {active ? (
+        <Suspense fallback={null}>
+          <TreatmentDialog treatment={active} onClose={() => setActive(null)} />
+        </Suspense>
+      ) : null}
     </section>
   );
 }

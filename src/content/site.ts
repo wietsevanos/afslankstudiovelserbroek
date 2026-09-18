@@ -4,17 +4,17 @@
  * openingstijden en social media links aan.
  */
 
-import ledFacialAsset from "@/assets/led-facial-v2.png.asset.json";
-import pdrnAsset from "@/assets/pdrn-meso-cocktail-v2.png.asset.json";
-import tCryoAsset from "@/assets/t-cryo.png.asset.json";
-import tCryoPlusAsset from "@/assets/t-cryo-plus.png.asset.json";
-import tEmsAsset from "@/assets/t-ems.png.asset.json";
-import tStarvacAsset from "@/assets/t-starvac-v2.png.asset.json";
-import tBallancerAsset from "@/assets/t-ballancer-v2.png.asset.json";
-import tVacustepAsset from "@/assets/t-vacustep-v2.png.asset.json";
-import tTanitaAsset from "@/assets/t-tanita-v2.png.asset.json";
-import pBioHcgAsset from "@/assets/p-biohcg-v2.png.asset.json";
-import pRedulastiqueAsset from "@/assets/p-redulastique.png.asset.json";
+import ledFacialAsset from "@/assets/led-facial-v2.webp.asset.json";
+import pdrnAsset from "@/assets/pdrn-meso-cocktail-v2.webp.asset.json";
+import tCryoAsset from "@/assets/t-cryo.webp.asset.json";
+import tCryoPlusAsset from "@/assets/t-cryo-plus.webp.asset.json";
+import tEmsAsset from "@/assets/t-ems.webp.asset.json";
+import tStarvacAsset from "@/assets/t-starvac-v2.webp.asset.json";
+import tBallancerAsset from "@/assets/t-ballancer-v2.webp.asset.json";
+import tVacustepAsset from "@/assets/t-vacustep-v2.webp.asset.json";
+import tTanitaAsset from "@/assets/t-tanita-v2.webp.asset.json";
+import pBioHcgAsset from "@/assets/p-biohcg-v2.webp.asset.json";
+import pRedulastiqueAsset from "@/assets/p-redulastique.webp.asset.json";
 
 /** Groepen waarin de kaarten op de website worden verdeeld. */
 export type TreatmentGroupId = "beauty" | "afslanken" | "producten";

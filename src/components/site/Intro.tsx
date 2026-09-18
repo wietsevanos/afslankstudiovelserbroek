@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import overonsAsset from "@/assets/overons.png.asset.json";
+import overonsAsset from "@/assets/overons.webp.asset.json";
 
 export function Intro() {
   return (
@@ -9,7 +9,10 @@ export function Intro() {
           <img
             src={overonsAsset.url}
             alt="TC Cryo XL behandelapparaat naast een comfortabele behandelstoel in de studio"
+            width={1400}
+            height={787}
             loading="lazy"
+            decoding="async"
             className="w-full rounded-sm object-cover shadow-[var(--shadow-soft)]"
           />
         </Reveal>

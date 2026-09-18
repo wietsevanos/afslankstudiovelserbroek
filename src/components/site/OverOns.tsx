@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import welkomAsset from "@/assets/welkom-studio.png.asset.json";
+import welkomAsset from "@/assets/welkom-studio.webp.asset.json";
 
 export function OverOns() {
   return (
@@ -38,7 +38,10 @@ export function OverOns() {
             <img
               src={welkomAsset.url}
               alt="Vrouw meet haar taille met een centimeter"
+              width={1400}
+              height={1050}
               loading="lazy"
+              decoding="async"
               className="w-full rounded-sm object-cover shadow-[var(--shadow-soft)]"
             />
           </div>

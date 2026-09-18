@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 import { contact } from "@/content/site";
 
-import instagram1 from "@/assets/instagram-1.png.asset.json";
-import instagram2 from "@/assets/instagram-2.png.asset.json";
-import instagram3 from "@/assets/instagram-3.png.asset.json";
-import instagram4 from "@/assets/instagram-4.png.asset.json";
-import instagram5 from "@/assets/instagram-5.png.asset.json";
-import instagram6 from "@/assets/instagram-6.png.asset.json";
+import instagram1 from "@/assets/instagram-1.webp.asset.json";
+import instagram2 from "@/assets/instagram-2.webp.asset.json";
+import instagram3 from "@/assets/instagram-3.webp.asset.json";
+import instagram4 from "@/assets/instagram-4.webp.asset.json";
+import instagram5 from "@/assets/instagram-5.webp.asset.json";
+import instagram6 from "@/assets/instagram-6.webp.asset.json";
 
 const posts = [
   { src: instagram1.url, alt: "Winactie: maak kans op 3 gratis behandelingen" },
@@ -56,7 +56,10 @@ export function Social() {
                 <img
                   src={post.src}
                   alt={post.alt}
+                  width={800}
+                  height={800}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </a>
