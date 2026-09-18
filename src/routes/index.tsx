@@ -11,6 +11,8 @@ import { Social } from "@/components/site/Social";
 import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { contact } from "@/content/site";
+import heroImageAsset from "@/assets/hero-art.webp.asset.json";
+import heroImageSmallAsset from "@/assets/hero-art-800.webp.asset.json";
 
 const title = "Afslankstudio Velserbroek | Beauty & afslanken in Velserbroek";
 const description =
@@ -32,7 +34,17 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
        { name: "twitter:image", content: socialImage },
     ],
-     links: [{ rel: "canonical", href: "https://afslankstudiovelserbroek.nl/" }],
+      links: [
+        { rel: "canonical", href: "https://afslankstudiovelserbroek.nl/" },
+        {
+          rel: "preload",
+          as: "image",
+          href: heroImageAsset.url,
+          imageSrcSet: `${heroImageSmallAsset.url} 800w, ${heroImageAsset.url} 1194w`,
+          imageSizes: "(max-width: 1023px) 100vw, 45vw",
+          fetchPriority: "high",
+        },
+      ],
     scripts: [
       {
         type: "application/ld+json",
