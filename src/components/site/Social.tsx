@@ -56,7 +56,10 @@ export function Social() {
                 <img
                   src={post.src}
                   alt={post.alt}
+                  width={800}
+                  height={800}
                   loading="lazy"
+                  decoding="async"
                   className="aspect-square w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </a>

@@ -45,6 +45,7 @@ export function Actie() {
                   width={887}
                   height={1146}
                   loading="lazy"
+                  decoding="async"
                   className="h-auto w-full object-contain"
                 />
               </div>
