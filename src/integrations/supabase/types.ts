@@ -14,13 +14,63 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      monthly_action_attempts: {
+        Row: {
+          attempted_at: string
+          client_key: string
+          id: number
+        }
+        Insert: {
+          attempted_at?: string
+          client_key: string
+          id?: never
+        }
+        Update: {
+          attempted_at?: string
+          client_key?: string
+          id?: never
+        }
+        Relationships: []
+      }
+      monthly_actions: {
+        Row: {
+          id: number
+          image_name: string | null
+          image_url: string | null
+          is_active: boolean
+          updated_at: string
+        }
+        Insert: {
+          id?: number
+          image_name?: string | null
+          image_url?: string | null
+          is_active?: boolean
+          updated_at?: string
+        }
+        Update: {
+          id?: number
+          image_name?: string | null
+          image_url?: string | null
+          is_active?: boolean
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      manage_monthly_action: {
+        Args: {
+          access_code: string
+          client_key?: string
+          new_image_name?: string
+          new_image_url?: string
+          operation: string
+        }
+        Returns: Json
+      }
     }
     Enums: {
       [_ in never]: never
