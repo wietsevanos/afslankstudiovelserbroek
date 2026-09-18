@@ -78,9 +78,6 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Afslankstudio Velserbroek. Alle rechten voorbehouden.</p>
           <div className="flex gap-6">
-            <Link to="/beheer" className="transition-colors hover:text-foreground">
-              Beheer
-            </Link>
             <Link
               to="/algemene-voorwaarden"
               className="transition-colors hover:text-foreground"
