@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/Reveal";
-import actieImageAsset from "@/assets/actie-september-2026.jpg.asset.json";
+import actieImageAsset from "@/assets/actie-september-2026.webp.asset.json";
 import { getMonthlyAction } from "@/lib/monthly-action";
 import { MonthlyActionManager } from "@/components/site/MonthlyActionManager";
 

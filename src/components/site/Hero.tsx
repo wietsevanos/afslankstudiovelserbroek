@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import heroImageAsset from "@/assets/hero-art.png.asset.json";
+import heroImageAsset from "@/assets/hero-art.webp.asset.json";
 
 const heroImage = heroImageAsset.url;
 

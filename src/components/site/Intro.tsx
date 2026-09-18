@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import overonsAsset from "@/assets/overons.png.asset.json";
+import overonsAsset from "@/assets/overons.webp.asset.json";
 
 export function Intro() {
   return (

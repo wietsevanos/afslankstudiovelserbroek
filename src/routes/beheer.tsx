@@ -4,7 +4,7 @@ import { ArrowLeft, Check, ImagePlus, LoaderCircle, LockKeyhole, LogOut, ShieldC
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import actieImageAsset from "@/assets/actie-september-2026.jpg.asset.json";
+import actieImageAsset from "@/assets/actie-september-2026.webp.asset.json";
 import { getMonthlyAction, manageMonthlyAction, prepareActionImage } from "@/lib/monthly-action";
 
 const title = "Actiebeheer | Afslankstudio Velserbroek";
