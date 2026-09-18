@@ -109,29 +109,32 @@ export function MonthlyActionManager({ currentImage, onChange }: Props) {
   return (
     <Dialog open={open} onOpenChange={(nextOpen) => { setOpen(nextOpen); if (!nextOpen) reset(); }}>
       <DialogTrigger asChild>
-        <Button variant="outline" size="lg" className="gap-3 bg-background px-7 font-normal uppercase tracking-[0.2em]">
-          <Settings2 /> Beheer
+        <Button variant="ghost" size="sm" className="gap-2 text-xs font-normal text-muted-foreground hover:bg-background/60 hover:text-foreground">
+          <Settings2 className="size-3.5" /> Actie beheren
         </Button>
       </DialogTrigger>
       <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-2xl overflow-y-auto rounded-sm border-border bg-background p-6 sm:p-9">
         {!unlocked ? (
-          <>
+          <div className="py-2 sm:px-3 sm:py-4">
             <DialogHeader>
-              <LockKeyhole className="mb-4 size-6 text-gold" strokeWidth={1.5} />
-              <DialogTitle className="font-display text-3xl font-normal">Actie beheren</DialogTitle>
-              <DialogDescription className="pt-2 text-base leading-relaxed">Voer de beheer-code in om de actie te wijzigen.</DialogDescription>
+              <div className="mb-5 flex size-11 items-center justify-center border border-gold/25 bg-cream text-gold">
+                <LockKeyhole className="size-5" strokeWidth={1.5} />
+              </div>
+              <p className="eyebrow text-left">Beveiligde omgeving</p>
+              <DialogTitle className="pt-2 text-left font-display text-4xl font-normal">Welkom terug</DialogTitle>
+              <DialogDescription className="pt-2 text-left text-sm leading-relaxed">Log in met je beheer-code om de actie te wijzigen.</DialogDescription>
             </DialogHeader>
-            <form onSubmit={verify} className="mt-5 space-y-5">
+            <form onSubmit={verify} className="mt-7 space-y-5">
               <div className="space-y-2">
-                <Label htmlFor="monthly-action-code">Beheer-code</Label>
-                <Input id="monthly-action-code" type="password" inputMode="numeric" autoComplete="current-password" maxLength={12} value={code} onChange={(event) => setCode(event.target.value)} required className="h-12" autoFocus />
+                <Label htmlFor="monthly-action-code" className="text-xs font-normal uppercase tracking-[0.14em] text-muted-foreground">Beheer-code</Label>
+                <Input id="monthly-action-code" type="password" inputMode="numeric" autoComplete="current-password" maxLength={12} value={code} onChange={(event) => setCode(event.target.value)} required className="h-12 px-4 text-base tracking-[0.2em]" autoFocus />
               </div>
               {error ? <p role="alert" className="text-sm text-destructive">{error}</p> : null}
               <Button type="submit" variant="gold" size="xl" className="w-full" disabled={busy || !code}>
-                {busy ? <LoaderCircle className="animate-spin" /> : <LockKeyhole />} Open beheer
+                {busy ? <LoaderCircle className="animate-spin" /> : <LockKeyhole />} Inloggen
               </Button>
             </form>
-          </>
+          </div>
         ) : (
           <>
             <DialogHeader>

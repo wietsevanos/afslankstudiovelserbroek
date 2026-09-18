@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Check, ImagePlus, LoaderCircle, LockKeyhole, Trash2, Upload } from "lucide-react";
+import { ArrowLeft, Check, ImagePlus, LoaderCircle, LockKeyhole, LogOut, ShieldCheck, Trash2, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -118,54 +118,70 @@ function BeheerPage() {
 
   return (
     <div className="min-h-screen bg-cream">
-      <header className="border-b border-border/70 bg-background">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-5 sm:px-8">
+      <header className="border-b border-border/60 bg-background/95">
+        <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
           <Link to="/" className="flex items-baseline gap-1.5 leading-none">
             <span className="text-base font-medium text-foreground sm:text-lg">Afslankstudio</span>
             <span className="text-base font-medium text-gold sm:text-lg">Velserbroek</span>
           </Link>
-          <Button asChild variant="goldOutline" size="sm">
-            <Link to="/"><ArrowLeft /> Website</Link>
+          <Button asChild variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground">
+            <Link to="/"><ArrowLeft /> Terug naar website</Link>
           </Button>
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-5 py-14 sm:px-8 md:py-20">
+      <main className="mx-auto max-w-6xl px-5 py-12 sm:px-8 md:py-20">
         {!unlocked ? (
-          <section className="mx-auto max-w-md border border-border/70 bg-card p-7 shadow-[var(--shadow-soft)] sm:p-10">
-            <LockKeyhole className="size-6 text-gold" strokeWidth={1.5} />
-            <p className="eyebrow mt-7">Beveiligd beheer</p>
-            <h1 className="mt-3 text-3xl">Actie van de maand</h1>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Voer je beheer-code in om de actieposter te wijzigen.</p>
-            <form onSubmit={verify} className="mt-8 space-y-5">
+          <section className="mx-auto max-w-md">
+            <div className="border border-border/60 bg-card px-6 py-8 shadow-[var(--shadow-soft)] sm:px-10 sm:py-11">
+              <div className="flex size-11 items-center justify-center border border-gold/25 bg-cream text-gold">
+                <LockKeyhole className="size-5" strokeWidth={1.5} />
+              </div>
+              <p className="eyebrow mt-8">Beveiligde omgeving</p>
+              <h1 className="mt-3 text-4xl leading-tight">Welkom terug</h1>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Log in met je beheer-code om de actie van de maand aan te passen.</p>
+              <form onSubmit={verify} className="mt-8 space-y-5">
               <div className="space-y-2">
-                <Label htmlFor="access-code">Beheer-code</Label>
-                <Input id="access-code" type="password" inputMode="numeric" autoComplete="current-password" value={code} onChange={(event) => setCode(event.target.value)} required className="h-12 bg-background" />
+                  <Label htmlFor="access-code" className="text-xs font-normal uppercase tracking-[0.14em] text-muted-foreground">Beheer-code</Label>
+                  <Input id="access-code" type="password" inputMode="numeric" autoComplete="current-password" maxLength={12} value={code} onChange={(event) => setCode(event.target.value)} required className="h-12 bg-background px-4 text-base tracking-[0.2em]" autoFocus />
               </div>
               {error ? <p role="alert" className="text-sm text-destructive">{error}</p> : null}
               <Button type="submit" variant="gold" size="xl" className="w-full" disabled={busy || !code}>
-                {busy ? <LoaderCircle className="animate-spin" /> : <LockKeyhole />} Open beheer
+                  {busy ? <LoaderCircle className="animate-spin" /> : <LockKeyhole />} Inloggen
               </Button>
-            </form>
+              </form>
+            </div>
+            <p className="mt-5 flex items-center justify-center gap-2 text-xs text-muted-foreground"><ShieldCheck className="size-3.5 text-gold" /> Alleen toegankelijk voor de studio</p>
           </section>
         ) : (
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-            <section>
-              <p className="eyebrow">Actiebeheer</p>
-              <h1 className="mt-4 text-4xl leading-tight sm:text-5xl">Nieuwe actie plaatsen</h1>
-              <span className="gold-rule mt-6" />
-              <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground">Kies alleen je nieuwe poster. De vaste opmaak en intakeknop worden automatisch toegevoegd.</p>
+          <div>
+            <div className="mb-10 flex flex-col justify-between gap-5 border-b border-border/70 pb-8 sm:flex-row sm:items-end">
+              <div>
+                <p className="eyebrow">Actie van de maand</p>
+                <h1 className="mt-3 text-4xl leading-tight sm:text-5xl">Actie beheren</h1>
+                <p className="mt-3 text-sm text-muted-foreground">Voeg een nieuwe poster toe of verwijder de huidige actie.</p>
+              </div>
+              <Button type="button" variant="ghost" size="sm" className="self-start text-muted-foreground sm:self-auto" onClick={() => { setUnlocked(false); setCode(""); setError(""); setNotice(""); }}>
+                <LogOut /> Uitloggen
+              </Button>
+            </div>
 
-              <div className="mt-9 border border-border/70 bg-card p-6 sm:p-8">
+            <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12">
+            <section>
+              <h2 className="text-2xl">Nieuwe actie</h2>
+              <p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">Kies alleen je nieuwe poster. De vaste opmaak en intakeknop worden automatisch toegevoegd.</p>
+
+              <div className="mt-6 border border-border/60 bg-card p-5 shadow-[var(--shadow-soft)] sm:p-7">
                 <input ref={inputRef} id="action-image" type="file" accept="image/jpeg,image/png,image/webp" onChange={chooseFile} className="sr-only" />
-                <Button type="button" variant="goldOutline" size="xl" className="w-full" onClick={() => inputRef.current?.click()} disabled={busy}>
-                  <ImagePlus /> Kies een foto
-                </Button>
-                <p className="mt-3 text-center text-xs text-muted-foreground">JPG, PNG of WEBP · maximaal 12 MB</p>
+                <button type="button" className="flex min-h-36 w-full cursor-pointer flex-col items-center justify-center border border-dashed border-gold/40 bg-cream px-6 text-center transition-colors hover:border-gold hover:bg-sand focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring" onClick={() => inputRef.current?.click()} disabled={busy}>
+                  <span className="flex size-10 items-center justify-center bg-background text-gold"><ImagePlus className="size-5" strokeWidth={1.5} /></span>
+                  <span className="mt-4 text-sm font-medium">Kies een foto</span>
+                  <span className="mt-1 text-xs text-muted-foreground">JPG, PNG of WEBP · maximaal 12 MB</span>
+                </button>
 
                 {preview ? (
                   <div className="mt-7 space-y-4">
-                    <div className="overflow-hidden border border-gold/25 bg-sand">
+                    <div className="overflow-hidden border border-gold/25 bg-cream p-2">
                       <img src={preview} alt="Voorbeeld van de nieuwe actie" className="h-auto w-full object-contain" />
                     </div>
                     <Button type="button" variant="gold" size="xl" className="w-full" onClick={publish} disabled={busy}>
@@ -180,10 +196,10 @@ function BeheerPage() {
             </section>
 
             <section>
-              <div className="flex items-end justify-between gap-4">
+              <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="eyebrow">Nu zichtbaar</p>
-                  <h2 className="mt-3 text-2xl">Huidige actie</h2>
+                  <h2 className="text-2xl">Huidige actie</h2>
+                  <p className="mt-2 text-sm text-muted-foreground">Dit staat nu op de website.</p>
                 </div>
                 {currentImage ? (
                   <Button type="button" variant="ghost" size="sm" onClick={remove} disabled={busy} className="text-destructive hover:text-destructive">
@@ -191,7 +207,7 @@ function BeheerPage() {
                   </Button>
                 ) : null}
               </div>
-              <div className="mt-6 min-h-80 border border-border/70 bg-background p-3 shadow-[var(--shadow-soft)] sm:p-5">
+              <div className="mt-6 min-h-80 border border-border/60 bg-background p-3 shadow-[var(--shadow-soft)] sm:p-5">
                 {currentImage ? (
                   <img src={currentImage} alt="Huidige actie van de maand" className="mx-auto h-auto max-h-[720px] w-full object-contain" />
                 ) : (
@@ -203,6 +219,7 @@ function BeheerPage() {
                 )}
               </div>
             </section>
+            </div>
           </div>
         )}
       </main>
