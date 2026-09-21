@@ -93,6 +93,7 @@ export const treatments: Treatment[] = [
         title: "Wat kun je verwachten?",
         paragraphs: [
           "Na de behandeling voelt de huid doorgaans schoon, verzorgd en fris aan. De combinatie van technieken maakt de Hydrogen LED Facial geschikt als uitgebreide behandeling wanneer je jouw huid een extra boost wilt geven.",
+          "De behandeling bevordert de aanmaak van collageen en gaat huidverslapping tegen.",
         ],
       },
     ],
@@ -220,6 +221,7 @@ export const treatments: Treatment[] = [
         paragraphs: [
           "Tijdens de behandeling worden speciale applicatoren op het te behandelen lichaamsdeel geplaatst. Deze stimuleren de spieren met krachtige elektromagnetische pulsen, waardoor de spieren herhaaldelijk samentrekken.",
           "Hierdoor worden de spieren intensief geactiveerd, zonder dat je zelf actief hoeft te bewegen.",
+          "Een behandeling van 30 minuten staat gelijk aan 30.000 sit-ups of 30.000 squats.",
         ],
       },
       {
@@ -379,12 +381,12 @@ export const treatments: Treatment[] = [
     image: pBioHcgAsset.url,
     imageAlt: "Beter in Balans Bio HCG afslankkuur verpakking met tabletten",
     description:
-      "De Bio HCG+ afslankkuur is een afslankprogramma waarbij een caloriearm voedingsprogramma centraal staat.\n\nTijdens de kuur volg je een vooraf opgesteld voedingsschema en wordt je voortgang begeleid.",
+      "De Bio HCG+ afslankkuur is een afslankprogramma waarbij een koolhydraatarm voedingsprogramma centraal staat.\n\nTijdens de kuur volg je een vooraf opgesteld voedingsschema en wordt je voortgang begeleid.",
     details: [
       {
         title: "Hoe werkt de kuur?",
         paragraphs: [
-          "De aanpak draait voornamelijk om een gecontroleerde calorie-inname en duidelijke voedingsrichtlijnen. Het doel is om op een gestructureerde manier gewicht te verliezen.",
+          "De aanpak draait voornamelijk om een koolhydraatarme voeding en duidelijke voedingsrichtlijnen. Het doel is om op een gestructureerde manier gewicht te verliezen.",
           "Tijdens het traject is het belangrijk om de voorgeschreven voedingsrichtlijnen goed te volgen en voldoende aandacht te besteden aan je dagelijkse leefstijl.",
         ],
       },
