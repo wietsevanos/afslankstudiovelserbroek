@@ -65,7 +65,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                 <div className="mt-12 space-y-11">
                   {treatment.details.map((section) => (
                     <section key={section.title}>
-                      <h4 className="text-[0.72rem] tracking-[0.18em] font-medium text-gold uppercase">
+                      <h4 className="text-[0.82rem] tracking-[0.14em] font-semibold text-gold-deep uppercase">
                         {section.title}
                       </h4>
                       {section.paragraphs?.map((paragraph) => (
