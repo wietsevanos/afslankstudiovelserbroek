@@ -55,7 +55,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                   {treatment.description.split("\n\n").map((paragraph) => (
                     <p
                       key={paragraph}
-                      className="mt-5 text-[1.02rem] leading-[1.85] text-foreground/85 first:mt-0"
+                      className="mt-5 text-[1.05rem] leading-[1.8] text-foreground first:mt-0"
                     >
                       {paragraph}
                     </p>
@@ -71,7 +71,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                       {section.paragraphs?.map((paragraph) => (
                         <p
                           key={paragraph}
-                          className="mt-4 text-[0.95rem] leading-[1.85] text-foreground/80 first:mt-0"
+                          className="mt-4 text-[0.98rem] leading-[1.8] text-foreground/95 first:mt-0"
                         >
                           {paragraph}
                         </p>
@@ -81,7 +81,7 @@ export function TreatmentDialog({ treatment, onClose }: Props) {
                           {section.list.map((item) => (
                             <li
                               key={item}
-                              className="flex gap-3 text-[0.95rem] leading-[1.8] text-foreground/80"
+                              className="flex gap-3 text-[0.98rem] leading-[1.75] text-foreground/95"
                             >
                               <Check className="mt-[0.28rem] size-3.5 shrink-0 text-gold" />
                               <span>{item}</span>
