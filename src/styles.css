@@ -40,6 +40,7 @@
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
   --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
   --color-gold-soft: var(--gold-soft);
   --color-cream: var(--cream);
   --color-sand: var(--sand);
@@ -86,6 +87,7 @@
   --ring: oklch(0.72 0.075 78);
 
   --gold: oklch(0.72 0.085 78);
+  --gold-deep: oklch(0.52 0.09 68);
   --gold-soft: oklch(0.86 0.05 82);
   --cream: oklch(0.972 0.012 78);
   --sand: oklch(0.945 0.02 60);
@@ -129,6 +131,7 @@
   --border: oklch(0.4 0.014 30);
   --input: oklch(0.4 0.014 30);
   --gold: oklch(0.82 0.09 82);
+  --gold-deep: oklch(0.8 0.09 82);
   --gold-soft: oklch(0.88 0.06 84);
   --cream: oklch(0.22 0.01 30);
   --sand: oklch(0.24 0.012 28);
